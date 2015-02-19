@@ -46,6 +46,7 @@
             this.menuItemAuthorSite = new System.Windows.Forms.MenuItem();
             this.menuItem15 = new System.Windows.Forms.MenuItem();
             this.menuItemAbout = new System.Windows.Forms.MenuItem();
+            this.menuItemGitHub = new System.Windows.Forms.MenuItem();
             this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.statusLabelOperatorLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusLabelOperatorName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -53,45 +54,48 @@
             this.statusLabelUseSpaceLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusLabelUseSpaceValue = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusLabelBlank = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.statusProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.mainPanelLeft = new System.Windows.Forms.Panel();
+            this.listView4Local = new System.Windows.Forms.ListView();
+            this.panelAddressBar4Local = new System.Windows.Forms.Panel();
+            this.btnParentDirectory4Local = new System.Windows.Forms.Button();
+            this.comboBoxPath4Local = new System.Windows.Forms.ComboBox();
             this.toolStripLeft = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.mainPanelRight = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
-            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.toolStripLabelLocal = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBtnComputer = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDesktop = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnMyDocument = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnTrans4Local = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnAddFolder4Local = new System.Windows.Forms.ToolStripButton();
+            this.toolStripAddFile = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnRefresh4Local = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDel4Local = new System.Windows.Forms.ToolStripButton();
+            this.mainPanelRight = new System.Windows.Forms.Panel();
+            this.listView4Remote = new System.Windows.Forms.ListView();
+            this.panelAddressBar4Remote = new System.Windows.Forms.Panel();
+            this.btnParentDirectory4Remote = new System.Windows.Forms.Button();
+            this.comboBoxPath4Remote = new System.Windows.Forms.ComboBox();
+            this.toolStripRemote = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabelRemote = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.toolStripBtnDisConnect = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnRootPath = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnTrans4Remote = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnCopyLink = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnAddFolder4Remote = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnRefresh4Remote = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDel4Remote = new System.Windows.Forms.ToolStripButton();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.toolStripBtnConnect = new System.Windows.Forms.ToolStripButton();
+            this.toolStripStatusLabelStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.mainStatusStrip.SuspendLayout();
             this.mainPanelLeft.SuspendLayout();
+            this.panelAddressBar4Local.SuspendLayout();
             this.toolStripLeft.SuspendLayout();
             this.mainPanelRight.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelAddressBar4Remote.SuspendLayout();
+            this.toolStripRemote.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenuBar
@@ -99,7 +103,8 @@
             this.mainMenuBar.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItemOperator,
             this.menuItemNetLine,
-            this.menuItemHelp});
+            this.menuItemHelp,
+            this.menuItemGitHub});
             // 
             // menuItemOperator
             // 
@@ -193,6 +198,11 @@
             this.menuItemAbout.Index = 3;
             this.menuItemAbout.Text = "关于(&A)";
             // 
+            // menuItemGitHub
+            // 
+            this.menuItemGitHub.Index = 3;
+            this.menuItemGitHub.Text = "点击访问项目GitHub主页(&G)";
+            // 
             // mainStatusStrip
             // 
             this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -202,7 +212,8 @@
             this.statusLabelUseSpaceLabel,
             this.statusLabelUseSpaceValue,
             this.statusLabelBlank,
-            this.toolStripProgressBar1});
+            this.toolStripStatusLabelStatus,
+            this.statusProgressBar});
             this.mainStatusStrip.Location = new System.Drawing.Point(0, 472);
             this.mainStatusStrip.Name = "mainStatusStrip";
             this.mainStatusStrip.Size = new System.Drawing.Size(806, 22);
@@ -242,20 +253,20 @@
             // statusLabelBlank
             // 
             this.statusLabelBlank.Name = "statusLabelBlank";
-            this.statusLabelBlank.Size = new System.Drawing.Size(422, 17);
+            this.statusLabelBlank.Size = new System.Drawing.Size(378, 17);
             this.statusLabelBlank.Spring = true;
             // 
-            // toolStripProgressBar1
+            // statusProgressBar
             // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(150, 16);
-            this.toolStripProgressBar1.Value = 10;
+            this.statusProgressBar.Name = "statusProgressBar";
+            this.statusProgressBar.Size = new System.Drawing.Size(150, 16);
+            this.statusProgressBar.Value = 10;
             // 
             // mainPanelLeft
             // 
             this.mainPanelLeft.BackColor = System.Drawing.SystemColors.Control;
-            this.mainPanelLeft.Controls.Add(this.listView1);
-            this.mainPanelLeft.Controls.Add(this.panel2);
+            this.mainPanelLeft.Controls.Add(this.listView4Local);
+            this.mainPanelLeft.Controls.Add(this.panelAddressBar4Local);
             this.mainPanelLeft.Controls.Add(this.toolStripLeft);
             this.mainPanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.mainPanelLeft.Location = new System.Drawing.Point(0, 0);
@@ -263,20 +274,61 @@
             this.mainPanelLeft.Size = new System.Drawing.Size(400, 472);
             this.mainPanelLeft.TabIndex = 1;
             // 
+            // listView4Local
+            // 
+            this.listView4Local.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView4Local.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView4Local.Location = new System.Drawing.Point(0, 60);
+            this.listView4Local.Name = "listView4Local";
+            this.listView4Local.Size = new System.Drawing.Size(400, 412);
+            this.listView4Local.TabIndex = 4;
+            this.listView4Local.UseCompatibleStateImageBehavior = false;
+            // 
+            // panelAddressBar4Local
+            // 
+            this.panelAddressBar4Local.Controls.Add(this.btnParentDirectory4Local);
+            this.panelAddressBar4Local.Controls.Add(this.comboBoxPath4Local);
+            this.panelAddressBar4Local.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelAddressBar4Local.Location = new System.Drawing.Point(0, 40);
+            this.panelAddressBar4Local.Name = "panelAddressBar4Local";
+            this.panelAddressBar4Local.Size = new System.Drawing.Size(400, 20);
+            this.panelAddressBar4Local.TabIndex = 3;
+            // 
+            // btnParentDirectory4Local
+            // 
+            this.btnParentDirectory4Local.Image = global::_97world_UpYun.Properties.Resources.up_16x16;
+            this.btnParentDirectory4Local.Location = new System.Drawing.Point(0, -1);
+            this.btnParentDirectory4Local.Name = "btnParentDirectory4Local";
+            this.btnParentDirectory4Local.Size = new System.Drawing.Size(25, 22);
+            this.btnParentDirectory4Local.TabIndex = 3;
+            this.btnParentDirectory4Local.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxPath4Local
+            // 
+            this.comboBoxPath4Local.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxPath4Local.FormattingEnabled = true;
+            this.comboBoxPath4Local.Location = new System.Drawing.Point(25, 0);
+            this.comboBoxPath4Local.Name = "comboBoxPath4Local";
+            this.comboBoxPath4Local.Size = new System.Drawing.Size(373, 20);
+            this.comboBoxPath4Local.TabIndex = 2;
+            // 
             // toolStripLeft
             // 
             this.toolStripLeft.AutoSize = false;
             this.toolStripLeft.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripLeft.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
+            this.toolStripLabelLocal,
             this.toolStripSeparator1,
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton6,
-            this.toolStripButton7,
-            this.toolStripButton5,
-            this.toolStripButton4});
+            this.toolStripBtnComputer,
+            this.toolStripBtnDesktop,
+            this.toolStripBtnMyDocument,
+            this.toolStripBtnTrans4Local,
+            this.toolStripBtnAddFolder4Local,
+            this.toolStripAddFile,
+            this.toolStripBtnRefresh4Local,
+            this.toolStripBtnDel4Local});
             this.toolStripLeft.Location = new System.Drawing.Point(0, 0);
             this.toolStripLeft.Name = "toolStripLeft";
             this.toolStripLeft.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -284,206 +336,268 @@
             this.toolStripLeft.TabIndex = 0;
             this.toolStripLeft.Text = "toolStrip1";
             // 
-            // toolStripLabel1
+            // toolStripLabelLocal
             // 
-            this.toolStripLabel1.Enabled = false;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(84, 37);
-            this.toolStripLabel1.Text = "  本地浏览器  ";
+            this.toolStripLabelLocal.Enabled = false;
+            this.toolStripLabelLocal.Name = "toolStripLabelLocal";
+            this.toolStripLabelLocal.Size = new System.Drawing.Size(80, 37);
+            this.toolStripLabelLocal.Text = "  本地浏览器 ";
             // 
-            // toolStripButton1
+            // toolStripSeparator1
             // 
-            this.toolStripButton1.AutoSize = false;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(37, 37);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 40);
             // 
-            // toolStripButton2
+            // toolStripBtnComputer
             // 
-            this.toolStripButton2.AutoSize = false;
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(37, 37);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripBtnComputer.AutoSize = false;
+            this.toolStripBtnComputer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnComputer.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnComputer.Image")));
+            this.toolStripBtnComputer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnComputer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnComputer.Name = "toolStripBtnComputer";
+            this.toolStripBtnComputer.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnComputer.Text = "toolStripButton1";
             // 
-            // toolStripButton3
+            // toolStripBtnDesktop
             // 
-            this.toolStripButton3.AutoSize = false;
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(37, 37);
-            this.toolStripButton3.Text = "toolStripButton1";
+            this.toolStripBtnDesktop.AutoSize = false;
+            this.toolStripBtnDesktop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnDesktop.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDesktop.Image")));
+            this.toolStripBtnDesktop.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnDesktop.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnDesktop.Name = "toolStripBtnDesktop";
+            this.toolStripBtnDesktop.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnDesktop.Text = "toolStripButton1";
             // 
-            // toolStripButton6
+            // toolStripBtnMyDocument
             // 
-            this.toolStripButton6.AutoSize = false;
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(37, 37);
-            this.toolStripButton6.Text = "toolStripButton1";
+            this.toolStripBtnMyDocument.AutoSize = false;
+            this.toolStripBtnMyDocument.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnMyDocument.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnMyDocument.Image")));
+            this.toolStripBtnMyDocument.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnMyDocument.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnMyDocument.Name = "toolStripBtnMyDocument";
+            this.toolStripBtnMyDocument.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnMyDocument.Text = "toolStripButton2";
             // 
-            // toolStripButton7
+            // toolStripBtnTrans4Local
             // 
-            this.toolStripButton7.AutoSize = false;
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(37, 37);
-            this.toolStripButton7.Text = "toolStripButton1";
+            this.toolStripBtnTrans4Local.AutoSize = false;
+            this.toolStripBtnTrans4Local.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnTrans4Local.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnTrans4Local.Image")));
+            this.toolStripBtnTrans4Local.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnTrans4Local.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnTrans4Local.Name = "toolStripBtnTrans4Local";
+            this.toolStripBtnTrans4Local.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnTrans4Local.Text = "toolStripButton1";
             // 
-            // toolStripButton5
+            // toolStripBtnAddFolder4Local
             // 
-            this.toolStripButton5.AutoSize = false;
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(37, 37);
-            this.toolStripButton5.Text = "toolStripButton1";
+            this.toolStripBtnAddFolder4Local.AutoSize = false;
+            this.toolStripBtnAddFolder4Local.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnAddFolder4Local.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnAddFolder4Local.Image")));
+            this.toolStripBtnAddFolder4Local.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnAddFolder4Local.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnAddFolder4Local.Name = "toolStripBtnAddFolder4Local";
+            this.toolStripBtnAddFolder4Local.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnAddFolder4Local.Text = "toolStripButton1";
             // 
-            // toolStripButton4
+            // toolStripAddFile
             // 
-            this.toolStripButton4.AutoSize = false;
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(37, 37);
-            this.toolStripButton4.Text = "toolStripButton1";
+            this.toolStripAddFile.AutoSize = false;
+            this.toolStripAddFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripAddFile.Image = ((System.Drawing.Image)(resources.GetObject("toolStripAddFile.Image")));
+            this.toolStripAddFile.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripAddFile.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripAddFile.Name = "toolStripAddFile";
+            this.toolStripAddFile.Size = new System.Drawing.Size(37, 37);
+            this.toolStripAddFile.Text = "toolStripButton1";
+            // 
+            // toolStripBtnRefresh4Local
+            // 
+            this.toolStripBtnRefresh4Local.AutoSize = false;
+            this.toolStripBtnRefresh4Local.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnRefresh4Local.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnRefresh4Local.Image")));
+            this.toolStripBtnRefresh4Local.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnRefresh4Local.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnRefresh4Local.Name = "toolStripBtnRefresh4Local";
+            this.toolStripBtnRefresh4Local.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnRefresh4Local.Text = "toolStripButton1";
+            // 
+            // toolStripBtnDel4Local
+            // 
+            this.toolStripBtnDel4Local.AutoSize = false;
+            this.toolStripBtnDel4Local.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnDel4Local.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDel4Local.Image")));
+            this.toolStripBtnDel4Local.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnDel4Local.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnDel4Local.Name = "toolStripBtnDel4Local";
+            this.toolStripBtnDel4Local.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnDel4Local.Text = "toolStripButton1";
             // 
             // mainPanelRight
             // 
             this.mainPanelRight.BackColor = System.Drawing.SystemColors.Control;
-            this.mainPanelRight.Controls.Add(this.listView2);
-            this.mainPanelRight.Controls.Add(this.panel1);
-            this.mainPanelRight.Controls.Add(this.toolStrip1);
+            this.mainPanelRight.Controls.Add(this.listView4Remote);
+            this.mainPanelRight.Controls.Add(this.panelAddressBar4Remote);
+            this.mainPanelRight.Controls.Add(this.toolStripRemote);
             this.mainPanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanelRight.Location = new System.Drawing.Point(400, 0);
             this.mainPanelRight.Name = "mainPanelRight";
             this.mainPanelRight.Size = new System.Drawing.Size(406, 472);
             this.mainPanelRight.TabIndex = 2;
             // 
-            // toolStrip1
+            // listView4Remote
             // 
-            this.toolStrip1.AutoSize = false;
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel2,
+            this.listView4Remote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView4Remote.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView4Remote.Location = new System.Drawing.Point(0, 60);
+            this.listView4Remote.Name = "listView4Remote";
+            this.listView4Remote.Size = new System.Drawing.Size(406, 412);
+            this.listView4Remote.TabIndex = 3;
+            this.listView4Remote.UseCompatibleStateImageBehavior = false;
+            // 
+            // panelAddressBar4Remote
+            // 
+            this.panelAddressBar4Remote.Controls.Add(this.btnParentDirectory4Remote);
+            this.panelAddressBar4Remote.Controls.Add(this.comboBoxPath4Remote);
+            this.panelAddressBar4Remote.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelAddressBar4Remote.Location = new System.Drawing.Point(0, 40);
+            this.panelAddressBar4Remote.Name = "panelAddressBar4Remote";
+            this.panelAddressBar4Remote.Size = new System.Drawing.Size(406, 20);
+            this.panelAddressBar4Remote.TabIndex = 2;
+            // 
+            // btnParentDirectory4Remote
+            // 
+            this.btnParentDirectory4Remote.Image = global::_97world_UpYun.Properties.Resources.up_16x16;
+            this.btnParentDirectory4Remote.Location = new System.Drawing.Point(3, -1);
+            this.btnParentDirectory4Remote.Name = "btnParentDirectory4Remote";
+            this.btnParentDirectory4Remote.Size = new System.Drawing.Size(25, 22);
+            this.btnParentDirectory4Remote.TabIndex = 3;
+            this.btnParentDirectory4Remote.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxPath4Remote
+            // 
+            this.comboBoxPath4Remote.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxPath4Remote.FormattingEnabled = true;
+            this.comboBoxPath4Remote.Location = new System.Drawing.Point(28, 0);
+            this.comboBoxPath4Remote.Name = "comboBoxPath4Remote";
+            this.comboBoxPath4Remote.Size = new System.Drawing.Size(376, 20);
+            this.comboBoxPath4Remote.TabIndex = 2;
+            // 
+            // toolStripRemote
+            // 
+            this.toolStripRemote.AutoSize = false;
+            this.toolStripRemote.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripRemote.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabelRemote,
             this.toolStripSeparator2,
-            this.toolStripButton13,
-            this.toolStripButton8,
-            this.toolStripButton14,
-            this.toolStripButton11,
-            this.toolStripButton10,
-            this.toolStripButton12,
-            this.toolStripButton9});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(406, 40);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStripBtnConnect,
+            this.toolStripBtnDisConnect,
+            this.toolStripBtnRootPath,
+            this.toolStripBtnTrans4Remote,
+            this.toolStripBtnCopyLink,
+            this.toolStripBtnAddFolder4Remote,
+            this.toolStripBtnRefresh4Remote,
+            this.toolStripBtnDel4Remote});
+            this.toolStripRemote.Location = new System.Drawing.Point(0, 0);
+            this.toolStripRemote.Name = "toolStripRemote";
+            this.toolStripRemote.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStripRemote.Size = new System.Drawing.Size(406, 40);
+            this.toolStripRemote.TabIndex = 1;
+            this.toolStripRemote.Text = "toolStrip1";
             // 
-            // toolStripLabel2
+            // toolStripLabelRemote
             // 
-            this.toolStripLabel2.Enabled = false;
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(84, 37);
-            this.toolStripLabel2.Text = "  远程浏览器  ";
+            this.toolStripLabelRemote.Enabled = false;
+            this.toolStripLabelRemote.Name = "toolStripLabelRemote";
+            this.toolStripLabelRemote.Size = new System.Drawing.Size(80, 37);
+            this.toolStripLabelRemote.Text = "  远程浏览器 ";
             // 
-            // toolStripButton13
+            // toolStripSeparator2
             // 
-            this.toolStripButton13.AutoSize = false;
-            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
-            this.toolStripButton13.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Size = new System.Drawing.Size(37, 37);
-            this.toolStripButton13.Text = "toolStripButton1";
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
             // 
-            // toolStripButton8
+            // toolStripBtnDisConnect
             // 
-            this.toolStripButton8.AutoSize = false;
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(37, 37);
-            this.toolStripButton8.Text = "toolStripButton1";
+            this.toolStripBtnDisConnect.AutoSize = false;
+            this.toolStripBtnDisConnect.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnDisConnect.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDisConnect.Image")));
+            this.toolStripBtnDisConnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnDisConnect.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnDisConnect.Name = "toolStripBtnDisConnect";
+            this.toolStripBtnDisConnect.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnDisConnect.Text = "toolStripButton1";
             // 
-            // toolStripButton14
+            // toolStripBtnRootPath
             // 
-            this.toolStripButton14.AutoSize = false;
-            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
-            this.toolStripButton14.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(37, 37);
-            this.toolStripButton14.Text = "toolStripButton1";
+            this.toolStripBtnRootPath.AutoSize = false;
+            this.toolStripBtnRootPath.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnRootPath.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnRootPath.Image")));
+            this.toolStripBtnRootPath.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnRootPath.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnRootPath.Name = "toolStripBtnRootPath";
+            this.toolStripBtnRootPath.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnRootPath.Text = "toolStripButton1";
             // 
-            // toolStripButton11
+            // toolStripBtnTrans4Remote
             // 
-            this.toolStripButton11.AutoSize = false;
-            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
-            this.toolStripButton11.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.Size = new System.Drawing.Size(37, 37);
-            this.toolStripButton11.Text = "toolStripButton1";
+            this.toolStripBtnTrans4Remote.AutoSize = false;
+            this.toolStripBtnTrans4Remote.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnTrans4Remote.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnTrans4Remote.Image")));
+            this.toolStripBtnTrans4Remote.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnTrans4Remote.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnTrans4Remote.Name = "toolStripBtnTrans4Remote";
+            this.toolStripBtnTrans4Remote.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnTrans4Remote.Text = "toolStripButton1";
             // 
-            // toolStripButton10
+            // toolStripBtnCopyLink
             // 
-            this.toolStripButton10.AutoSize = false;
-            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
-            this.toolStripButton10.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(37, 37);
-            this.toolStripButton10.Text = "toolStripButton1";
+            this.toolStripBtnCopyLink.AutoSize = false;
+            this.toolStripBtnCopyLink.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnCopyLink.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnCopyLink.Image")));
+            this.toolStripBtnCopyLink.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnCopyLink.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnCopyLink.Name = "toolStripBtnCopyLink";
+            this.toolStripBtnCopyLink.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnCopyLink.Text = "toolStripButton1";
             // 
-            // toolStripButton12
+            // toolStripBtnAddFolder4Remote
             // 
-            this.toolStripButton12.AutoSize = false;
-            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
-            this.toolStripButton12.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(37, 37);
-            this.toolStripButton12.Text = "toolStripButton1";
+            this.toolStripBtnAddFolder4Remote.AutoSize = false;
+            this.toolStripBtnAddFolder4Remote.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnAddFolder4Remote.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnAddFolder4Remote.Image")));
+            this.toolStripBtnAddFolder4Remote.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnAddFolder4Remote.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnAddFolder4Remote.Name = "toolStripBtnAddFolder4Remote";
+            this.toolStripBtnAddFolder4Remote.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnAddFolder4Remote.Text = "toolStripButton1";
             // 
-            // toolStripButton9
+            // toolStripBtnRefresh4Remote
             // 
-            this.toolStripButton9.AutoSize = false;
-            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
-            this.toolStripButton9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(37, 37);
-            this.toolStripButton9.Text = "toolStripButton1";
+            this.toolStripBtnRefresh4Remote.AutoSize = false;
+            this.toolStripBtnRefresh4Remote.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnRefresh4Remote.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnRefresh4Remote.Image")));
+            this.toolStripBtnRefresh4Remote.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnRefresh4Remote.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnRefresh4Remote.Name = "toolStripBtnRefresh4Remote";
+            this.toolStripBtnRefresh4Remote.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnRefresh4Remote.Text = "toolStripButton1";
+            // 
+            // toolStripBtnDel4Remote
+            // 
+            this.toolStripBtnDel4Remote.AutoSize = false;
+            this.toolStripBtnDel4Remote.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnDel4Remote.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDel4Remote.Image")));
+            this.toolStripBtnDel4Remote.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnDel4Remote.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnDel4Remote.Name = "toolStripBtnDel4Remote";
+            this.toolStripBtnDel4Remote.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnDel4Remote.Text = "toolStripButton1";
             // 
             // splitter1
             // 
@@ -494,95 +608,22 @@
             this.splitter1.TabIndex = 3;
             this.splitter1.TabStop = false;
             // 
-            // toolStripSeparator1
+            // toolStripBtnConnect
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 40);
+            this.toolStripBtnConnect.AutoSize = false;
+            this.toolStripBtnConnect.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnConnect.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnConnect.Image")));
+            this.toolStripBtnConnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnConnect.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnConnect.Name = "toolStripBtnConnect";
+            this.toolStripBtnConnect.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnConnect.Text = "toolStripButton1";
             // 
-            // toolStripSeparator2
+            // toolStripStatusLabelStatus
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(406, 20);
-            this.panel1.TabIndex = 2;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(28, 0);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(376, 20);
-            this.comboBox2.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.Image = global::_97world_UpYun.Properties.Resources.up_16x16;
-            this.button2.Location = new System.Drawing.Point(3, -1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 22);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // listView2
-            // 
-            this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView2.Location = new System.Drawing.Point(0, 60);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(406, 412);
-            this.listView2.TabIndex = 3;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 40);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(400, 20);
-            this.panel2.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::_97world_UpYun.Properties.Resources.up_16x16;
-            this.button1.Location = new System.Drawing.Point(1, -1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 22);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(26, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(372, 20);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // listView1
-            // 
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Location = new System.Drawing.Point(0, 60);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(400, 412);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.toolStripStatusLabelStatus.Name = "toolStripStatusLabelStatus";
+            this.toolStripStatusLabelStatus.Size = new System.Drawing.Size(44, 17);
+            this.toolStripStatusLabelStatus.Text = "未登录";
             // 
             // UpYunMain
             // 
@@ -599,13 +640,13 @@
             this.mainStatusStrip.ResumeLayout(false);
             this.mainStatusStrip.PerformLayout();
             this.mainPanelLeft.ResumeLayout(false);
+            this.panelAddressBar4Local.ResumeLayout(false);
             this.toolStripLeft.ResumeLayout(false);
             this.toolStripLeft.PerformLayout();
             this.mainPanelRight.ResumeLayout(false);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.panelAddressBar4Remote.ResumeLayout(false);
+            this.toolStripRemote.ResumeLayout(false);
+            this.toolStripRemote.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -636,37 +677,41 @@
         private System.Windows.Forms.ToolStripStatusLabel statusLabelUseSpaceLabel;
         private System.Windows.Forms.ToolStripStatusLabel statusLabelUseSpaceValue;
         private System.Windows.Forms.ToolStripStatusLabel statusLabelBlank;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.ToolStripProgressBar statusProgressBar;
         private System.Windows.Forms.Panel mainPanelLeft;
         private System.Windows.Forms.Panel mainPanelRight;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.ToolStrip toolStripLeft;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
-        private System.Windows.Forms.ToolStripButton toolStripButton10;
-        private System.Windows.Forms.ToolStripButton toolStripButton12;
-        private System.Windows.Forms.ToolStripButton toolStripButton13;
-        private System.Windows.Forms.ToolStripButton toolStripButton14;
-        private System.Windows.Forms.ToolStripButton toolStripButton9;
-        private System.Windows.Forms.ToolStripButton toolStripButton11;
+        private System.Windows.Forms.ToolStripButton toolStripBtnMyDocument;
+        private System.Windows.Forms.ToolStripButton toolStripBtnDesktop;
+        private System.Windows.Forms.ToolStripButton toolStripBtnTrans4Local;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelLocal;
+        private System.Windows.Forms.ToolStripButton toolStripBtnAddFolder4Local;
+        private System.Windows.Forms.ToolStripButton toolStripAddFile;
+        private System.Windows.Forms.ToolStripButton toolStripBtnRefresh4Local;
+        private System.Windows.Forms.ToolStripButton toolStripBtnDel4Local;
+        private System.Windows.Forms.ToolStrip toolStripRemote;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelRemote;
+        private System.Windows.Forms.ToolStripButton toolStripBtnRootPath;
+        private System.Windows.Forms.ToolStripButton toolStripBtnAddFolder4Remote;
+        private System.Windows.Forms.ToolStripButton toolStripBtnRefresh4Remote;
+        private System.Windows.Forms.ToolStripButton toolStripBtnDisConnect;
+        private System.Windows.Forms.ToolStripButton toolStripBtnTrans4Remote;
+        private System.Windows.Forms.ToolStripButton toolStripBtnDel4Remote;
+        private System.Windows.Forms.ToolStripButton toolStripBtnCopyLink;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panelAddressBar4Remote;
+        private System.Windows.Forms.Button btnParentDirectory4Remote;
+        private System.Windows.Forms.ComboBox comboBoxPath4Remote;
+        private System.Windows.Forms.ListView listView4Remote;
+        private System.Windows.Forms.ListView listView4Local;
+        private System.Windows.Forms.Panel panelAddressBar4Local;
+        private System.Windows.Forms.Button btnParentDirectory4Local;
+        private System.Windows.Forms.ComboBox comboBoxPath4Local;
+        private System.Windows.Forms.MenuItem menuItemGitHub;
+        private System.Windows.Forms.ToolStripButton toolStripBtnComputer;
+        private System.Windows.Forms.ToolStripButton toolStripBtnConnect;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelStatus;
     }
 }
