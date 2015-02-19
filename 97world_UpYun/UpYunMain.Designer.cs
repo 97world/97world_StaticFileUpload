@@ -54,6 +54,7 @@
             this.statusLabelUseSpaceLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusLabelUseSpaceValue = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusLabelBlank = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.mainPanelLeft = new System.Windows.Forms.Panel();
             this.listView4Local = new System.Windows.Forms.ListView();
@@ -79,6 +80,7 @@
             this.toolStripRemote = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelRemote = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBtnConnect = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnDisConnect = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnRootPath = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnTrans4Remote = new System.Windows.Forms.ToolStripButton();
@@ -87,8 +89,6 @@
             this.toolStripBtnRefresh4Remote = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnDel4Remote = new System.Windows.Forms.ToolStripButton();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.toolStripBtnConnect = new System.Windows.Forms.ToolStripButton();
-            this.toolStripStatusLabelStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.mainStatusStrip.SuspendLayout();
             this.mainPanelLeft.SuspendLayout();
             this.panelAddressBar4Local.SuspendLayout();
@@ -214,7 +214,7 @@
             this.statusLabelBlank,
             this.toolStripStatusLabelStatus,
             this.statusProgressBar});
-            this.mainStatusStrip.Location = new System.Drawing.Point(0, 472);
+            this.mainStatusStrip.Location = new System.Drawing.Point(0, 451);
             this.mainStatusStrip.Name = "mainStatusStrip";
             this.mainStatusStrip.Size = new System.Drawing.Size(806, 22);
             this.mainStatusStrip.TabIndex = 0;
@@ -256,6 +256,12 @@
             this.statusLabelBlank.Size = new System.Drawing.Size(378, 17);
             this.statusLabelBlank.Spring = true;
             // 
+            // toolStripStatusLabelStatus
+            // 
+            this.toolStripStatusLabelStatus.Name = "toolStripStatusLabelStatus";
+            this.toolStripStatusLabelStatus.Size = new System.Drawing.Size(44, 17);
+            this.toolStripStatusLabelStatus.Text = "未登录";
+            // 
             // statusProgressBar
             // 
             this.statusProgressBar.Name = "statusProgressBar";
@@ -271,7 +277,7 @@
             this.mainPanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.mainPanelLeft.Location = new System.Drawing.Point(0, 0);
             this.mainPanelLeft.Name = "mainPanelLeft";
-            this.mainPanelLeft.Size = new System.Drawing.Size(400, 472);
+            this.mainPanelLeft.Size = new System.Drawing.Size(400, 451);
             this.mainPanelLeft.TabIndex = 1;
             // 
             // listView4Local
@@ -280,7 +286,7 @@
             this.listView4Local.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView4Local.Location = new System.Drawing.Point(0, 60);
             this.listView4Local.Name = "listView4Local";
-            this.listView4Local.Size = new System.Drawing.Size(400, 412);
+            this.listView4Local.Size = new System.Drawing.Size(400, 391);
             this.listView4Local.TabIndex = 4;
             this.listView4Local.UseCompatibleStateImageBehavior = false;
             // 
@@ -445,7 +451,7 @@
             this.mainPanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanelRight.Location = new System.Drawing.Point(400, 0);
             this.mainPanelRight.Name = "mainPanelRight";
-            this.mainPanelRight.Size = new System.Drawing.Size(406, 472);
+            this.mainPanelRight.Size = new System.Drawing.Size(406, 451);
             this.mainPanelRight.TabIndex = 2;
             // 
             // listView4Remote
@@ -454,7 +460,7 @@
             this.listView4Remote.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView4Remote.Location = new System.Drawing.Point(0, 60);
             this.listView4Remote.Name = "listView4Remote";
-            this.listView4Remote.Size = new System.Drawing.Size(406, 412);
+            this.listView4Remote.Size = new System.Drawing.Size(406, 391);
             this.listView4Remote.TabIndex = 3;
             this.listView4Remote.UseCompatibleStateImageBehavior = false;
             // 
@@ -521,6 +527,17 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
+            // 
+            // toolStripBtnConnect
+            // 
+            this.toolStripBtnConnect.AutoSize = false;
+            this.toolStripBtnConnect.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnConnect.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnConnect.Image")));
+            this.toolStripBtnConnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnConnect.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnConnect.Name = "toolStripBtnConnect";
+            this.toolStripBtnConnect.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnConnect.Text = "toolStripButton1";
             // 
             // toolStripBtnDisConnect
             // 
@@ -604,32 +621,15 @@
             this.splitter1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.splitter1.Location = new System.Drawing.Point(400, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 472);
+            this.splitter1.Size = new System.Drawing.Size(3, 451);
             this.splitter1.TabIndex = 3;
             this.splitter1.TabStop = false;
-            // 
-            // toolStripBtnConnect
-            // 
-            this.toolStripBtnConnect.AutoSize = false;
-            this.toolStripBtnConnect.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnConnect.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnConnect.Image")));
-            this.toolStripBtnConnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnConnect.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnConnect.Name = "toolStripBtnConnect";
-            this.toolStripBtnConnect.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnConnect.Text = "toolStripButton1";
-            // 
-            // toolStripStatusLabelStatus
-            // 
-            this.toolStripStatusLabelStatus.Name = "toolStripStatusLabelStatus";
-            this.toolStripStatusLabelStatus.Size = new System.Drawing.Size(44, 17);
-            this.toolStripStatusLabelStatus.Text = "未登录";
             // 
             // UpYunMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 494);
+            this.ClientSize = new System.Drawing.Size(806, 473);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.mainPanelRight);
             this.Controls.Add(this.mainPanelLeft);

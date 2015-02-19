@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _97world_UpYun
 {
-    public partial class UpYunMain : UpYunBase
+    public partial class UpYunBase : Form
     {
-        public UpYunMain()
+        public UpYunBase()
         {
             InitializeComponent();
         }
