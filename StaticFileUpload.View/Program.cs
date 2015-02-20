@@ -16,7 +16,7 @@ namespace StaticFileUpload.View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StaticFileUploadMain());
+            Application.Run(new StaticFileUploadAbout());
         }
     }
 }
