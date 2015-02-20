@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StaticFileUpload.Log;
 
 namespace StaticFileUpload.View
 {
@@ -14,9 +15,12 @@ namespace StaticFileUpload.View
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StaticFileUploadAbout());
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new StaticFileUploadAbout());
+            SFULog sfuLog = new SFULog();
+            log4net.ILog testLog = sfuLog.GetLogIns();
+            testLog.Debug("test11111111");
         }
     }
 }

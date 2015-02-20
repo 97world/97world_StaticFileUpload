@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StaticFileUpload.Common
 {
-    public class Class1
+    public class StaticFileUploadConfig
     {
     }
 }

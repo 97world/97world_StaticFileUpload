@@ -11,7 +11,8 @@
     <AssemblyName>StaticFileUpload</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,6 +36,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\Library.DLL\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -142,6 +146,10 @@
     <ProjectReference Include="..\StaticFileUpload.Business\StaticFileUpload.Business.csproj">
       <Project>{17cab1b0-3382-4934-b226-48b5b69b6659}</Project>
       <Name>StaticFileUpload.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StaticFileUpload.Log\StaticFileUpload.Log.csproj">
+      <Project>{9ae2e4d4-87e3-4e5f-b5cf-6e2c4cc8686b}</Project>
+      <Name>StaticFileUpload.Log</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

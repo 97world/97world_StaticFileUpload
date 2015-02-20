@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.QiNiu", "Library.Qi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticFileUpload.Interface", "StaticFileUpload.Interface\StaticFileUpload.Interface.csproj", "{98BBEFBE-5238-4607-AAE9-3C9B3C497A63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticFileUpload.Log", "StaticFileUpload.Log\StaticFileUpload.Log.csproj", "{9AE2E4D4-87E3-4E5F-B5CF-6E2C4CC8686B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{98BBEFBE-5238-4607-AAE9-3C9B3C497A63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98BBEFBE-5238-4607-AAE9-3C9B3C497A63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98BBEFBE-5238-4607-AAE9-3C9B3C497A63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AE2E4D4-87E3-4E5F-B5CF-6E2C4CC8686B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE2E4D4-87E3-4E5F-B5CF-6E2C4CC8686B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE2E4D4-87E3-4E5F-B5CF-6E2C4CC8686B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE2E4D4-87E3-4E5F-B5CF-6E2C4CC8686B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
