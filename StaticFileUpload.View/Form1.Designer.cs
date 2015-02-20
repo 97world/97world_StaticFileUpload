@@ -1,4 +1,4 @@
-﻿namespace _97world_UpYun
+﻿namespace StaticFileUpload.View
 {
     partial class Form1
     {

@@ -7,10 +7,11 @@
     <ProjectGuid>{B6309C91-DB04-48F2-8834-9C49EE8F2EBE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_97world_UpYun</RootNamespace>
-    <AssemblyName>97world_UpYun</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>StaticFileUpload.View</RootNamespace>
+    <AssemblyName>StaticFileUpload.View</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -107,6 +108,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\up_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StaticFileUpload.Business\StaticFileUpload.Business.csproj">
+      <Project>{17cab1b0-3382-4934-b226-48b5b69b6659}</Project>
+      <Name>StaticFileUpload.Business</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

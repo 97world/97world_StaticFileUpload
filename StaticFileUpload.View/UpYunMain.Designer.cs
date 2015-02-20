@@ -1,4 +1,4 @@
-﻿namespace _97world_UpYun
+﻿namespace StaticFileUpload.View
 {
     partial class UpYunMain
     {
@@ -61,7 +61,7 @@
             this.toolStripBtnRootPath = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnTrans4Remote = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnCopyLink = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnAddFolder4Remote = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnNewFolder4Remote = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnRefresh4Remote = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnDel4Remote = new System.Windows.Forms.ToolStripButton();
             this.mainPanelLeft = new System.Windows.Forms.Panel();
@@ -73,11 +73,11 @@
             this.toolStripLabelLocal = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBtnComputer = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnDesktop = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnMyDocument = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDesktop = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnTrans4Local = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnAddFolder4Local = new System.Windows.Forms.ToolStripButton();
-            this.toolStripAddFile = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnNewFolder4Local = new System.Windows.Forms.ToolStripButton();
+            this.toolStripNewFile = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnRefresh4Local = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnDel4Local = new System.Windows.Forms.ToolStripButton();
             this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
@@ -208,7 +208,7 @@
             this.splitter1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.splitter1.Location = new System.Drawing.Point(400, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 448);
+            this.splitter1.Size = new System.Drawing.Size(3, 385);
             this.splitter1.TabIndex = 3;
             this.splitter1.TabStop = false;
             // 
@@ -221,7 +221,7 @@
             this.mainPanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanelRight.Location = new System.Drawing.Point(400, 0);
             this.mainPanelRight.Name = "mainPanelRight";
-            this.mainPanelRight.Size = new System.Drawing.Size(406, 448);
+            this.mainPanelRight.Size = new System.Drawing.Size(406, 385);
             this.mainPanelRight.TabIndex = 2;
             // 
             // listView4Remote
@@ -230,7 +230,7 @@
             this.listView4Remote.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView4Remote.Location = new System.Drawing.Point(0, 60);
             this.listView4Remote.Name = "listView4Remote";
-            this.listView4Remote.Size = new System.Drawing.Size(406, 388);
+            this.listView4Remote.Size = new System.Drawing.Size(406, 325);
             this.listView4Remote.TabIndex = 3;
             this.listView4Remote.UseCompatibleStateImageBehavior = false;
             // 
@@ -246,7 +246,7 @@
             // 
             // btnParentDirectory4Remote
             // 
-            this.btnParentDirectory4Remote.Image = global::_97world_UpYun.Properties.Resources.up_16x16;
+            this.btnParentDirectory4Remote.Image = global::StaticFileUpload.View.Properties.Resources.up_16x16;
             this.btnParentDirectory4Remote.Location = new System.Drawing.Point(3, -1);
             this.btnParentDirectory4Remote.Name = "btnParentDirectory4Remote";
             this.btnParentDirectory4Remote.Size = new System.Drawing.Size(25, 22);
@@ -276,7 +276,7 @@
             this.toolStripBtnRootPath,
             this.toolStripBtnTrans4Remote,
             this.toolStripBtnCopyLink,
-            this.toolStripBtnAddFolder4Remote,
+            this.toolStripBtnNewFolder4Remote,
             this.toolStripBtnRefresh4Remote,
             this.toolStripBtnDel4Remote});
             this.toolStripRemote.Location = new System.Drawing.Point(0, 0);
@@ -358,17 +358,17 @@
             this.toolStripBtnCopyLink.Text = "toolStripButton1";
             this.toolStripBtnCopyLink.ToolTipText = "复制链接";
             // 
-            // toolStripBtnAddFolder4Remote
+            // toolStripBtnNewFolder4Remote
             // 
-            this.toolStripBtnAddFolder4Remote.AutoSize = false;
-            this.toolStripBtnAddFolder4Remote.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnAddFolder4Remote.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnAddFolder4Remote.Image")));
-            this.toolStripBtnAddFolder4Remote.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnAddFolder4Remote.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnAddFolder4Remote.Name = "toolStripBtnAddFolder4Remote";
-            this.toolStripBtnAddFolder4Remote.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnAddFolder4Remote.Text = "toolStripButton1";
-            this.toolStripBtnAddFolder4Remote.ToolTipText = "新建文件夹";
+            this.toolStripBtnNewFolder4Remote.AutoSize = false;
+            this.toolStripBtnNewFolder4Remote.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnNewFolder4Remote.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnNewFolder4Remote.Image")));
+            this.toolStripBtnNewFolder4Remote.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnNewFolder4Remote.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnNewFolder4Remote.Name = "toolStripBtnNewFolder4Remote";
+            this.toolStripBtnNewFolder4Remote.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnNewFolder4Remote.Text = "toolStripButton1";
+            this.toolStripBtnNewFolder4Remote.ToolTipText = "新建文件夹";
             // 
             // toolStripBtnRefresh4Remote
             // 
@@ -403,7 +403,7 @@
             this.mainPanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.mainPanelLeft.Location = new System.Drawing.Point(0, 0);
             this.mainPanelLeft.Name = "mainPanelLeft";
-            this.mainPanelLeft.Size = new System.Drawing.Size(400, 448);
+            this.mainPanelLeft.Size = new System.Drawing.Size(400, 385);
             this.mainPanelLeft.TabIndex = 1;
             // 
             // listView4Local
@@ -412,7 +412,7 @@
             this.listView4Local.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView4Local.Location = new System.Drawing.Point(0, 60);
             this.listView4Local.Name = "listView4Local";
-            this.listView4Local.Size = new System.Drawing.Size(400, 388);
+            this.listView4Local.Size = new System.Drawing.Size(400, 325);
             this.listView4Local.TabIndex = 4;
             this.listView4Local.UseCompatibleStateImageBehavior = false;
             // 
@@ -428,7 +428,7 @@
             // 
             // btnParentDirectory4Local
             // 
-            this.btnParentDirectory4Local.Image = global::_97world_UpYun.Properties.Resources.up_16x16;
+            this.btnParentDirectory4Local.Image = global::StaticFileUpload.View.Properties.Resources.up_16x16;
             this.btnParentDirectory4Local.Location = new System.Drawing.Point(0, -1);
             this.btnParentDirectory4Local.Name = "btnParentDirectory4Local";
             this.btnParentDirectory4Local.Size = new System.Drawing.Size(25, 22);
@@ -457,8 +457,8 @@
             this.toolStripBtnMyDocument,
             this.toolStripBtnDesktop,
             this.toolStripBtnTrans4Local,
-            this.toolStripBtnAddFolder4Local,
-            this.toolStripAddFile,
+            this.toolStripBtnNewFolder4Local,
+            this.toolStripNewFile,
             this.toolStripBtnRefresh4Local,
             this.toolStripBtnDel4Local});
             this.toolStripLeft.Location = new System.Drawing.Point(0, 0);
@@ -492,18 +492,6 @@
             this.toolStripBtnComputer.Text = "toolStripButton1";
             this.toolStripBtnComputer.ToolTipText = "这台电脑";
             // 
-            // toolStripBtnDesktop
-            // 
-            this.toolStripBtnDesktop.AutoSize = false;
-            this.toolStripBtnDesktop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnDesktop.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDesktop.Image")));
-            this.toolStripBtnDesktop.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnDesktop.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnDesktop.Name = "toolStripBtnDesktop";
-            this.toolStripBtnDesktop.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnDesktop.Text = "toolStripButton1";
-            this.toolStripBtnDesktop.ToolTipText = "桌面";
-            // 
             // toolStripBtnMyDocument
             // 
             this.toolStripBtnMyDocument.AutoSize = false;
@@ -515,6 +503,18 @@
             this.toolStripBtnMyDocument.Size = new System.Drawing.Size(37, 37);
             this.toolStripBtnMyDocument.Text = "toolStripButton2";
             this.toolStripBtnMyDocument.ToolTipText = "文档";
+            // 
+            // toolStripBtnDesktop
+            // 
+            this.toolStripBtnDesktop.AutoSize = false;
+            this.toolStripBtnDesktop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnDesktop.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDesktop.Image")));
+            this.toolStripBtnDesktop.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnDesktop.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnDesktop.Name = "toolStripBtnDesktop";
+            this.toolStripBtnDesktop.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnDesktop.Text = "toolStripButton1";
+            this.toolStripBtnDesktop.ToolTipText = "桌面";
             // 
             // toolStripBtnTrans4Local
             // 
@@ -528,29 +528,29 @@
             this.toolStripBtnTrans4Local.Text = "toolStripButton1";
             this.toolStripBtnTrans4Local.ToolTipText = "开始传输";
             // 
-            // toolStripBtnAddFolder4Local
+            // toolStripBtnNewFolder4Local
             // 
-            this.toolStripBtnAddFolder4Local.AutoSize = false;
-            this.toolStripBtnAddFolder4Local.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnAddFolder4Local.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnAddFolder4Local.Image")));
-            this.toolStripBtnAddFolder4Local.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnAddFolder4Local.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnAddFolder4Local.Name = "toolStripBtnAddFolder4Local";
-            this.toolStripBtnAddFolder4Local.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnAddFolder4Local.Text = "toolStripButton1";
-            this.toolStripBtnAddFolder4Local.ToolTipText = "新建文件夹";
+            this.toolStripBtnNewFolder4Local.AutoSize = false;
+            this.toolStripBtnNewFolder4Local.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnNewFolder4Local.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnNewFolder4Local.Image")));
+            this.toolStripBtnNewFolder4Local.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnNewFolder4Local.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnNewFolder4Local.Name = "toolStripBtnNewFolder4Local";
+            this.toolStripBtnNewFolder4Local.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnNewFolder4Local.Text = "toolStripButton1";
+            this.toolStripBtnNewFolder4Local.ToolTipText = "新建文件夹";
             // 
-            // toolStripAddFile
+            // toolStripNewFile
             // 
-            this.toolStripAddFile.AutoSize = false;
-            this.toolStripAddFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripAddFile.Image = ((System.Drawing.Image)(resources.GetObject("toolStripAddFile.Image")));
-            this.toolStripAddFile.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripAddFile.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripAddFile.Name = "toolStripAddFile";
-            this.toolStripAddFile.Size = new System.Drawing.Size(37, 37);
-            this.toolStripAddFile.Text = "toolStripButton1";
-            this.toolStripAddFile.ToolTipText = "新建空白文件";
+            this.toolStripNewFile.AutoSize = false;
+            this.toolStripNewFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripNewFile.Image = ((System.Drawing.Image)(resources.GetObject("toolStripNewFile.Image")));
+            this.toolStripNewFile.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripNewFile.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripNewFile.Name = "toolStripNewFile";
+            this.toolStripNewFile.Size = new System.Drawing.Size(37, 37);
+            this.toolStripNewFile.Text = "toolStripButton1";
+            this.toolStripNewFile.ToolTipText = "新建空白文件";
             // 
             // toolStripBtnRefresh4Local
             // 
@@ -587,7 +587,7 @@
             this.statusLabelBlank,
             this.toolStripStatusLabelStatus,
             this.statusProgressBar});
-            this.mainStatusStrip.Location = new System.Drawing.Point(0, 448);
+            this.mainStatusStrip.Location = new System.Drawing.Point(0, 385);
             this.mainStatusStrip.Name = "mainStatusStrip";
             this.mainStatusStrip.Size = new System.Drawing.Size(806, 22);
             this.mainStatusStrip.TabIndex = 0;
@@ -645,7 +645,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 470);
+            this.ClientSize = new System.Drawing.Size(806, 407);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.mainPanelRight);
             this.Controls.Add(this.mainPanelLeft);
@@ -702,14 +702,14 @@
         private System.Windows.Forms.ToolStripButton toolStripBtnDesktop;
         private System.Windows.Forms.ToolStripButton toolStripBtnTrans4Local;
         private System.Windows.Forms.ToolStripLabel toolStripLabelLocal;
-        private System.Windows.Forms.ToolStripButton toolStripBtnAddFolder4Local;
-        private System.Windows.Forms.ToolStripButton toolStripAddFile;
+        private System.Windows.Forms.ToolStripButton toolStripBtnNewFolder4Local;
+        private System.Windows.Forms.ToolStripButton toolStripNewFile;
         private System.Windows.Forms.ToolStripButton toolStripBtnRefresh4Local;
         private System.Windows.Forms.ToolStripButton toolStripBtnDel4Local;
         private System.Windows.Forms.ToolStrip toolStripRemote;
         private System.Windows.Forms.ToolStripLabel toolStripLabelRemote;
         private System.Windows.Forms.ToolStripButton toolStripBtnRootPath;
-        private System.Windows.Forms.ToolStripButton toolStripBtnAddFolder4Remote;
+        private System.Windows.Forms.ToolStripButton toolStripBtnNewFolder4Remote;
         private System.Windows.Forms.ToolStripButton toolStripBtnRefresh4Remote;
         private System.Windows.Forms.ToolStripButton toolStripBtnDisConnect;
         private System.Windows.Forms.ToolStripButton toolStripBtnTrans4Remote;

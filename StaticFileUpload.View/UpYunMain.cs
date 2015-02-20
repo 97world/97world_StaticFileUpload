@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _97world_UpYun
+namespace StaticFileUpload.View
 {
-    public partial class UpYunBase : Form
+    public partial class UpYunMain : UpYunBase
     {
-        public UpYunBase()
+        public UpYunMain()
         {
             InitializeComponent();
         }
