@@ -1,6 +1,6 @@
 ﻿namespace StaticFileUpload.View
 {
-    partial class UpYunMain
+    partial class StaticFileUploadMain
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpYunMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaticFileUploadMain));
             this.mainMenuBar = new System.Windows.Forms.MainMenu(this.components);
             this.menuItemOperator = new System.Windows.Forms.MenuItem();
             this.menuItemLogin = new System.Windows.Forms.MenuItem();
@@ -51,35 +51,17 @@
             this.mainPanelRight = new System.Windows.Forms.Panel();
             this.listView4Remote = new System.Windows.Forms.ListView();
             this.panelAddressBar4Remote = new System.Windows.Forms.Panel();
-            this.btnParentDirectory4Remote = new System.Windows.Forms.Button();
             this.comboBoxPath4Remote = new System.Windows.Forms.ComboBox();
             this.toolStripRemote = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelRemote = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBtnConnect = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnDisConnect = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnRootPath = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnTrans4Remote = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnCopyLink = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnNewFolder4Remote = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnRefresh4Remote = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnDel4Remote = new System.Windows.Forms.ToolStripButton();
             this.mainPanelLeft = new System.Windows.Forms.Panel();
             this.listView4Local = new System.Windows.Forms.ListView();
             this.panelAddressBar4Local = new System.Windows.Forms.Panel();
-            this.btnParentDirectory4Local = new System.Windows.Forms.Button();
             this.comboBoxPath4Local = new System.Windows.Forms.ComboBox();
             this.toolStripLeft = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelLocal = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBtnComputer = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnMyDocument = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnDesktop = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnTrans4Local = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnNewFolder4Local = new System.Windows.Forms.ToolStripButton();
-            this.toolStripNewFile = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnRefresh4Local = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnDel4Local = new System.Windows.Forms.ToolStripButton();
             this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.statusLabelOperatorLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusLabelOperatorName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -89,6 +71,24 @@
             this.statusLabelBlank = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusProgressBar = new System.Windows.Forms.ToolStripProgressBar();
+            this.btnParentDirectory4Remote = new System.Windows.Forms.Button();
+            this.toolStripBtnConnect = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDisConnect = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnRootPath = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnTrans4Remote = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnCopyLink = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnNewFolder4Remote = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnRefresh4Remote = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDel4Remote = new System.Windows.Forms.ToolStripButton();
+            this.btnParentDirectory4Local = new System.Windows.Forms.Button();
+            this.toolStripBtnComputer = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnMyDocument = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDesktop = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnTrans4Local = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnNewFolder4Local = new System.Windows.Forms.ToolStripButton();
+            this.toolStripNewFile = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnRefresh4Local = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDel4Local = new System.Windows.Forms.ToolStripButton();
             this.mainPanelRight.SuspendLayout();
             this.panelAddressBar4Remote.SuspendLayout();
             this.toolStripRemote.SuspendLayout();
@@ -208,7 +208,7 @@
             this.splitter1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.splitter1.Location = new System.Drawing.Point(400, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 385);
+            this.splitter1.Size = new System.Drawing.Size(3, 364);
             this.splitter1.TabIndex = 3;
             this.splitter1.TabStop = false;
             // 
@@ -221,7 +221,7 @@
             this.mainPanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanelRight.Location = new System.Drawing.Point(400, 0);
             this.mainPanelRight.Name = "mainPanelRight";
-            this.mainPanelRight.Size = new System.Drawing.Size(406, 385);
+            this.mainPanelRight.Size = new System.Drawing.Size(406, 364);
             this.mainPanelRight.TabIndex = 2;
             // 
             // listView4Remote
@@ -230,7 +230,7 @@
             this.listView4Remote.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView4Remote.Location = new System.Drawing.Point(0, 60);
             this.listView4Remote.Name = "listView4Remote";
-            this.listView4Remote.Size = new System.Drawing.Size(406, 325);
+            this.listView4Remote.Size = new System.Drawing.Size(406, 304);
             this.listView4Remote.TabIndex = 3;
             this.listView4Remote.UseCompatibleStateImageBehavior = false;
             // 
@@ -243,15 +243,6 @@
             this.panelAddressBar4Remote.Name = "panelAddressBar4Remote";
             this.panelAddressBar4Remote.Size = new System.Drawing.Size(406, 20);
             this.panelAddressBar4Remote.TabIndex = 2;
-            // 
-            // btnParentDirectory4Remote
-            // 
-            this.btnParentDirectory4Remote.Image = global::StaticFileUpload.View.Properties.Resources.up_16x16;
-            this.btnParentDirectory4Remote.Location = new System.Drawing.Point(3, -1);
-            this.btnParentDirectory4Remote.Name = "btnParentDirectory4Remote";
-            this.btnParentDirectory4Remote.Size = new System.Drawing.Size(25, 22);
-            this.btnParentDirectory4Remote.TabIndex = 3;
-            this.btnParentDirectory4Remote.UseVisualStyleBackColor = true;
             // 
             // comboBoxPath4Remote
             // 
@@ -297,6 +288,157 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
+            // 
+            // mainPanelLeft
+            // 
+            this.mainPanelLeft.BackColor = System.Drawing.SystemColors.Control;
+            this.mainPanelLeft.Controls.Add(this.listView4Local);
+            this.mainPanelLeft.Controls.Add(this.panelAddressBar4Local);
+            this.mainPanelLeft.Controls.Add(this.toolStripLeft);
+            this.mainPanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mainPanelLeft.Location = new System.Drawing.Point(0, 0);
+            this.mainPanelLeft.Name = "mainPanelLeft";
+            this.mainPanelLeft.Size = new System.Drawing.Size(400, 364);
+            this.mainPanelLeft.TabIndex = 1;
+            // 
+            // listView4Local
+            // 
+            this.listView4Local.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView4Local.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView4Local.Location = new System.Drawing.Point(0, 60);
+            this.listView4Local.Name = "listView4Local";
+            this.listView4Local.Size = new System.Drawing.Size(400, 304);
+            this.listView4Local.TabIndex = 4;
+            this.listView4Local.UseCompatibleStateImageBehavior = false;
+            // 
+            // panelAddressBar4Local
+            // 
+            this.panelAddressBar4Local.Controls.Add(this.btnParentDirectory4Local);
+            this.panelAddressBar4Local.Controls.Add(this.comboBoxPath4Local);
+            this.panelAddressBar4Local.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelAddressBar4Local.Location = new System.Drawing.Point(0, 40);
+            this.panelAddressBar4Local.Name = "panelAddressBar4Local";
+            this.panelAddressBar4Local.Size = new System.Drawing.Size(400, 20);
+            this.panelAddressBar4Local.TabIndex = 3;
+            // 
+            // comboBoxPath4Local
+            // 
+            this.comboBoxPath4Local.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxPath4Local.FormattingEnabled = true;
+            this.comboBoxPath4Local.Location = new System.Drawing.Point(25, 0);
+            this.comboBoxPath4Local.Name = "comboBoxPath4Local";
+            this.comboBoxPath4Local.Size = new System.Drawing.Size(373, 20);
+            this.comboBoxPath4Local.TabIndex = 2;
+            // 
+            // toolStripLeft
+            // 
+            this.toolStripLeft.AutoSize = false;
+            this.toolStripLeft.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripLeft.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabelLocal,
+            this.toolStripSeparator1,
+            this.toolStripBtnComputer,
+            this.toolStripBtnMyDocument,
+            this.toolStripBtnDesktop,
+            this.toolStripBtnTrans4Local,
+            this.toolStripBtnNewFolder4Local,
+            this.toolStripNewFile,
+            this.toolStripBtnRefresh4Local,
+            this.toolStripBtnDel4Local});
+            this.toolStripLeft.Location = new System.Drawing.Point(0, 0);
+            this.toolStripLeft.Name = "toolStripLeft";
+            this.toolStripLeft.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStripLeft.Size = new System.Drawing.Size(400, 40);
+            this.toolStripLeft.TabIndex = 0;
+            this.toolStripLeft.Text = "toolStrip1";
+            // 
+            // toolStripLabelLocal
+            // 
+            this.toolStripLabelLocal.Enabled = false;
+            this.toolStripLabelLocal.Name = "toolStripLabelLocal";
+            this.toolStripLabelLocal.Size = new System.Drawing.Size(80, 37);
+            this.toolStripLabelLocal.Text = "  本地浏览器 ";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 40);
+            // 
+            // mainStatusStrip
+            // 
+            this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusLabelOperatorLabel,
+            this.statusLabelOperatorName,
+            this.statusLabelDelimiter,
+            this.statusLabelUseSpaceLabel,
+            this.statusLabelUseSpaceValue,
+            this.statusLabelBlank,
+            this.toolStripStatusLabelStatus,
+            this.statusProgressBar});
+            this.mainStatusStrip.Location = new System.Drawing.Point(0, 364);
+            this.mainStatusStrip.Name = "mainStatusStrip";
+            this.mainStatusStrip.Size = new System.Drawing.Size(806, 22);
+            this.mainStatusStrip.TabIndex = 0;
+            this.mainStatusStrip.Text = "statusStrip1";
+            // 
+            // statusLabelOperatorLabel
+            // 
+            this.statusLabelOperatorLabel.Name = "statusLabelOperatorLabel";
+            this.statusLabelOperatorLabel.Size = new System.Drawing.Size(47, 17);
+            this.statusLabelOperatorLabel.Text = "操作员:";
+            // 
+            // statusLabelOperatorName
+            // 
+            this.statusLabelOperatorName.Name = "statusLabelOperatorName";
+            this.statusLabelOperatorName.Size = new System.Drawing.Size(44, 17);
+            this.statusLabelOperatorName.Text = "未登录";
+            // 
+            // statusLabelDelimiter
+            // 
+            this.statusLabelDelimiter.Name = "statusLabelDelimiter";
+            this.statusLabelDelimiter.Size = new System.Drawing.Size(11, 17);
+            this.statusLabelDelimiter.Text = "|";
+            // 
+            // statusLabelUseSpaceLabel
+            // 
+            this.statusLabelUseSpaceLabel.Name = "statusLabelUseSpaceLabel";
+            this.statusLabelUseSpaceLabel.Size = new System.Drawing.Size(71, 17);
+            this.statusLabelUseSpaceLabel.Text = "空间已使用:";
+            // 
+            // statusLabelUseSpaceValue
+            // 
+            this.statusLabelUseSpaceValue.Name = "statusLabelUseSpaceValue";
+            this.statusLabelUseSpaceValue.Size = new System.Drawing.Size(44, 17);
+            this.statusLabelUseSpaceValue.Text = "未登录";
+            // 
+            // statusLabelBlank
+            // 
+            this.statusLabelBlank.Name = "statusLabelBlank";
+            this.statusLabelBlank.Size = new System.Drawing.Size(378, 17);
+            this.statusLabelBlank.Spring = true;
+            // 
+            // toolStripStatusLabelStatus
+            // 
+            this.toolStripStatusLabelStatus.Name = "toolStripStatusLabelStatus";
+            this.toolStripStatusLabelStatus.Size = new System.Drawing.Size(44, 17);
+            this.toolStripStatusLabelStatus.Text = "未登录";
+            // 
+            // statusProgressBar
+            // 
+            this.statusProgressBar.Name = "statusProgressBar";
+            this.statusProgressBar.Size = new System.Drawing.Size(150, 16);
+            this.statusProgressBar.Value = 10;
+            // 
+            // btnParentDirectory4Remote
+            // 
+            this.btnParentDirectory4Remote.Image = global::StaticFileUpload.View.Properties.Resources.up_16x16;
+            this.btnParentDirectory4Remote.Location = new System.Drawing.Point(3, -1);
+            this.btnParentDirectory4Remote.Name = "btnParentDirectory4Remote";
+            this.btnParentDirectory4Remote.Size = new System.Drawing.Size(25, 22);
+            this.btnParentDirectory4Remote.TabIndex = 3;
+            this.btnParentDirectory4Remote.UseVisualStyleBackColor = true;
             // 
             // toolStripBtnConnect
             // 
@@ -394,38 +536,6 @@
             this.toolStripBtnDel4Remote.Text = "toolStripButton1";
             this.toolStripBtnDel4Remote.ToolTipText = "删除";
             // 
-            // mainPanelLeft
-            // 
-            this.mainPanelLeft.BackColor = System.Drawing.SystemColors.Control;
-            this.mainPanelLeft.Controls.Add(this.listView4Local);
-            this.mainPanelLeft.Controls.Add(this.panelAddressBar4Local);
-            this.mainPanelLeft.Controls.Add(this.toolStripLeft);
-            this.mainPanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.mainPanelLeft.Location = new System.Drawing.Point(0, 0);
-            this.mainPanelLeft.Name = "mainPanelLeft";
-            this.mainPanelLeft.Size = new System.Drawing.Size(400, 385);
-            this.mainPanelLeft.TabIndex = 1;
-            // 
-            // listView4Local
-            // 
-            this.listView4Local.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView4Local.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView4Local.Location = new System.Drawing.Point(0, 60);
-            this.listView4Local.Name = "listView4Local";
-            this.listView4Local.Size = new System.Drawing.Size(400, 325);
-            this.listView4Local.TabIndex = 4;
-            this.listView4Local.UseCompatibleStateImageBehavior = false;
-            // 
-            // panelAddressBar4Local
-            // 
-            this.panelAddressBar4Local.Controls.Add(this.btnParentDirectory4Local);
-            this.panelAddressBar4Local.Controls.Add(this.comboBoxPath4Local);
-            this.panelAddressBar4Local.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAddressBar4Local.Location = new System.Drawing.Point(0, 40);
-            this.panelAddressBar4Local.Name = "panelAddressBar4Local";
-            this.panelAddressBar4Local.Size = new System.Drawing.Size(400, 20);
-            this.panelAddressBar4Local.TabIndex = 3;
-            // 
             // btnParentDirectory4Local
             // 
             this.btnParentDirectory4Local.Image = global::StaticFileUpload.View.Properties.Resources.up_16x16;
@@ -434,51 +544,6 @@
             this.btnParentDirectory4Local.Size = new System.Drawing.Size(25, 22);
             this.btnParentDirectory4Local.TabIndex = 3;
             this.btnParentDirectory4Local.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxPath4Local
-            // 
-            this.comboBoxPath4Local.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxPath4Local.FormattingEnabled = true;
-            this.comboBoxPath4Local.Location = new System.Drawing.Point(25, 0);
-            this.comboBoxPath4Local.Name = "comboBoxPath4Local";
-            this.comboBoxPath4Local.Size = new System.Drawing.Size(373, 20);
-            this.comboBoxPath4Local.TabIndex = 2;
-            // 
-            // toolStripLeft
-            // 
-            this.toolStripLeft.AutoSize = false;
-            this.toolStripLeft.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStripLeft.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabelLocal,
-            this.toolStripSeparator1,
-            this.toolStripBtnComputer,
-            this.toolStripBtnMyDocument,
-            this.toolStripBtnDesktop,
-            this.toolStripBtnTrans4Local,
-            this.toolStripBtnNewFolder4Local,
-            this.toolStripNewFile,
-            this.toolStripBtnRefresh4Local,
-            this.toolStripBtnDel4Local});
-            this.toolStripLeft.Location = new System.Drawing.Point(0, 0);
-            this.toolStripLeft.Name = "toolStripLeft";
-            this.toolStripLeft.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripLeft.Size = new System.Drawing.Size(400, 40);
-            this.toolStripLeft.TabIndex = 0;
-            this.toolStripLeft.Text = "toolStrip1";
-            // 
-            // toolStripLabelLocal
-            // 
-            this.toolStripLabelLocal.Enabled = false;
-            this.toolStripLabelLocal.Name = "toolStripLabelLocal";
-            this.toolStripLabelLocal.Size = new System.Drawing.Size(80, 37);
-            this.toolStripLabelLocal.Text = "  本地浏览器 ";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 40);
             // 
             // toolStripBtnComputer
             // 
@@ -576,82 +641,17 @@
             this.toolStripBtnDel4Local.Text = "toolStripButton1";
             this.toolStripBtnDel4Local.ToolTipText = "删除";
             // 
-            // mainStatusStrip
-            // 
-            this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusLabelOperatorLabel,
-            this.statusLabelOperatorName,
-            this.statusLabelDelimiter,
-            this.statusLabelUseSpaceLabel,
-            this.statusLabelUseSpaceValue,
-            this.statusLabelBlank,
-            this.toolStripStatusLabelStatus,
-            this.statusProgressBar});
-            this.mainStatusStrip.Location = new System.Drawing.Point(0, 385);
-            this.mainStatusStrip.Name = "mainStatusStrip";
-            this.mainStatusStrip.Size = new System.Drawing.Size(806, 22);
-            this.mainStatusStrip.TabIndex = 0;
-            this.mainStatusStrip.Text = "statusStrip1";
-            // 
-            // statusLabelOperatorLabel
-            // 
-            this.statusLabelOperatorLabel.Name = "statusLabelOperatorLabel";
-            this.statusLabelOperatorLabel.Size = new System.Drawing.Size(47, 17);
-            this.statusLabelOperatorLabel.Text = "操作员:";
-            // 
-            // statusLabelOperatorName
-            // 
-            this.statusLabelOperatorName.Name = "statusLabelOperatorName";
-            this.statusLabelOperatorName.Size = new System.Drawing.Size(44, 17);
-            this.statusLabelOperatorName.Text = "未登录";
-            // 
-            // statusLabelDelimiter
-            // 
-            this.statusLabelDelimiter.Name = "statusLabelDelimiter";
-            this.statusLabelDelimiter.Size = new System.Drawing.Size(11, 17);
-            this.statusLabelDelimiter.Text = "|";
-            // 
-            // statusLabelUseSpaceLabel
-            // 
-            this.statusLabelUseSpaceLabel.Name = "statusLabelUseSpaceLabel";
-            this.statusLabelUseSpaceLabel.Size = new System.Drawing.Size(71, 17);
-            this.statusLabelUseSpaceLabel.Text = "空间已使用:";
-            // 
-            // statusLabelUseSpaceValue
-            // 
-            this.statusLabelUseSpaceValue.Name = "statusLabelUseSpaceValue";
-            this.statusLabelUseSpaceValue.Size = new System.Drawing.Size(44, 17);
-            this.statusLabelUseSpaceValue.Text = "未登录";
-            // 
-            // statusLabelBlank
-            // 
-            this.statusLabelBlank.Name = "statusLabelBlank";
-            this.statusLabelBlank.Size = new System.Drawing.Size(378, 17);
-            this.statusLabelBlank.Spring = true;
-            // 
-            // toolStripStatusLabelStatus
-            // 
-            this.toolStripStatusLabelStatus.Name = "toolStripStatusLabelStatus";
-            this.toolStripStatusLabelStatus.Size = new System.Drawing.Size(44, 17);
-            this.toolStripStatusLabelStatus.Text = "未登录";
-            // 
-            // statusProgressBar
-            // 
-            this.statusProgressBar.Name = "statusProgressBar";
-            this.statusProgressBar.Size = new System.Drawing.Size(150, 16);
-            this.statusProgressBar.Value = 10;
-            // 
-            // UpYunMain
+            // StaticFileUploadMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 407);
+            this.ClientSize = new System.Drawing.Size(806, 386);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.mainPanelRight);
             this.Controls.Add(this.mainPanelLeft);
             this.Controls.Add(this.mainStatusStrip);
             this.Menu = this.mainMenuBar;
-            this.Name = "UpYunMain";
+            this.Name = "StaticFileUploadMain";
             this.Text = "又拍云客户端 Ver.1.0.1";
             this.mainPanelRight.ResumeLayout(false);
             this.panelAddressBar4Remote.ResumeLayout(false);

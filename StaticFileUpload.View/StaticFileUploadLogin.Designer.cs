@@ -1,6 +1,6 @@
 ﻿namespace StaticFileUpload.View
 {
-    partial class UpYunLogin
+    partial class StaticFileUploadLogin
     {
         /// <summary>
         /// Required designer variable.

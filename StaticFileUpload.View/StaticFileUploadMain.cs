@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StaticFileUpload.View
 {
-    public partial class UpYunLogin : UpYunBase
+    public partial class StaticFileUploadMain : StaticFileUploadBase
     {
-        public UpYunLogin()
+        public StaticFileUploadMain()
         {
             InitializeComponent();
         }
