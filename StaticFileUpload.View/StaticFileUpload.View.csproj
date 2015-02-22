@@ -147,9 +147,9 @@
       <Project>{17cab1b0-3382-4934-b226-48b5b69b6659}</Project>
       <Name>StaticFileUpload.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\StaticFileUpload.Log\StaticFileUpload.Log.csproj">
-      <Project>{9ae2e4d4-87e3-4e5f-b5cf-6e2c4cc8686b}</Project>
-      <Name>StaticFileUpload.Log</Name>
+    <ProjectReference Include="..\StaticFileUpload.Common\StaticFileUpload.Common.csproj">
+      <Project>{48893977-88a9-4979-bb46-2b28db1b3e4b}</Project>
+      <Name>StaticFileUpload.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

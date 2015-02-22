@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using StaticFileUpload.Log;
+
+using System.Text;
+using System.IO;
+using StaticFileUpload.Common;
+using System.Xml.Serialization;
 
 namespace StaticFileUpload.View
 {
@@ -18,9 +22,24 @@ namespace StaticFileUpload.View
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new StaticFileUploadAbout());
-            SFULog sfuLog = new SFULog();
-            log4net.ILog testLog = sfuLog.GetLogIns();
-            testLog.Debug("test11111111");
+            TestClass testClass = new TestClass();
+            testClass.testA = 123;
+            testClass.testB = 123;
+            string path = "D:\\GitHub\\97world_UpYun\\StaticFileUpload.View\\bin\\Debug";
+            //string testSTr = XmlUtil.Serializer(typeof(TestClass), testClass);
+            //XmlUtil.SaveToXml(path,testClass,typeof(TestClass)," ");
+            string testStr = XmlHelper.Serialize(testClass);
+            string test = "";
         }
+
+        [Serializable] 
+        public class TestClass
+        {
+            [XmlElement("testA")]
+            public int testA { get; set; }
+            [XmlElement("testB")]
+            public int testB { get; set; }
+        }
+
     }
 }
