@@ -13,95 +13,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace StaticFileUpload.Common
 {
-    /// <summary>
-    /// Xml序列化与反序列化
-    /// </summary>
     public static class XmlUtil
-    {
-        #region 反序列化
-        public static object Deserialize(Type type, string xml)
-        {
-            try
-            {
-                using (StringReader sr = new StringReader(xml))
-                {
-                    XmlSerializer xmlSerializer = new XmlSerializer(type);
-                    return xmlSerializer.Deserialize(sr);
-                }
-            }
-            catch (Exception ex)
-            {
-                SFULogger.DEFAULT.Error(ex);
-                return null;
-            }
-        }
-        
-        public static object Deserialize(Type type, Stream stream)
-        {
-            XmlSerializer xmldes = new XmlSerializer(type);
-            return xmldes.Deserialize(stream);
-        }
-        #endregion
-
-        #region 序列化
-        public static string Serializer(Type type, object obj)
-        {
-            MemoryStream memoryStream = new MemoryStream();
-            XmlSerializer xmlSerializer = new XmlSerializer(type);
-            try
-            {
-                xmlSerializer.Serialize(memoryStream, obj);
-            }
-            catch (InvalidOperationException ex)
-            {
-                SFULogger.DEFAULT.Error(ex);
-                throw;
-            }
-            memoryStream.Position = 0;
-            StreamReader streamReader = new StreamReader(memoryStream);
-            string xmlStr = streamReader.ReadToEnd();
-
-            streamReader.Dispose();
-            memoryStream.Dispose();
-
-            return xmlStr;
-        }
-
-        #endregion
-
-        public static void SaveToXml(string filePath, object sourceObj, Type type, string xmlRootName)
-        {
-            if (!string.IsNullOrWhiteSpace(filePath) && sourceObj != null)
-            {
-                type = type != null ? type : sourceObj.GetType();
-
-                using (StreamWriter writer = new StreamWriter(filePath))
-                {
-                    System.Xml.Serialization.XmlSerializer xmlSerializer = string.IsNullOrWhiteSpace(xmlRootName) ?
-                        new System.Xml.Serialization.XmlSerializer(type) :
-                        new System.Xml.Serialization.XmlSerializer(type, new XmlRootAttribute(xmlRootName));
-                    xmlSerializer.Serialize(writer, sourceObj);
-                }
-            }
-        }
-
-        public static object LoadFromXml(string filePath, Type type)
-        {
-            object result = null;
-
-            if (File.Exists(filePath))
-            {
-                using (StreamReader reader = new StreamReader(filePath))
-                {
-                    System.Xml.Serialization.XmlSerializer xmlSerializer = new System.Xml.Serialization.XmlSerializer(type);
-                    result = xmlSerializer.Deserialize(reader);
-                }
-            }
-
-            return result;
-        }
-    }
-    public static class XmlHelper
     {
         private static void XmlSerializeInternal(Stream stream, object o, Encoding encoding)
         {
@@ -203,32 +115,6 @@ namespace StaticFileUpload.Common
             string xml = File.ReadAllText(path, encoding);
             return XmlDeserialize<T>(xml, encoding);
         }
-
-        public static string Serialize(object obj)
-        {
-            IFormatter formatter = new BinaryFormatter();
-            MemoryStream stream = new MemoryStream();
-            formatter.Serialize(stream, obj);
-            stream.Position = 0;
-            byte[] buffer = new byte[stream.Length];
-            stream.Read(buffer, 0, buffer.Length);
-            stream.Position = 0;
-            StreamReader streamReader = new StreamReader(stream, Encoding.Unicode);
-            string xmlStr = streamReader.ReadToEnd();
-            stream.Flush();
-            stream.Close();
-            return xmlStr;
-        }
-
-        public static object Desrialize(string str)
-        {
-            IFormatter formatter = new BinaryFormatter();
-            byte[] buffer = Convert.FromBase64String(str);
-            MemoryStream stream = new MemoryStream(buffer);
-            object result = formatter.Deserialize(stream);
-            stream.Flush();
-            stream.Close();
-            return result;
-        }
     }
+
 }

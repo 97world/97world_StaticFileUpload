@@ -8,6 +8,7 @@ using System.Text;
 using System.IO;
 using StaticFileUpload.Common;
 using System.Xml.Serialization;
+using StaticFileUpload.Model;
 
 namespace StaticFileUpload.View
 {
@@ -19,27 +20,18 @@ namespace StaticFileUpload.View
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new StaticFileUploadAbout());
-            TestClass testClass = new TestClass();
-            testClass.testA = 123;
-            testClass.testB = 123;
-            string path = "D:\\GitHub\\97world_UpYun\\StaticFileUpload.View\\bin\\Debug";
-            //string testSTr = XmlUtil.Serializer(typeof(TestClass), testClass);
-            //XmlUtil.SaveToXml(path,testClass,typeof(TestClass)," ");
-            string testStr = XmlHelper.Serialize(testClass);
-            string test = "";
-        }
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new StaticFileUploadAbout());
 
-        [Serializable] 
-        public class TestClass
-        {
-            [XmlElement("testA")]
-            public int testA { get; set; }
-            [XmlElement("testB")]
-            public int testB { get; set; }
+            //OperatorInfo operatorInfo = SFUSetting.GetInstance().operatorInfo;
+            //LoginInfo loginInfo = SFUSetting.GetInstance().loginInfo;
+            //string testStr = "";
+            //operatorInfo.netSelection = "中国电信网络";
+            //SFUSetting.Save();
+            //string testStr2 = "";
         }
 
     }
 }
+
