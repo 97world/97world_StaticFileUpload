@@ -15,6 +15,14 @@ namespace StaticFileUpload.View
         public Form1()
         {
             InitializeComponent();
+            InitForm();
+        }
+
+        public void InitForm()
+        {
+            Icon testIcon = Icon.ExtractAssociatedIcon(AppDomain.CurrentDomain.BaseDirectory);
+            string testStr = AppDomain.CurrentDomain.BaseDirectory;
+            pictureBox1.Image = testIcon.ToBitmap();
         }
     }
 }
