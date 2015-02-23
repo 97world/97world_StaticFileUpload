@@ -15,6 +15,8 @@ namespace StaticFileUpload.View
         public StaticFileUploadMain()
         {
             InitializeComponent();
+            listView4Local.ContextMenu = contextMenu4Local;
+            listView4Remote.ContextMenu = contextMenu4Remote;
         }
     }
 }
