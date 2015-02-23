@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace StaticFileUpload.Business
+namespace StaticFileUpload.Interface
 {
-    public class Class1
+    public interface ILocalBrowser
     {
+
     }
 }

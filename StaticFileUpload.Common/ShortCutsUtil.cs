@@ -14,7 +14,7 @@ namespace StaticFileUpload.Common
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        public static string getTarget(string path)
+        public static string GetTarget(string path)
         {
             IWshShortcut _shortcut = null;
             IWshShell_Class shell = new IWshShell_Class();
