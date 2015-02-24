@@ -50,7 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShortCutsUtil.cs" />
     <Compile Include="SysContextMenuUtil.cs" />
-    <Compile Include="SysCopyingUtil.cs" />
+    <Compile Include="SysFileOrDirActionUtil.cs" />
     <Compile Include="XmlUtil.cs" />
   </ItemGroup>
   <ItemGroup>

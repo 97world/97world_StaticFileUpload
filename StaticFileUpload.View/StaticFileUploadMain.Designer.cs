@@ -55,19 +55,10 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageListRemoteListViewIcon = new System.Windows.Forms.ImageList(this.components);
             this.panelAddressBar4Remote = new System.Windows.Forms.Panel();
-            this.btnParentDirectory4Remote = new System.Windows.Forms.Button();
             this.comboBoxPath4Remote = new System.Windows.Forms.ComboBox();
             this.toolStripRemote = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelRemote = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBtnConnect = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnDisConnect = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnRootPath = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnTrans4Remote = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnCopyLink = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnNewFolder4Remote = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnRefresh4Remote = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnDel4Remote = new System.Windows.Forms.ToolStripButton();
             this.mainPanelLeft = new System.Windows.Forms.Panel();
             this.listView4Local = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -75,19 +66,10 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageListLocalListViewIcon = new System.Windows.Forms.ImageList(this.components);
             this.panelAddressBar4Local = new System.Windows.Forms.Panel();
-            this.btnParentDirectory4Local = new System.Windows.Forms.Button();
             this.comboBoxPath4Local = new System.Windows.Forms.ComboBox();
             this.toolStripLeft = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelLocal = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBtnComputer = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnMyDocument = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnDesktop = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnTrans4Local = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnNewFolder4Local = new System.Windows.Forms.ToolStripButton();
-            this.toolStripNewFile = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnRefresh4Local = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnDel4Local = new System.Windows.Forms.ToolStripButton();
             this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.statusLabelOperatorLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusLabelOperatorName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -126,6 +108,24 @@
             this.menuItemNewFolder4Remote = new System.Windows.Forms.MenuItem();
             this.menuItem12 = new System.Windows.Forms.MenuItem();
             this.menuItemRefresh4Remote = new System.Windows.Forms.MenuItem();
+            this.btnParentDirectory4Remote = new System.Windows.Forms.Button();
+            this.toolStripBtnConnect = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDisConnect = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnRootPath = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnTrans4Remote = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnCopyLink = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnNewFolder4Remote = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnRefresh4Remote = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDel4Remote = new System.Windows.Forms.ToolStripButton();
+            this.btnParentDirectory4Local = new System.Windows.Forms.Button();
+            this.toolStripBtnComputer = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnMyDocument = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDesktop = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnTrans4Local = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnNewFolder4Local = new System.Windows.Forms.ToolStripButton();
+            this.toolStripNewFile = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnRefresh4Local = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDel4Local = new System.Windows.Forms.ToolStripButton();
             this.mainPanelRight.SuspendLayout();
             this.panelAddressBar4Remote.SuspendLayout();
             this.toolStripRemote.SuspendLayout();
@@ -245,7 +245,7 @@
             this.splitter1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.splitter1.Location = new System.Drawing.Point(449, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 614);
+            this.splitter1.Size = new System.Drawing.Size(3, 593);
             this.splitter1.TabIndex = 3;
             this.splitter1.TabStop = false;
             // 
@@ -258,7 +258,7 @@
             this.mainPanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanelRight.Location = new System.Drawing.Point(449, 0);
             this.mainPanelRight.Name = "mainPanelRight";
-            this.mainPanelRight.Size = new System.Drawing.Size(448, 614);
+            this.mainPanelRight.Size = new System.Drawing.Size(448, 593);
             this.mainPanelRight.TabIndex = 2;
             // 
             // listView4Remote
@@ -273,7 +273,7 @@
             this.listView4Remote.FullRowSelect = true;
             this.listView4Remote.Location = new System.Drawing.Point(0, 60);
             this.listView4Remote.Name = "listView4Remote";
-            this.listView4Remote.Size = new System.Drawing.Size(448, 554);
+            this.listView4Remote.Size = new System.Drawing.Size(448, 533);
             this.listView4Remote.SmallImageList = this.imageListRemoteListViewIcon;
             this.listView4Remote.TabIndex = 3;
             this.listView4Remote.UseCompatibleStateImageBehavior = false;
@@ -309,15 +309,6 @@
             this.panelAddressBar4Remote.Name = "panelAddressBar4Remote";
             this.panelAddressBar4Remote.Size = new System.Drawing.Size(448, 20);
             this.panelAddressBar4Remote.TabIndex = 2;
-            // 
-            // btnParentDirectory4Remote
-            // 
-            this.btnParentDirectory4Remote.Image = global::StaticFileUpload.View.Properties.Resources.up_16x16;
-            this.btnParentDirectory4Remote.Location = new System.Drawing.Point(3, -1);
-            this.btnParentDirectory4Remote.Name = "btnParentDirectory4Remote";
-            this.btnParentDirectory4Remote.Size = new System.Drawing.Size(25, 22);
-            this.btnParentDirectory4Remote.TabIndex = 3;
-            this.btnParentDirectory4Remote.UseVisualStyleBackColor = true;
             // 
             // comboBoxPath4Remote
             // 
@@ -364,102 +355,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
             // 
-            // toolStripBtnConnect
-            // 
-            this.toolStripBtnConnect.AutoSize = false;
-            this.toolStripBtnConnect.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnConnect.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnConnect.Image")));
-            this.toolStripBtnConnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnConnect.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnConnect.Name = "toolStripBtnConnect";
-            this.toolStripBtnConnect.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnConnect.Text = "toolStripButton1";
-            this.toolStripBtnConnect.ToolTipText = "连接";
-            // 
-            // toolStripBtnDisConnect
-            // 
-            this.toolStripBtnDisConnect.AutoSize = false;
-            this.toolStripBtnDisConnect.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnDisConnect.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDisConnect.Image")));
-            this.toolStripBtnDisConnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnDisConnect.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnDisConnect.Name = "toolStripBtnDisConnect";
-            this.toolStripBtnDisConnect.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnDisConnect.Text = "toolStripButton1";
-            this.toolStripBtnDisConnect.ToolTipText = "断开连接";
-            // 
-            // toolStripBtnRootPath
-            // 
-            this.toolStripBtnRootPath.AutoSize = false;
-            this.toolStripBtnRootPath.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnRootPath.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnRootPath.Image")));
-            this.toolStripBtnRootPath.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnRootPath.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnRootPath.Name = "toolStripBtnRootPath";
-            this.toolStripBtnRootPath.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnRootPath.Text = "toolStripButton1";
-            this.toolStripBtnRootPath.ToolTipText = "返回根目录";
-            // 
-            // toolStripBtnTrans4Remote
-            // 
-            this.toolStripBtnTrans4Remote.AutoSize = false;
-            this.toolStripBtnTrans4Remote.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnTrans4Remote.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnTrans4Remote.Image")));
-            this.toolStripBtnTrans4Remote.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnTrans4Remote.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnTrans4Remote.Name = "toolStripBtnTrans4Remote";
-            this.toolStripBtnTrans4Remote.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnTrans4Remote.Text = "toolStripButton1";
-            this.toolStripBtnTrans4Remote.ToolTipText = "开始传输";
-            // 
-            // toolStripBtnCopyLink
-            // 
-            this.toolStripBtnCopyLink.AutoSize = false;
-            this.toolStripBtnCopyLink.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnCopyLink.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnCopyLink.Image")));
-            this.toolStripBtnCopyLink.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnCopyLink.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnCopyLink.Name = "toolStripBtnCopyLink";
-            this.toolStripBtnCopyLink.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnCopyLink.Text = "toolStripButton1";
-            this.toolStripBtnCopyLink.ToolTipText = "复制链接";
-            // 
-            // toolStripBtnNewFolder4Remote
-            // 
-            this.toolStripBtnNewFolder4Remote.AutoSize = false;
-            this.toolStripBtnNewFolder4Remote.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnNewFolder4Remote.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnNewFolder4Remote.Image")));
-            this.toolStripBtnNewFolder4Remote.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnNewFolder4Remote.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnNewFolder4Remote.Name = "toolStripBtnNewFolder4Remote";
-            this.toolStripBtnNewFolder4Remote.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnNewFolder4Remote.Text = "toolStripButton1";
-            this.toolStripBtnNewFolder4Remote.ToolTipText = "新建文件夹";
-            // 
-            // toolStripBtnRefresh4Remote
-            // 
-            this.toolStripBtnRefresh4Remote.AutoSize = false;
-            this.toolStripBtnRefresh4Remote.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnRefresh4Remote.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnRefresh4Remote.Image")));
-            this.toolStripBtnRefresh4Remote.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnRefresh4Remote.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnRefresh4Remote.Name = "toolStripBtnRefresh4Remote";
-            this.toolStripBtnRefresh4Remote.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnRefresh4Remote.Text = "toolStripButton1";
-            this.toolStripBtnRefresh4Remote.ToolTipText = "刷新";
-            // 
-            // toolStripBtnDel4Remote
-            // 
-            this.toolStripBtnDel4Remote.AutoSize = false;
-            this.toolStripBtnDel4Remote.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnDel4Remote.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDel4Remote.Image")));
-            this.toolStripBtnDel4Remote.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnDel4Remote.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnDel4Remote.Name = "toolStripBtnDel4Remote";
-            this.toolStripBtnDel4Remote.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnDel4Remote.Text = "toolStripButton1";
-            this.toolStripBtnDel4Remote.ToolTipText = "删除";
-            // 
             // mainPanelLeft
             // 
             this.mainPanelLeft.BackColor = System.Drawing.SystemColors.Control;
@@ -469,7 +364,7 @@
             this.mainPanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.mainPanelLeft.Location = new System.Drawing.Point(0, 0);
             this.mainPanelLeft.Name = "mainPanelLeft";
-            this.mainPanelLeft.Size = new System.Drawing.Size(449, 614);
+            this.mainPanelLeft.Size = new System.Drawing.Size(449, 593);
             this.mainPanelLeft.TabIndex = 1;
             // 
             // listView4Local
@@ -484,11 +379,12 @@
             this.listView4Local.FullRowSelect = true;
             this.listView4Local.Location = new System.Drawing.Point(0, 60);
             this.listView4Local.Name = "listView4Local";
-            this.listView4Local.Size = new System.Drawing.Size(449, 554);
+            this.listView4Local.Size = new System.Drawing.Size(449, 533);
             this.listView4Local.SmallImageList = this.imageListLocalListViewIcon;
             this.listView4Local.TabIndex = 4;
             this.listView4Local.UseCompatibleStateImageBehavior = false;
             this.listView4Local.View = System.Windows.Forms.View.Details;
+            this.listView4Local.DoubleClick += new System.EventHandler(this.listView4Local_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -521,15 +417,6 @@
             this.panelAddressBar4Local.Size = new System.Drawing.Size(449, 20);
             this.panelAddressBar4Local.TabIndex = 3;
             // 
-            // btnParentDirectory4Local
-            // 
-            this.btnParentDirectory4Local.Image = global::StaticFileUpload.View.Properties.Resources.up_16x16;
-            this.btnParentDirectory4Local.Location = new System.Drawing.Point(0, -1);
-            this.btnParentDirectory4Local.Name = "btnParentDirectory4Local";
-            this.btnParentDirectory4Local.Size = new System.Drawing.Size(25, 22);
-            this.btnParentDirectory4Local.TabIndex = 3;
-            this.btnParentDirectory4Local.UseVisualStyleBackColor = true;
-            // 
             // comboBoxPath4Local
             // 
             this.comboBoxPath4Local.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -540,6 +427,8 @@
             this.comboBoxPath4Local.Name = "comboBoxPath4Local";
             this.comboBoxPath4Local.Size = new System.Drawing.Size(422, 20);
             this.comboBoxPath4Local.TabIndex = 2;
+            this.comboBoxPath4Local.SelectedIndexChanged += new System.EventHandler(this.comboBoxPath4Local_SelectedIndexChanged);
+            this.comboBoxPath4Local.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxPath4Local_KeyDown);
             // 
             // toolStripLeft
             // 
@@ -575,102 +464,6 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 40);
             // 
-            // toolStripBtnComputer
-            // 
-            this.toolStripBtnComputer.AutoSize = false;
-            this.toolStripBtnComputer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnComputer.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnComputer.Image")));
-            this.toolStripBtnComputer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnComputer.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnComputer.Name = "toolStripBtnComputer";
-            this.toolStripBtnComputer.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnComputer.Text = "toolStripButton1";
-            this.toolStripBtnComputer.ToolTipText = "这台电脑";
-            // 
-            // toolStripBtnMyDocument
-            // 
-            this.toolStripBtnMyDocument.AutoSize = false;
-            this.toolStripBtnMyDocument.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnMyDocument.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnMyDocument.Image")));
-            this.toolStripBtnMyDocument.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnMyDocument.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnMyDocument.Name = "toolStripBtnMyDocument";
-            this.toolStripBtnMyDocument.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnMyDocument.Text = "toolStripButton2";
-            this.toolStripBtnMyDocument.ToolTipText = "文档";
-            // 
-            // toolStripBtnDesktop
-            // 
-            this.toolStripBtnDesktop.AutoSize = false;
-            this.toolStripBtnDesktop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnDesktop.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDesktop.Image")));
-            this.toolStripBtnDesktop.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnDesktop.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnDesktop.Name = "toolStripBtnDesktop";
-            this.toolStripBtnDesktop.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnDesktop.Text = "toolStripButton1";
-            this.toolStripBtnDesktop.ToolTipText = "桌面";
-            // 
-            // toolStripBtnTrans4Local
-            // 
-            this.toolStripBtnTrans4Local.AutoSize = false;
-            this.toolStripBtnTrans4Local.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnTrans4Local.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnTrans4Local.Image")));
-            this.toolStripBtnTrans4Local.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnTrans4Local.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnTrans4Local.Name = "toolStripBtnTrans4Local";
-            this.toolStripBtnTrans4Local.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnTrans4Local.Text = "toolStripButton1";
-            this.toolStripBtnTrans4Local.ToolTipText = "开始传输";
-            // 
-            // toolStripBtnNewFolder4Local
-            // 
-            this.toolStripBtnNewFolder4Local.AutoSize = false;
-            this.toolStripBtnNewFolder4Local.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnNewFolder4Local.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnNewFolder4Local.Image")));
-            this.toolStripBtnNewFolder4Local.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnNewFolder4Local.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnNewFolder4Local.Name = "toolStripBtnNewFolder4Local";
-            this.toolStripBtnNewFolder4Local.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnNewFolder4Local.Text = "toolStripButton1";
-            this.toolStripBtnNewFolder4Local.ToolTipText = "新建文件夹";
-            // 
-            // toolStripNewFile
-            // 
-            this.toolStripNewFile.AutoSize = false;
-            this.toolStripNewFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripNewFile.Image = ((System.Drawing.Image)(resources.GetObject("toolStripNewFile.Image")));
-            this.toolStripNewFile.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripNewFile.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripNewFile.Name = "toolStripNewFile";
-            this.toolStripNewFile.Size = new System.Drawing.Size(37, 37);
-            this.toolStripNewFile.Text = "toolStripButton1";
-            this.toolStripNewFile.ToolTipText = "新建空白文件";
-            // 
-            // toolStripBtnRefresh4Local
-            // 
-            this.toolStripBtnRefresh4Local.AutoSize = false;
-            this.toolStripBtnRefresh4Local.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnRefresh4Local.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnRefresh4Local.Image")));
-            this.toolStripBtnRefresh4Local.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnRefresh4Local.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnRefresh4Local.Name = "toolStripBtnRefresh4Local";
-            this.toolStripBtnRefresh4Local.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnRefresh4Local.Text = "toolStripButton1";
-            this.toolStripBtnRefresh4Local.ToolTipText = "刷新";
-            // 
-            // toolStripBtnDel4Local
-            // 
-            this.toolStripBtnDel4Local.AutoSize = false;
-            this.toolStripBtnDel4Local.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnDel4Local.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDel4Local.Image")));
-            this.toolStripBtnDel4Local.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtnDel4Local.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnDel4Local.Name = "toolStripBtnDel4Local";
-            this.toolStripBtnDel4Local.Size = new System.Drawing.Size(37, 37);
-            this.toolStripBtnDel4Local.Text = "toolStripButton1";
-            this.toolStripBtnDel4Local.ToolTipText = "删除";
-            // 
             // mainStatusStrip
             // 
             this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -682,7 +475,7 @@
             this.statusLabelBlank,
             this.toolStripStatusLabelStatus,
             this.statusProgressBar});
-            this.mainStatusStrip.Location = new System.Drawing.Point(0, 614);
+            this.mainStatusStrip.Location = new System.Drawing.Point(0, 593);
             this.mainStatusStrip.Name = "mainStatusStrip";
             this.mainStatusStrip.Size = new System.Drawing.Size(897, 22);
             this.mainStatusStrip.TabIndex = 0;
@@ -921,18 +714,237 @@
             this.menuItemRefresh4Remote.Shortcut = System.Windows.Forms.Shortcut.F5;
             this.menuItemRefresh4Remote.Text = "刷新(&Z)";
             // 
+            // btnParentDirectory4Remote
+            // 
+            this.btnParentDirectory4Remote.Image = global::StaticFileUpload.View.Properties.Resources.up_16x16;
+            this.btnParentDirectory4Remote.Location = new System.Drawing.Point(3, -1);
+            this.btnParentDirectory4Remote.Name = "btnParentDirectory4Remote";
+            this.btnParentDirectory4Remote.Size = new System.Drawing.Size(25, 22);
+            this.btnParentDirectory4Remote.TabIndex = 3;
+            this.btnParentDirectory4Remote.UseVisualStyleBackColor = true;
+            // 
+            // toolStripBtnConnect
+            // 
+            this.toolStripBtnConnect.AutoSize = false;
+            this.toolStripBtnConnect.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnConnect.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnConnect.Image")));
+            this.toolStripBtnConnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnConnect.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnConnect.Name = "toolStripBtnConnect";
+            this.toolStripBtnConnect.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnConnect.Text = "toolStripButton1";
+            this.toolStripBtnConnect.ToolTipText = "连接";
+            // 
+            // toolStripBtnDisConnect
+            // 
+            this.toolStripBtnDisConnect.AutoSize = false;
+            this.toolStripBtnDisConnect.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnDisConnect.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDisConnect.Image")));
+            this.toolStripBtnDisConnect.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnDisConnect.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnDisConnect.Name = "toolStripBtnDisConnect";
+            this.toolStripBtnDisConnect.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnDisConnect.Text = "toolStripButton1";
+            this.toolStripBtnDisConnect.ToolTipText = "断开连接";
+            // 
+            // toolStripBtnRootPath
+            // 
+            this.toolStripBtnRootPath.AutoSize = false;
+            this.toolStripBtnRootPath.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnRootPath.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnRootPath.Image")));
+            this.toolStripBtnRootPath.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnRootPath.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnRootPath.Name = "toolStripBtnRootPath";
+            this.toolStripBtnRootPath.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnRootPath.Text = "toolStripButton1";
+            this.toolStripBtnRootPath.ToolTipText = "返回根目录";
+            // 
+            // toolStripBtnTrans4Remote
+            // 
+            this.toolStripBtnTrans4Remote.AutoSize = false;
+            this.toolStripBtnTrans4Remote.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnTrans4Remote.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnTrans4Remote.Image")));
+            this.toolStripBtnTrans4Remote.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnTrans4Remote.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnTrans4Remote.Name = "toolStripBtnTrans4Remote";
+            this.toolStripBtnTrans4Remote.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnTrans4Remote.Text = "toolStripButton1";
+            this.toolStripBtnTrans4Remote.ToolTipText = "开始传输";
+            // 
+            // toolStripBtnCopyLink
+            // 
+            this.toolStripBtnCopyLink.AutoSize = false;
+            this.toolStripBtnCopyLink.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnCopyLink.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnCopyLink.Image")));
+            this.toolStripBtnCopyLink.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnCopyLink.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnCopyLink.Name = "toolStripBtnCopyLink";
+            this.toolStripBtnCopyLink.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnCopyLink.Text = "toolStripButton1";
+            this.toolStripBtnCopyLink.ToolTipText = "复制链接";
+            // 
+            // toolStripBtnNewFolder4Remote
+            // 
+            this.toolStripBtnNewFolder4Remote.AutoSize = false;
+            this.toolStripBtnNewFolder4Remote.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnNewFolder4Remote.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnNewFolder4Remote.Image")));
+            this.toolStripBtnNewFolder4Remote.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnNewFolder4Remote.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnNewFolder4Remote.Name = "toolStripBtnNewFolder4Remote";
+            this.toolStripBtnNewFolder4Remote.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnNewFolder4Remote.Text = "toolStripButton1";
+            this.toolStripBtnNewFolder4Remote.ToolTipText = "新建文件夹";
+            // 
+            // toolStripBtnRefresh4Remote
+            // 
+            this.toolStripBtnRefresh4Remote.AutoSize = false;
+            this.toolStripBtnRefresh4Remote.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnRefresh4Remote.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnRefresh4Remote.Image")));
+            this.toolStripBtnRefresh4Remote.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnRefresh4Remote.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnRefresh4Remote.Name = "toolStripBtnRefresh4Remote";
+            this.toolStripBtnRefresh4Remote.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnRefresh4Remote.Text = "toolStripButton1";
+            this.toolStripBtnRefresh4Remote.ToolTipText = "刷新";
+            // 
+            // toolStripBtnDel4Remote
+            // 
+            this.toolStripBtnDel4Remote.AutoSize = false;
+            this.toolStripBtnDel4Remote.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnDel4Remote.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDel4Remote.Image")));
+            this.toolStripBtnDel4Remote.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnDel4Remote.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnDel4Remote.Name = "toolStripBtnDel4Remote";
+            this.toolStripBtnDel4Remote.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnDel4Remote.Text = "toolStripButton1";
+            this.toolStripBtnDel4Remote.ToolTipText = "删除";
+            // 
+            // btnParentDirectory4Local
+            // 
+            this.btnParentDirectory4Local.Image = global::StaticFileUpload.View.Properties.Resources.up_16x16;
+            this.btnParentDirectory4Local.Location = new System.Drawing.Point(0, -1);
+            this.btnParentDirectory4Local.Name = "btnParentDirectory4Local";
+            this.btnParentDirectory4Local.Size = new System.Drawing.Size(25, 22);
+            this.btnParentDirectory4Local.TabIndex = 3;
+            this.btnParentDirectory4Local.UseVisualStyleBackColor = true;
+            this.btnParentDirectory4Local.Click += new System.EventHandler(this.btnParentDirectory4Local_Click);
+            // 
+            // toolStripBtnComputer
+            // 
+            this.toolStripBtnComputer.AutoSize = false;
+            this.toolStripBtnComputer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnComputer.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnComputer.Image")));
+            this.toolStripBtnComputer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnComputer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnComputer.Name = "toolStripBtnComputer";
+            this.toolStripBtnComputer.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnComputer.Text = "toolStripButton1";
+            this.toolStripBtnComputer.ToolTipText = "这台电脑";
+            this.toolStripBtnComputer.Click += new System.EventHandler(this.toolStripBtnComputer_Click);
+            // 
+            // toolStripBtnMyDocument
+            // 
+            this.toolStripBtnMyDocument.AutoSize = false;
+            this.toolStripBtnMyDocument.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnMyDocument.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnMyDocument.Image")));
+            this.toolStripBtnMyDocument.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnMyDocument.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnMyDocument.Name = "toolStripBtnMyDocument";
+            this.toolStripBtnMyDocument.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnMyDocument.Text = "toolStripButton2";
+            this.toolStripBtnMyDocument.ToolTipText = "文档";
+            this.toolStripBtnMyDocument.Click += new System.EventHandler(this.toolStripBtnMyDocument_Click);
+            // 
+            // toolStripBtnDesktop
+            // 
+            this.toolStripBtnDesktop.AutoSize = false;
+            this.toolStripBtnDesktop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnDesktop.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDesktop.Image")));
+            this.toolStripBtnDesktop.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnDesktop.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnDesktop.Name = "toolStripBtnDesktop";
+            this.toolStripBtnDesktop.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnDesktop.Text = "toolStripButton1";
+            this.toolStripBtnDesktop.ToolTipText = "桌面";
+            this.toolStripBtnDesktop.Click += new System.EventHandler(this.toolStripBtnDesktop_Click);
+            // 
+            // toolStripBtnTrans4Local
+            // 
+            this.toolStripBtnTrans4Local.AutoSize = false;
+            this.toolStripBtnTrans4Local.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnTrans4Local.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnTrans4Local.Image")));
+            this.toolStripBtnTrans4Local.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnTrans4Local.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnTrans4Local.Name = "toolStripBtnTrans4Local";
+            this.toolStripBtnTrans4Local.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnTrans4Local.Text = "toolStripButton1";
+            this.toolStripBtnTrans4Local.ToolTipText = "开始传输";
+            this.toolStripBtnTrans4Local.Click += new System.EventHandler(this.toolStripBtnTrans4Local_Click);
+            // 
+            // toolStripBtnNewFolder4Local
+            // 
+            this.toolStripBtnNewFolder4Local.AutoSize = false;
+            this.toolStripBtnNewFolder4Local.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnNewFolder4Local.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnNewFolder4Local.Image")));
+            this.toolStripBtnNewFolder4Local.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnNewFolder4Local.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnNewFolder4Local.Name = "toolStripBtnNewFolder4Local";
+            this.toolStripBtnNewFolder4Local.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnNewFolder4Local.Text = "toolStripButton1";
+            this.toolStripBtnNewFolder4Local.ToolTipText = "新建文件夹";
+            this.toolStripBtnNewFolder4Local.Click += new System.EventHandler(this.toolStripBtnNewFolder4Local_Click);
+            // 
+            // toolStripNewFile
+            // 
+            this.toolStripNewFile.AutoSize = false;
+            this.toolStripNewFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripNewFile.Image = ((System.Drawing.Image)(resources.GetObject("toolStripNewFile.Image")));
+            this.toolStripNewFile.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripNewFile.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripNewFile.Name = "toolStripNewFile";
+            this.toolStripNewFile.Size = new System.Drawing.Size(37, 37);
+            this.toolStripNewFile.Text = "toolStripButton1";
+            this.toolStripNewFile.ToolTipText = "新建空白文件";
+            this.toolStripNewFile.Click += new System.EventHandler(this.toolStripNewFile_Click);
+            // 
+            // toolStripBtnRefresh4Local
+            // 
+            this.toolStripBtnRefresh4Local.AutoSize = false;
+            this.toolStripBtnRefresh4Local.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnRefresh4Local.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnRefresh4Local.Image")));
+            this.toolStripBtnRefresh4Local.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnRefresh4Local.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnRefresh4Local.Name = "toolStripBtnRefresh4Local";
+            this.toolStripBtnRefresh4Local.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnRefresh4Local.Text = "toolStripButton1";
+            this.toolStripBtnRefresh4Local.ToolTipText = "刷新";
+            this.toolStripBtnRefresh4Local.Click += new System.EventHandler(this.toolStripBtnRefresh4Local_Click);
+            // 
+            // toolStripBtnDel4Local
+            // 
+            this.toolStripBtnDel4Local.AutoSize = false;
+            this.toolStripBtnDel4Local.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnDel4Local.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDel4Local.Image")));
+            this.toolStripBtnDel4Local.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBtnDel4Local.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnDel4Local.Name = "toolStripBtnDel4Local";
+            this.toolStripBtnDel4Local.Size = new System.Drawing.Size(37, 37);
+            this.toolStripBtnDel4Local.Text = "toolStripButton1";
+            this.toolStripBtnDel4Local.ToolTipText = "删除";
+            this.toolStripBtnDel4Local.Click += new System.EventHandler(this.toolStripBtnDel4Local_Click);
+            // 
             // StaticFileUploadMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 636);
+            this.ClientSize = new System.Drawing.Size(897, 615);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.mainPanelRight);
             this.Controls.Add(this.mainPanelLeft);
             this.Controls.Add(this.mainStatusStrip);
             this.Menu = this.mainMenuBar;
             this.Name = "StaticFileUploadMain";
-            this.Text = "又拍云客户端 Ver.1.0.1";
+            this.Text = "StaticFileUpload 静态文件上传工具 Ver.1.0.1";
             this.mainPanelRight.ResumeLayout(false);
             this.panelAddressBar4Remote.ResumeLayout(false);
             this.toolStripRemote.ResumeLayout(false);

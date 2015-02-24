@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 
 namespace StaticFileUpload.Common
 {
-    public class SysCopyingUtil
+    public class SysFileOrDirActionUtil
     {
         public enum FileFuncFlags : uint
         {
@@ -55,5 +55,17 @@ namespace StaticFileUpload.Common
         }
         [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
         public static extern int SHFileOperation([In] ref SHFILEOPSTRUCT lpFileOp);
+
+        public static int DeleteFileOrDirectory(StringBuilder pathSb)
+        {
+            SHFILEOPSTRUCT shfileopstruct = new SHFILEOPSTRUCT();
+            shfileopstruct.hwnd = IntPtr.Zero;
+            shfileopstruct.wFunc = FileFuncFlags.FO_DELETE;
+            shfileopstruct.pFrom = pathSb.ToString();
+            shfileopstruct.hNameMappings = IntPtr.Zero;
+            shfileopstruct.fFlags = FILEOP_FLAGS.FOF_ALLOWUNDO;
+            shfileopstruct.fAnyOperationsAborted = true;
+            return SHFileOperation(ref shfileopstruct);
+        }
     }
 }

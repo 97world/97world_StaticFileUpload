@@ -9,6 +9,18 @@ namespace StaticFileUpload.Interface
 {
     public interface ILocalBrowser
     {
-        void LoadListView(ListView.ListViewItemCollection listViewItems, ImageList.ImageCollection imageListItems, string lcoalPath);
+        void LoadListView(ListView listView, ImageList imageList, string lcoalPath);
+
+        void LoadListViewByMyPcPath(ListView listView, ImageList imageList, string lcoalPath);
+
+        bool DeleteFolderOrFile(ListView.SelectedListViewItemCollection selectedItems, string parentPath);
+
+        bool NewFolder(string parentPath, string folderName);
+
+        bool NewFile(string parentPath, string fileName);
+
+        bool RenameFolder(string parentPath, string oriName, string newName);
+
+        bool RenameFile(string parentPath, string oriName, string newName);
     }
 }

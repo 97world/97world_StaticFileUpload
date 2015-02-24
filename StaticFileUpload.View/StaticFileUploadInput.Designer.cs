@@ -1,6 +1,6 @@
 ﻿namespace StaticFileUpload.View
 {
-    partial class StaticFileUploadFolder
+    partial class StaticFileUploadInput
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.labelFolderName = new System.Windows.Forms.Label();
-            this.textBoxFolderName = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,12 +44,12 @@
             this.labelFolderName.TabIndex = 0;
             this.labelFolderName.Text = "文件夹名称：";
             // 
-            // textBoxFolderName
+            // textBoxName
             // 
-            this.textBoxFolderName.Location = new System.Drawing.Point(15, 45);
-            this.textBoxFolderName.Name = "textBoxFolderName";
-            this.textBoxFolderName.Size = new System.Drawing.Size(257, 21);
-            this.textBoxFolderName.TabIndex = 1;
+            this.textBoxName.Location = new System.Drawing.Point(15, 45);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(257, 21);
+            this.textBoxName.TabIndex = 1;
             // 
             // btnOK
             // 
@@ -59,6 +59,7 @@
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "确定";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancel
             // 
@@ -68,21 +69,23 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // StaticFileUploadFolder
+            // StaticFileUploadInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 122);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.textBoxFolderName);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelFolderName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "StaticFileUploadFolder";
+            this.Name = "StaticFileUploadInput";
             this.Text = "StaticFileUploadFolder";
+            this.Load += new System.EventHandler(this.StaticFileUploadInput_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,7 +94,7 @@
         #endregion
 
         private System.Windows.Forms.Label labelFolderName;
-        private System.Windows.Forms.TextBox textBoxFolderName;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
     }

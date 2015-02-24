@@ -71,11 +71,11 @@
     <Compile Include="StaticFileUploadBase.Designer.cs">
       <DependentUpon>StaticFileUploadBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaticFileUploadFolder.cs">
+    <Compile Include="StaticFileUploadInput.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StaticFileUploadFolder.Designer.cs">
-      <DependentUpon>StaticFileUploadFolder.cs</DependentUpon>
+    <Compile Include="StaticFileUploadInput.Designer.cs">
+      <DependentUpon>StaticFileUploadInput.cs</DependentUpon>
     </Compile>
     <Compile Include="StaticFileUploadLogin.cs">
       <SubType>Form</SubType>
@@ -114,8 +114,8 @@
     <EmbeddedResource Include="StaticFileUploadBase.resx">
       <DependentUpon>StaticFileUploadBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaticFileUploadFolder.resx">
-      <DependentUpon>StaticFileUploadFolder.cs</DependentUpon>
+    <EmbeddedResource Include="StaticFileUploadInput.resx">
+      <DependentUpon>StaticFileUploadInput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaticFileUploadLogin.resx">
       <DependentUpon>StaticFileUploadLogin.cs</DependentUpon>
@@ -154,6 +154,10 @@
     <ProjectReference Include="..\StaticFileUpload.Interface\StaticFileUpload.Interface.csproj">
       <Project>{98bbefbe-5238-4607-aae9-3c9b3c497a63}</Project>
       <Name>StaticFileUpload.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StaticFileUpload.Log\StaticFileUpload.Log.csproj">
+      <Project>{9ae2e4d4-87e3-4e5f-b5cf-6e2c4cc8686b}</Project>
+      <Name>StaticFileUpload.Log</Name>
     </ProjectReference>
     <ProjectReference Include="..\StaticFileUpload.Model\StaticFileUpload.Model.csproj">
       <Project>{f802c020-d836-4060-b2f3-2cb15938bb6c}</Project>

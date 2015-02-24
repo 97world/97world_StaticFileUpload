@@ -13,7 +13,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace StaticFileUpload.Common
 {
-    public static class XmlUtil
+    public class XmlUtil
     {
         private static void XmlSerializeInternal(Stream stream, object o, Encoding encoding)
         {
