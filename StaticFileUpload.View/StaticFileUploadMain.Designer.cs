@@ -53,6 +53,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageListRemoteListViewIcon = new System.Windows.Forms.ImageList(this.components);
             this.panelAddressBar4Remote = new System.Windows.Forms.Panel();
             this.btnParentDirectory4Remote = new System.Windows.Forms.Button();
             this.comboBoxPath4Remote = new System.Windows.Forms.ComboBox();
@@ -72,6 +73,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageListLocalListViewIcon = new System.Windows.Forms.ImageList(this.components);
             this.panelAddressBar4Local = new System.Windows.Forms.Panel();
             this.btnParentDirectory4Local = new System.Windows.Forms.Button();
             this.comboBoxPath4Local = new System.Windows.Forms.ComboBox();
@@ -124,8 +126,6 @@
             this.menuItemNewFolder4Remote = new System.Windows.Forms.MenuItem();
             this.menuItem12 = new System.Windows.Forms.MenuItem();
             this.menuItemRefresh4Remote = new System.Windows.Forms.MenuItem();
-            this.imageListLocalListViewIcon = new System.Windows.Forms.ImageList(this.components);
-            this.imageListRemoteListViewIcon = new System.Windows.Forms.ImageList(this.components);
             this.mainPanelRight.SuspendLayout();
             this.panelAddressBar4Remote.SuspendLayout();
             this.toolStripRemote.SuspendLayout();
@@ -243,9 +243,9 @@
             // splitter1
             // 
             this.splitter1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.splitter1.Location = new System.Drawing.Point(400, 0);
+            this.splitter1.Location = new System.Drawing.Point(449, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 446);
+            this.splitter1.Size = new System.Drawing.Size(3, 614);
             this.splitter1.TabIndex = 3;
             this.splitter1.TabStop = false;
             // 
@@ -256,9 +256,9 @@
             this.mainPanelRight.Controls.Add(this.panelAddressBar4Remote);
             this.mainPanelRight.Controls.Add(this.toolStripRemote);
             this.mainPanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanelRight.Location = new System.Drawing.Point(400, 0);
+            this.mainPanelRight.Location = new System.Drawing.Point(449, 0);
             this.mainPanelRight.Name = "mainPanelRight";
-            this.mainPanelRight.Size = new System.Drawing.Size(406, 446);
+            this.mainPanelRight.Size = new System.Drawing.Size(448, 614);
             this.mainPanelRight.TabIndex = 2;
             // 
             // listView4Remote
@@ -270,9 +270,10 @@
             this.columnHeader6});
             this.listView4Remote.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView4Remote.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.listView4Remote.FullRowSelect = true;
             this.listView4Remote.Location = new System.Drawing.Point(0, 60);
             this.listView4Remote.Name = "listView4Remote";
-            this.listView4Remote.Size = new System.Drawing.Size(406, 386);
+            this.listView4Remote.Size = new System.Drawing.Size(448, 554);
             this.listView4Remote.SmallImageList = this.imageListRemoteListViewIcon;
             this.listView4Remote.TabIndex = 3;
             this.listView4Remote.UseCompatibleStateImageBehavior = false;
@@ -281,17 +282,23 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "名称";
-            this.columnHeader4.Width = 200;
+            this.columnHeader4.Width = 240;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "大小";
-            this.columnHeader5.Width = 80;
+            this.columnHeader5.Width = 70;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "修改日期";
             this.columnHeader6.Width = 120;
+            // 
+            // imageListRemoteListViewIcon
+            // 
+            this.imageListRemoteListViewIcon.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageListRemoteListViewIcon.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListRemoteListViewIcon.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // panelAddressBar4Remote
             // 
@@ -300,7 +307,7 @@
             this.panelAddressBar4Remote.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAddressBar4Remote.Location = new System.Drawing.Point(0, 40);
             this.panelAddressBar4Remote.Name = "panelAddressBar4Remote";
-            this.panelAddressBar4Remote.Size = new System.Drawing.Size(406, 20);
+            this.panelAddressBar4Remote.Size = new System.Drawing.Size(448, 20);
             this.panelAddressBar4Remote.TabIndex = 2;
             // 
             // btnParentDirectory4Remote
@@ -320,7 +327,7 @@
             this.comboBoxPath4Remote.FormattingEnabled = true;
             this.comboBoxPath4Remote.Location = new System.Drawing.Point(28, 0);
             this.comboBoxPath4Remote.Name = "comboBoxPath4Remote";
-            this.comboBoxPath4Remote.Size = new System.Drawing.Size(376, 20);
+            this.comboBoxPath4Remote.Size = new System.Drawing.Size(418, 20);
             this.comboBoxPath4Remote.TabIndex = 2;
             // 
             // toolStripRemote
@@ -341,7 +348,7 @@
             this.toolStripRemote.Location = new System.Drawing.Point(0, 0);
             this.toolStripRemote.Name = "toolStripRemote";
             this.toolStripRemote.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripRemote.Size = new System.Drawing.Size(406, 40);
+            this.toolStripRemote.Size = new System.Drawing.Size(448, 40);
             this.toolStripRemote.TabIndex = 1;
             this.toolStripRemote.Text = "toolStrip1";
             // 
@@ -462,7 +469,7 @@
             this.mainPanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.mainPanelLeft.Location = new System.Drawing.Point(0, 0);
             this.mainPanelLeft.Name = "mainPanelLeft";
-            this.mainPanelLeft.Size = new System.Drawing.Size(400, 446);
+            this.mainPanelLeft.Size = new System.Drawing.Size(449, 614);
             this.mainPanelLeft.TabIndex = 1;
             // 
             // listView4Local
@@ -474,9 +481,10 @@
             this.columnHeader3});
             this.listView4Local.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView4Local.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.listView4Local.FullRowSelect = true;
             this.listView4Local.Location = new System.Drawing.Point(0, 60);
             this.listView4Local.Name = "listView4Local";
-            this.listView4Local.Size = new System.Drawing.Size(400, 386);
+            this.listView4Local.Size = new System.Drawing.Size(449, 554);
             this.listView4Local.SmallImageList = this.imageListLocalListViewIcon;
             this.listView4Local.TabIndex = 4;
             this.listView4Local.UseCompatibleStateImageBehavior = false;
@@ -485,17 +493,23 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "名称";
-            this.columnHeader1.Width = 200;
+            this.columnHeader1.Width = 240;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "大小";
-            this.columnHeader2.Width = 80;
+            this.columnHeader2.Width = 70;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "修改日期";
             this.columnHeader3.Width = 120;
+            // 
+            // imageListLocalListViewIcon
+            // 
+            this.imageListLocalListViewIcon.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageListLocalListViewIcon.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListLocalListViewIcon.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // panelAddressBar4Local
             // 
@@ -504,7 +518,7 @@
             this.panelAddressBar4Local.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAddressBar4Local.Location = new System.Drawing.Point(0, 40);
             this.panelAddressBar4Local.Name = "panelAddressBar4Local";
-            this.panelAddressBar4Local.Size = new System.Drawing.Size(400, 20);
+            this.panelAddressBar4Local.Size = new System.Drawing.Size(449, 20);
             this.panelAddressBar4Local.TabIndex = 3;
             // 
             // btnParentDirectory4Local
@@ -524,7 +538,7 @@
             this.comboBoxPath4Local.FormattingEnabled = true;
             this.comboBoxPath4Local.Location = new System.Drawing.Point(25, 0);
             this.comboBoxPath4Local.Name = "comboBoxPath4Local";
-            this.comboBoxPath4Local.Size = new System.Drawing.Size(373, 20);
+            this.comboBoxPath4Local.Size = new System.Drawing.Size(422, 20);
             this.comboBoxPath4Local.TabIndex = 2;
             // 
             // toolStripLeft
@@ -545,7 +559,7 @@
             this.toolStripLeft.Location = new System.Drawing.Point(0, 0);
             this.toolStripLeft.Name = "toolStripLeft";
             this.toolStripLeft.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripLeft.Size = new System.Drawing.Size(400, 40);
+            this.toolStripLeft.Size = new System.Drawing.Size(449, 40);
             this.toolStripLeft.TabIndex = 0;
             this.toolStripLeft.Text = "toolStrip1";
             // 
@@ -668,9 +682,9 @@
             this.statusLabelBlank,
             this.toolStripStatusLabelStatus,
             this.statusProgressBar});
-            this.mainStatusStrip.Location = new System.Drawing.Point(0, 446);
+            this.mainStatusStrip.Location = new System.Drawing.Point(0, 614);
             this.mainStatusStrip.Name = "mainStatusStrip";
-            this.mainStatusStrip.Size = new System.Drawing.Size(806, 22);
+            this.mainStatusStrip.Size = new System.Drawing.Size(897, 22);
             this.mainStatusStrip.TabIndex = 0;
             this.mainStatusStrip.Text = "statusStrip1";
             // 
@@ -707,7 +721,7 @@
             // statusLabelBlank
             // 
             this.statusLabelBlank.Name = "statusLabelBlank";
-            this.statusLabelBlank.Size = new System.Drawing.Size(378, 17);
+            this.statusLabelBlank.Size = new System.Drawing.Size(469, 17);
             this.statusLabelBlank.Spring = true;
             // 
             // toolStripStatusLabelStatus
@@ -907,23 +921,11 @@
             this.menuItemRefresh4Remote.Shortcut = System.Windows.Forms.Shortcut.F5;
             this.menuItemRefresh4Remote.Text = "刷新(&Z)";
             // 
-            // imageListLocalListViewIcon
-            // 
-            this.imageListLocalListViewIcon.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imageListLocalListViewIcon.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageListLocalListViewIcon.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // imageListRemoteListViewIcon
-            // 
-            this.imageListRemoteListViewIcon.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imageListRemoteListViewIcon.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageListRemoteListViewIcon.TransparentColor = System.Drawing.Color.Transparent;
-            // 
             // StaticFileUploadMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 468);
+            this.ClientSize = new System.Drawing.Size(897, 636);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.mainPanelRight);
             this.Controls.Add(this.mainPanelLeft);

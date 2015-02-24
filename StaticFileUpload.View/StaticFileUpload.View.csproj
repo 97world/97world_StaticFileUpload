@@ -151,6 +151,10 @@
       <Project>{48893977-88a9-4979-bb46-2b28db1b3e4b}</Project>
       <Name>StaticFileUpload.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StaticFileUpload.Interface\StaticFileUpload.Interface.csproj">
+      <Project>{98bbefbe-5238-4607-aae9-3c9b3c497a63}</Project>
+      <Name>StaticFileUpload.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StaticFileUpload.Model\StaticFileUpload.Model.csproj">
       <Project>{f802c020-d836-4060-b2f3-2cb15938bb6c}</Project>
       <Name>StaticFileUpload.Model</Name>

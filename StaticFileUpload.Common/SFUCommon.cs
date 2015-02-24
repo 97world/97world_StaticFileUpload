@@ -8,14 +8,14 @@ using System.Security.Cryptography;
 
 namespace StaticFileUpload.Common
 {
-    public class Common
+    public class SFUCommon
     {
         /// <summary>
         /// 字节容量单位转换为易读的容量单位
         /// </summary>
         /// <param name="bytes">字节</param>
         /// <returns></returns>
-        public static string getCommonSize(double bytes)
+        public static string GetCommonSize(double bytes)
         {
             int unit = 1024;
             if (bytes < unit) return bytes + " B";
@@ -28,7 +28,7 @@ namespace StaticFileUpload.Common
         /// </summary>
         /// <param name="num">时间戳</param>
         /// <returns></returns>
-        public static DateTime getCommonTime(double num)
+        public static DateTime GetCommonTime(double num)
         {
             System.DateTime time = System.DateTime.MinValue;
             System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));

@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common.cs" />
+    <Compile Include="SFUCommon.cs" />
     <Compile Include="IconUtil.cs" />
     <Compile Include="SFUSetting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

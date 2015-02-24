@@ -36,6 +36,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -46,6 +48,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoteBrowserQiNiuBusi.cs" />
     <Compile Include="RemoteBrowserUpYunBusi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StaticFileUpload.Common\StaticFileUpload.Common.csproj">
+      <Project>{48893977-88a9-4979-bb46-2b28db1b3e4b}</Project>
+      <Name>StaticFileUpload.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StaticFileUpload.Interface\StaticFileUpload.Interface.csproj">
+      <Project>{98bbefbe-5238-4607-aae9-3c9b3c497a63}</Project>
+      <Name>StaticFileUpload.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StaticFileUpload.Log\StaticFileUpload.Log.csproj">
+      <Project>{9ae2e4d4-87e3-4e5f-b5cf-6e2c4cc8686b}</Project>
+      <Name>StaticFileUpload.Log</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
