@@ -8,13 +8,68 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using StaticFileUpload.Common;
+using StaticFileUpload.Model;
+
 namespace StaticFileUpload.View
 {
     public partial class StaticFileUploadLogin : StaticFileUploadBase
     {
+        private SFUConfigInfo tempSFUConfigInfo;
+
         public StaticFileUploadLogin()
         {
             InitializeComponent();
+
+            InitStaticFileUploadLogin();
+        }
+
+        private void InitStaticFileUploadLogin()
+        {
+            tempSFUConfigInfo = SFUSetting.GetInstance();
+            if (tempSFUConfigInfo.loginInfo.rememberPwd == true)
+            {
+                textBoxBucketName.Text = tempSFUConfigInfo.operatorInfo.bucketName;
+                textBoxOperatorName.Text = tempSFUConfigInfo.operatorInfo.operatorName;
+                textBoxOperatorPwd.Text = tempSFUConfigInfo.operatorInfo.operatorPwd;
+                textBoxDomain.Text = tempSFUConfigInfo.operatorInfo.bindDomain;
+                comboBoxInternet.Text = tempSFUConfigInfo.operatorInfo.netSelection;
+                checkBoxAutoLogin.Checked = tempSFUConfigInfo.loginInfo.autoLogin;
+                checkBoxRememberPwd.Checked = tempSFUConfigInfo.loginInfo.rememberPwd;
+            }
+            else
+            {
+                // 设置默认网络选择为“自动选择网络”
+                comboBoxInternet.SelectedIndex = 0;
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            textBoxBucketName.Text = "";
+            textBoxOperatorName.Text = "";
+            textBoxOperatorPwd.Text = "";
+            textBoxDomain.Text = "";
+            comboBoxInternet.SelectedIndex = 0;
+
+            checkBoxRememberPwd.Checked = checkBoxAutoLogin.Checked = false;
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            bool isLoginSuccess = true;
+            if (isLoginSuccess)
+            {
+                sfuConfigInfo = tempSFUConfigInfo;
+                StaticFileUploadMain staticFileUploadMain = (StaticFileUploadMain)this.Owner;
+                staticFileUploadMain.InitStaticFileUploadMain();
+                this.Close();
+            }
         }
     }
 }

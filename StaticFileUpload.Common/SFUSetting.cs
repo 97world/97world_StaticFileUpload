@@ -35,7 +35,8 @@ namespace StaticFileUpload.Common
             {
                 string msg = string.Format("Configuration file does not exist. configFilePath=[{0}]", configFilePath);
                 SFULogger.DEFAULT.Error(msg);
-                throw new Exception(msg);
+                string configXmlStr = "<?xml version=\"1.0\" encoding=\"utf-8\"?><SFUConfigInfo xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><operatorInfo><bucketName></bucketName><operatorName></operatorName><operatorPwd></operatorPwd><bindDomain></bindDomain><netSelection></netSelection></operatorInfo><loginInfo><rememberPwd>false</rememberPwd><autoLogin>false</autoLogin></loginInfo></SFUConfigInfo>";
+                File.WriteAllText(configFilePath, configXmlStr, Encoding.UTF8);
             }
             sfuConfigInfo = XmlUtil.XmlDeserializeFromFile<SFUConfigInfo>(configFilePath, Encoding.UTF8);
         }

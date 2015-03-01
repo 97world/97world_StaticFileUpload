@@ -30,6 +30,9 @@ namespace StaticFileUpload.View
             //operatorInfo.netSelection = "中国电信网络";
             //SFUSetting.Save();
             //string testStr2 = "";
+
+            //string domainStr = SFUSetting.GetInstance().operatorInfo.bindDomain;
+            //string testStr = "";
         }
 
     }

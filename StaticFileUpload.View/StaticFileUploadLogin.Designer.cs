@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBoxAutoLogin = new System.Windows.Forms.CheckBox();
+            this.checkBoxRememberPwd = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBoxInternet = new System.Windows.Forms.ComboBox();
             this.textBoxDomain = new System.Windows.Forms.TextBox();
@@ -39,15 +45,74 @@
             this.labelOperatorPwd = new System.Windows.Forms.Label();
             this.labelOperatorName = new System.Windows.Forms.Label();
             this.labelBucketName = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.checkBoxAutoLogin = new System.Windows.Forms.CheckBox();
-            this.checkBoxRememberPwd = new System.Windows.Forms.CheckBox();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(240, 268);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "登录";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(329, 268);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "关闭";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(12, 268);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 2;
+            this.btnReset.Text = "重置";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.checkBoxAutoLogin);
+            this.panel2.Controls.Add(this.checkBoxRememberPwd);
+            this.panel2.Location = new System.Drawing.Point(13, 219);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(390, 40);
+            this.panel2.TabIndex = 1;
+            // 
+            // checkBoxAutoLogin
+            // 
+            this.checkBoxAutoLogin.AutoSize = true;
+            this.checkBoxAutoLogin.Location = new System.Drawing.Point(233, 9);
+            this.checkBoxAutoLogin.Name = "checkBoxAutoLogin";
+            this.checkBoxAutoLogin.Size = new System.Drawing.Size(75, 21);
+            this.checkBoxAutoLogin.TabIndex = 1;
+            this.checkBoxAutoLogin.Text = "自动登录";
+            this.checkBoxAutoLogin.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxRememberPwd
+            // 
+            this.checkBoxRememberPwd.AutoSize = true;
+            this.checkBoxRememberPwd.Location = new System.Drawing.Point(81, 9);
+            this.checkBoxRememberPwd.Name = "checkBoxRememberPwd";
+            this.checkBoxRememberPwd.Size = new System.Drawing.Size(75, 21);
+            this.checkBoxRememberPwd.TabIndex = 0;
+            this.checkBoxRememberPwd.Text = "记住密码";
+            this.checkBoxRememberPwd.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -73,6 +138,11 @@
             // 
             this.comboBoxInternet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxInternet.FormattingEnabled = true;
+            this.comboBoxInternet.Items.AddRange(new object[] {
+            "自动选择网络",
+            "中国电信网络",
+            "中国联通网络",
+            "中国移动网络"});
             this.comboBoxInternet.Location = new System.Drawing.Point(145, 152);
             this.comboBoxInternet.Name = "comboBoxInternet";
             this.comboBoxInternet.Size = new System.Drawing.Size(200, 25);
@@ -152,69 +222,7 @@
             this.labelBucketName.TabIndex = 0;
             this.labelBucketName.Text = "空间名称(&B)：";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.checkBoxAutoLogin);
-            this.panel2.Controls.Add(this.checkBoxRememberPwd);
-            this.panel2.Location = new System.Drawing.Point(13, 219);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(390, 40);
-            this.panel2.TabIndex = 1;
-            // 
-            // checkBoxAutoLogin
-            // 
-            this.checkBoxAutoLogin.AutoSize = true;
-            this.checkBoxAutoLogin.Location = new System.Drawing.Point(233, 9);
-            this.checkBoxAutoLogin.Name = "checkBoxAutoLogin";
-            this.checkBoxAutoLogin.Size = new System.Drawing.Size(75, 21);
-            this.checkBoxAutoLogin.TabIndex = 1;
-            this.checkBoxAutoLogin.Text = "自动登录";
-            this.checkBoxAutoLogin.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxRememberPwd
-            // 
-            this.checkBoxRememberPwd.AutoSize = true;
-            this.checkBoxRememberPwd.Location = new System.Drawing.Point(81, 9);
-            this.checkBoxRememberPwd.Name = "checkBoxRememberPwd";
-            this.checkBoxRememberPwd.Size = new System.Drawing.Size(75, 21);
-            this.checkBoxRememberPwd.TabIndex = 0;
-            this.checkBoxRememberPwd.Text = "记住密码";
-            this.checkBoxRememberPwd.UseVisualStyleBackColor = true;
-            // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(12, 268);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 23);
-            this.btnReset.TabIndex = 2;
-            this.btnReset.Text = "重置";
-            this.btnReset.UseVisualStyleBackColor = true;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(329, 268);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "关闭";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(240, 268);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "登录";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            // 
-            // UpYunLogin
+            // StaticFileUploadLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -229,13 +237,13 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "UpYunLogin";
+            this.Name = "StaticFileUploadLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "操作员登录";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

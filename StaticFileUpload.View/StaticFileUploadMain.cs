@@ -13,6 +13,7 @@ using StaticFileUpload.Interface;
 using StaticFileUpload.Business;
 using StaticFileUpload.Common;
 using StaticFileUpload.Log;
+using StaticFileUpload.Model;
 
 namespace StaticFileUpload.View
 {
@@ -21,20 +22,37 @@ namespace StaticFileUpload.View
         private ILocalBrowser localBrowserBusi = new LocalBrowserBusi();
         private IRemoteBrowser remoteBrowserBusi = new RemoteBrowserUpYunBusi();
 
+        private Point localListViewPoint = new Point(0, 0);
+        private Point remoteListViewPoint = new Point(0, 0);
+
         public StaticFileUploadMain()
         {
             InitializeComponent();
-            InitMain();
+            InitStaticFileUploadMain();
         }
 
-        private void InitMain()
+        public void InitStaticFileUploadMain()
         {
             // 绑定 LocalListView & RemoteListView 控件的ContextMenu
             listView4Local.ContextMenu = contextMenu4Local;
             listView4Remote.ContextMenu = contextMenu4Remote;
+            // 设置操作员信息
+            if (sfuConfigInfo != null)
+            {
+                statusLabelOperatorName.Text = sfuConfigInfo.operatorInfo.operatorName;
+            }
+            else
+            {
+                SFUConfigInfo tempSFUConfigInfo = SFUSetting.GetInstance();
+                if (tempSFUConfigInfo.loginInfo.autoLogin == true)
+                {
+                    sfuConfigInfo = tempSFUConfigInfo;
+                    // TODO: Init Model YpYun.
+                }
+            }
             // 添加 ListView 的数据
             LoadListViewByLocalPath();
-            LocalListViewByRemotePath();
+            LoadListViewByRemotePath();
         }
 
         public void LoadListViewByLocalPath()
@@ -54,14 +72,14 @@ namespace StaticFileUpload.View
             comboBoxPath4Local.Text = localPath;
         }
 
-        public void LocalListViewByRemotePath()
+        public void LoadListViewByRemotePath()
         {
 
         }
 
         private void listView4Local_DoubleClick(object sender, EventArgs e)
         {
-            ListViewItem selectedItem = listView4Local.SelectedItems[0];
+            ListViewItem selectedItem = listView4Local.SelectedItems[listView4Local.SelectedItems.Count - 1];
             if (selectedItem.SubItems.Count == 4)
             {
                 localPath = selectedItem.SubItems[3].Text;
@@ -167,6 +185,55 @@ namespace StaticFileUpload.View
                 localPath = comboBoxPath4Local.Text.Trim();
                 LoadListViewByLocalPath();
             }
+        }
+
+        private void menuItemOpen4Local_Click(object sender, EventArgs e)
+        {
+            listView4Local_DoubleClick(sender, new EventArgs());
+        }
+
+        private void menuItemRefresh4Local_Click(object sender, EventArgs e)
+        {
+            LoadListViewByLocalPath();
+        }
+
+        private void menuItemNewFolder4Local_Click(object sender, EventArgs e)
+        {
+            toolStripBtnNewFolder4Local_Click(sender, new EventArgs());
+        }
+
+        private void menuItemNewFile4Local_Click(object sender, EventArgs e)
+        {
+            toolStripNewFile_Click(sender, new EventArgs());
+        }
+
+        private void menuItemDel4Local_Click(object sender, EventArgs e)
+        {
+            localBrowserBusi.DeleteFolderOrFile(listView4Local.SelectedItems, localPath);
+            LoadListViewByLocalPath();
+        }
+
+        private void menuItemSysMenu4Local_Click(object sender, EventArgs e)
+        {
+            ShellContextMenu scmu = new ShellContextMenu();
+            Point listViewPoint = listView4Local.PointToClient(localListViewPoint);
+            FileInfo[] fileInfoArr = new FileInfo[1];
+            string filePath = Path.Combine(localPath, listView4Local.GetItemAt(listViewPoint.X, listViewPoint.Y).Text);
+            fileInfoArr[0] = new FileInfo(filePath);
+            scmu.ShowContextMenu(fileInfoArr, localListViewPoint);
+        }
+
+        private void menuItemLogin_Click(object sender, EventArgs e)
+        {
+            StaticFileUploadLogin staticFileUploadLogin = new StaticFileUploadLogin();
+            staticFileUploadLogin.Owner = this;
+            staticFileUploadLogin.ShowDialog();
+        }
+
+        private void contextMenu4Local_Popup(object sender, EventArgs e)
+        {
+            localListViewPoint.X = Cursor.Position.X;
+            localListViewPoint.Y = Cursor.Position.Y;
         }
 
     }

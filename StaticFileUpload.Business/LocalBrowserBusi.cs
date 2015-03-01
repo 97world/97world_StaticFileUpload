@@ -109,7 +109,7 @@ namespace StaticFileUpload.Business
                 pathSb.Append(Path.Combine(parentPath, item.Text) + "\0");
             }
             int retVal = SysFileOrDirActionUtil.DeleteFileOrDirectory(pathSb);
-            if (retVal > 0)
+            if (retVal >= 0)
             {
                 SFULogger.DEFAULT.InfoFormat("删除文件/文件夹成功.pathSb=[{0}]", pathSb.ToString().Replace("\0", ";"));
                 return true;

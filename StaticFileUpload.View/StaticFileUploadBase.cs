@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using StaticFileUpload.Model;
+
 namespace StaticFileUpload.View
 {
     public partial class StaticFileUploadBase : Form
@@ -26,6 +28,11 @@ namespace StaticFileUpload.View
         /// 远程浏览器地址
         /// </summary>
         public static string remotePath = @"/";
+
+        /// <summary>
+        /// 操作员信息
+        /// </summary>
+        public static SFUConfigInfo sfuConfigInfo;
 
     }
 }
