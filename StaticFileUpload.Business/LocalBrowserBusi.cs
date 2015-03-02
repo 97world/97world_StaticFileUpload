@@ -109,14 +109,19 @@ namespace StaticFileUpload.Business
                 pathSb.Append(Path.Combine(parentPath, item.Text) + "\0");
             }
             int retVal = SysFileOrDirActionUtil.DeleteFileOrDirectory(pathSb);
-            if (retVal >= 0)
+            if (retVal == 0)
             {
-                SFULogger.DEFAULT.InfoFormat("删除文件/文件夹成功.pathSb=[{0}]", pathSb.ToString().Replace("\0", ";"));
+                SFULogger.DEFAULT.InfoFormat("删除文件/文件夹成功.retVal=[{0}],pathSb=[{1}]", retVal, pathSb.ToString().Replace("\0", ";"));
+                return true;
+            }
+            else if (retVal == 1223) 
+            {
+                SFULogger.DEFAULT.InfoFormat("操作没有进行.retVal=[{0}],pathSb=[{1}]", retVal, pathSb.ToString().Replace("\0", ";"));
                 return true;
             }
             else
             {
-                SFULogger.DEFAULT.InfoFormat("删除文件/文件夹失败.retVal=[{0}],pathSb=[{1}]", retVal, pathSb.ToString().Replace("\0", ";"));
+                SFULogger.DEFAULT.ErrorFormat("删除文件/文件夹失败.retVal=[{0}],pathSb=[{1}]", retVal, pathSb.ToString().Replace("\0", ";"));
                 return false;
             }
         }
@@ -188,6 +193,26 @@ namespace StaticFileUpload.Business
                 File.Move(oriPath, newPath);
                 SFULogger.DEFAULT.InfoFormat("文件重命名成功.oriPath=[{0}],newPath=[{1}]", oriPath, newPath);
                 return true;
+            }
+        }
+
+        public bool CopyFileOrFolder(StringBuilder sourcePath, string targetPath)
+        {
+            int retVal = SysFileOrDirActionUtil.CopyFileOrDirectory(sourcePath, targetPath);
+            if (retVal == 0)
+            {
+                SFULogger.DEFAULT.InfoFormat("复制文件成功.retVal=[{0}],sourcePath=[{1}],targetPath=[{2}]", retVal, sourcePath.ToString(), targetPath);
+                return true;
+            }
+            else if (retVal == 1223)
+            {
+                SFULogger.DEFAULT.InfoFormat("操作没有进行.retVal=[{0}],sourcePath=[{1}],targetPath=[{2}]", retVal, sourcePath.ToString(), targetPath);
+                return true;
+            }
+            else
+            {
+                SFULogger.DEFAULT.ErrorFormat("复制文件失败.retVal=[{0}],sourcePath=[{1}],targetPath=[{2}]", retVal, sourcePath.ToString(), targetPath);
+                return false;
             }
         }
     }

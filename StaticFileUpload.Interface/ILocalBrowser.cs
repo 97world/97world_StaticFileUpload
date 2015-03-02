@@ -22,5 +22,7 @@ namespace StaticFileUpload.Interface
         bool RenameFolder(string parentPath, string oriName, string newName);
 
         bool RenameFile(string parentPath, string oriName, string newName);
+
+        bool CopyFileOrFolder(StringBuilder sourcePath, string targetPath);
     }
 }

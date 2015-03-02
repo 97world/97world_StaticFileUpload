@@ -34,5 +34,10 @@ namespace StaticFileUpload.View
         /// </summary>
         public static SFUConfigInfo sfuConfigInfo;
 
+        /// <summary>
+        /// 本地浏览器复制源地址（多个条目用\0分割）
+        /// </summary>
+        public static StringBuilder localCopySourcePath = new StringBuilder();
+
     }
 }

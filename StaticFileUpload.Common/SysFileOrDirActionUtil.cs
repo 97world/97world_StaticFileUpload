@@ -67,5 +67,18 @@ namespace StaticFileUpload.Common
             shfileopstruct.fAnyOperationsAborted = true;
             return SHFileOperation(ref shfileopstruct);
         }
+
+        public static int CopyFileOrDirectory(StringBuilder sourcePath, string targetPath)
+        {
+            SHFILEOPSTRUCT shfileopstruct = new SHFILEOPSTRUCT();
+            shfileopstruct.hwnd = IntPtr.Zero;
+            shfileopstruct.wFunc = FileFuncFlags.FO_COPY;
+            shfileopstruct.pFrom = sourcePath.ToString();
+            shfileopstruct.pTo = targetPath.ToString();
+            shfileopstruct.hNameMappings = IntPtr.Zero;
+            shfileopstruct.fFlags = FILEOP_FLAGS.FOF_ALLOWUNDO;
+            shfileopstruct.fAnyOperationsAborted = true;
+            return SHFileOperation(ref shfileopstruct);
+        }
     }
 }

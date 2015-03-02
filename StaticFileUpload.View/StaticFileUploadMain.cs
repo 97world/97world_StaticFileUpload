@@ -36,10 +36,14 @@ namespace StaticFileUpload.View
             // 绑定 LocalListView & RemoteListView 控件的ContextMenu
             listView4Local.ContextMenu = contextMenu4Local;
             listView4Remote.ContextMenu = contextMenu4Remote;
+            // 设置右键菜单状态
+            menuItemTrans4Local.Enabled = false;
+            menuItemPaste4Local.Enabled = false;
             // 设置操作员信息
             if (sfuConfigInfo != null)
             {
                 statusLabelOperatorName.Text = sfuConfigInfo.operatorInfo.operatorName;
+                menuItemTrans4Local.Enabled = true;
             }
             else
             {
@@ -48,6 +52,7 @@ namespace StaticFileUpload.View
                 {
                     sfuConfigInfo = tempSFUConfigInfo;
                     // TODO: Init Model YpYun.
+                    menuItemTrans4Local.Enabled = true;
                 }
             }
             // 添加 ListView 的数据
@@ -160,8 +165,8 @@ namespace StaticFileUpload.View
 
         private void toolStripBtnDel4Local_Click(object sender, EventArgs e)
         {
-            localBrowserBusi.DeleteFolderOrFile(listView4Local.SelectedItems, localPath);
-            LoadListViewByLocalPath();
+            bool retValue = localBrowserBusi.DeleteFolderOrFile(listView4Local.SelectedItems, localPath);
+            if (retValue) LoadListViewByLocalPath();
         }
 
         private void btnParentDirectory4Local_Click(object sender, EventArgs e)
@@ -234,6 +239,29 @@ namespace StaticFileUpload.View
         {
             localListViewPoint.X = Cursor.Position.X;
             localListViewPoint.Y = Cursor.Position.Y;
+        }
+
+        private void menuItemExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void menuItemCopy4Local_Click(object sender, EventArgs e)
+        {
+            int selectedCount = listView4Local.SelectedItems.Count;
+            for (int i = 0; i < selectedCount; i++)
+            {
+                string itemName = listView4Local.SelectedItems[i].Text;
+                if (itemName.Equals("上级目录")) continue;
+                localCopySourcePath.Append(Path.Combine(localPath, itemName) + "\0");
+            }
+            menuItemPaste4Local.Enabled = true;
+        }
+
+        private void menuItemPaste4Local_Click(object sender, EventArgs e)
+        {
+            bool retVal = localBrowserBusi.CopyFileOrFolder(localCopySourcePath, localPath);
+            if(retVal) LoadListViewByLocalPath();
         }
 
     }

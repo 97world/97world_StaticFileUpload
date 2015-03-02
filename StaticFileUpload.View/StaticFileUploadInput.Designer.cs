@@ -28,28 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelFolderName = new System.Windows.Forms.Label();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.labelFolderName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // labelFolderName
+            // btnCancel
             // 
-            this.labelFolderName.AutoSize = true;
-            this.labelFolderName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelFolderName.Location = new System.Drawing.Point(12, 21);
-            this.labelFolderName.Name = "labelFolderName";
-            this.labelFolderName.Size = new System.Drawing.Size(80, 17);
-            this.labelFolderName.TabIndex = 0;
-            this.labelFolderName.Text = "文件夹名称：";
-            // 
-            // textBoxName
-            // 
-            this.textBoxName.Location = new System.Drawing.Point(15, 45);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(257, 21);
-            this.textBoxName.TabIndex = 1;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(165, 81);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "取消";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOK
             // 
@@ -61,20 +55,29 @@
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // btnCancel
+            // textBoxName
             // 
-            this.btnCancel.Location = new System.Drawing.Point(165, 81);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "取消";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.textBoxName.Location = new System.Drawing.Point(15, 45);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(257, 21);
+            this.textBoxName.TabIndex = 1;
+            // 
+            // labelFolderName
+            // 
+            this.labelFolderName.AutoSize = true;
+            this.labelFolderName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelFolderName.Location = new System.Drawing.Point(12, 21);
+            this.labelFolderName.Name = "labelFolderName";
+            this.labelFolderName.Size = new System.Drawing.Size(80, 17);
+            this.labelFolderName.TabIndex = 0;
+            this.labelFolderName.Text = "文件夹名称：";
             // 
             // StaticFileUploadInput
             // 
+            this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(284, 122);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);

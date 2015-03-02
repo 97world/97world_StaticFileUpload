@@ -175,6 +175,7 @@
             this.menuItemExit.Index = 3;
             this.menuItemExit.Shortcut = System.Windows.Forms.Shortcut.AltF4;
             this.menuItemExit.Text = "退出(&X)";
+            this.menuItemExit.Click += new System.EventHandler(this.menuItemExit_Click);
             // 
             // menuItemNetLine
             // 
@@ -809,12 +810,14 @@
             this.menuItemCopy4Local.Index = 6;
             this.menuItemCopy4Local.Shortcut = System.Windows.Forms.Shortcut.CtrlC;
             this.menuItemCopy4Local.Text = "复制(&C)";
+            this.menuItemCopy4Local.Click += new System.EventHandler(this.menuItemCopy4Local_Click);
             // 
             // menuItemPaste4Local
             // 
             this.menuItemPaste4Local.Index = 7;
             this.menuItemPaste4Local.Shortcut = System.Windows.Forms.Shortcut.CtrlV;
             this.menuItemPaste4Local.Text = "粘贴(&V)";
+            this.menuItemPaste4Local.Click += new System.EventHandler(this.menuItemPaste4Local_Click);
             // 
             // menuItemDel4Local
             // 
@@ -882,6 +885,7 @@
             // 
             // menuItemCopyLink4Remote
             // 
+            this.menuItemCopyLink4Remote.Enabled = false;
             this.menuItemCopyLink4Remote.Index = 0;
             this.menuItemCopyLink4Remote.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftC;
             this.menuItemCopyLink4Remote.Text = "复制链接(&L)";
@@ -893,6 +897,7 @@
             // 
             // menuItemTrans4Remote
             // 
+            this.menuItemTrans4Remote.Enabled = false;
             this.menuItemTrans4Remote.Index = 2;
             this.menuItemTrans4Remote.Shortcut = System.Windows.Forms.Shortcut.CtrlT;
             this.menuItemTrans4Remote.Text = "传输(&T)";
@@ -904,6 +909,7 @@
             // 
             // menuItemPreview4Remote
             // 
+            this.menuItemPreview4Remote.Enabled = false;
             this.menuItemPreview4Remote.Index = 4;
             this.menuItemPreview4Remote.Shortcut = System.Windows.Forms.Shortcut.CtrlQ;
             this.menuItemPreview4Remote.Text = "预览(&Q)";
@@ -915,6 +921,7 @@
             // 
             // menuItemDel4Remote
             // 
+            this.menuItemDel4Remote.Enabled = false;
             this.menuItemDel4Remote.Index = 6;
             this.menuItemDel4Remote.Shortcut = System.Windows.Forms.Shortcut.Del;
             this.menuItemDel4Remote.Text = "删除(&D)";
@@ -926,6 +933,7 @@
             // 
             // menuItemNewFolder4Remote
             // 
+            this.menuItemNewFolder4Remote.Enabled = false;
             this.menuItemNewFolder4Remote.Index = 8;
             this.menuItemNewFolder4Remote.Shortcut = System.Windows.Forms.Shortcut.Ins;
             this.menuItemNewFolder4Remote.Text = "建立文件夹(&X)";
@@ -937,6 +945,7 @@
             // 
             // menuItemRefresh4Remote
             // 
+            this.menuItemRefresh4Remote.Enabled = false;
             this.menuItemRefresh4Remote.Index = 10;
             this.menuItemRefresh4Remote.Shortcut = System.Windows.Forms.Shortcut.F5;
             this.menuItemRefresh4Remote.Text = "刷新(&Z)";
