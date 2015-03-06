@@ -191,21 +191,25 @@
             // 
             this.menuItemNetAuto.Index = 0;
             this.menuItemNetAuto.Text = "自动识别网络(&A)";
+            this.menuItemNetAuto.Click += new System.EventHandler(this.menuItemNetAuto_Click);
             // 
             // menuItemNetTel
             // 
             this.menuItemNetTel.Index = 1;
             this.menuItemNetTel.Text = "中国电信网络(&D)";
+            this.menuItemNetTel.Click += new System.EventHandler(this.menuItemNetTel_Click);
             // 
             // menuItemNetUni
             // 
             this.menuItemNetUni.Index = 2;
             this.menuItemNetUni.Text = "中国联通网络(&L)";
+            this.menuItemNetUni.Click += new System.EventHandler(this.menuItemNetUni_Click);
             // 
             // menuItemNetMob
             // 
             this.menuItemNetMob.Index = 3;
             this.menuItemNetMob.Text = "中国移动网络(&Y)";
+            this.menuItemNetMob.Click += new System.EventHandler(this.menuItemNetMob_Click);
             // 
             // menuItemHelp
             // 
@@ -221,11 +225,13 @@
             // 
             this.menuItemOfficialSite.Index = 0;
             this.menuItemOfficialSite.Text = "访问又拍云官网...";
+            this.menuItemOfficialSite.Click += new System.EventHandler(this.menuItemOfficialSite_Click);
             // 
             // menuItemAuthorSite
             // 
             this.menuItemAuthorSite.Index = 1;
             this.menuItemAuthorSite.Text = "访问作者的BLOG...";
+            this.menuItemAuthorSite.Click += new System.EventHandler(this.menuItemAuthorSite_Click);
             // 
             // menuItem15
             // 
@@ -236,11 +242,13 @@
             // 
             this.menuItemAbout.Index = 3;
             this.menuItemAbout.Text = "关于(&A)";
+            this.menuItemAbout.Click += new System.EventHandler(this.menuItemAbout_Click);
             // 
             // menuItemGitHub
             // 
             this.menuItemGitHub.Index = 3;
             this.menuItemGitHub.Text = "点击访问项目GitHub主页(&G)";
+            this.menuItemGitHub.Click += new System.EventHandler(this.menuItemGitHub_Click);
             // 
             // splitter1
             // 

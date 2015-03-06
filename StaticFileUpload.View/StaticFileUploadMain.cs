@@ -36,6 +36,8 @@ namespace StaticFileUpload.View
             // 绑定 LocalListView & RemoteListView 控件的ContextMenu
             listView4Local.ContextMenu = contextMenu4Local;
             listView4Remote.ContextMenu = contextMenu4Remote;
+            // 默认设置网络选择为“自动选择”
+            menuItemNetAuto.Checked = true;
             // 设置右键菜单状态
             menuItemTrans4Local.Enabled = false;
             menuItemPaste4Local.Enabled = false;
@@ -262,6 +264,57 @@ namespace StaticFileUpload.View
         {
             bool retVal = localBrowserBusi.CopyFileOrFolder(localCopySourcePath, localPath);
             if(retVal) LoadListViewByLocalPath();
+        }
+
+        private void SingleCheck4MenuItem(object sender)
+        {
+            menuItemNetAuto.Checked = false;
+            menuItemNetTel.Checked = false;
+            menuItemNetMob.Checked = false;
+            menuItemNetUni.Checked = false;
+            ((MenuItem)sender).Checked = true;
+        }
+
+        private void menuItemNetAuto_Click(object sender, EventArgs e)
+        {
+            SingleCheck4MenuItem(sender);
+        }
+
+        private void menuItemNetTel_Click(object sender, EventArgs e)
+        {
+            SingleCheck4MenuItem(sender);
+        }
+
+        private void menuItemNetUni_Click(object sender, EventArgs e)
+        {
+            SingleCheck4MenuItem(sender);
+        }
+
+        private void menuItemNetMob_Click(object sender, EventArgs e)
+        {
+            SingleCheck4MenuItem(sender);
+        }
+
+        private void menuItemAbout_Click(object sender, EventArgs e)
+        {
+            StaticFileUploadAbout staticFileUpload = new StaticFileUploadAbout();
+            staticFileUpload.Owner = this;
+            staticFileUpload.ShowDialog();
+        }
+
+        private void menuItemOfficialSite_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.upyun.com");
+        }
+
+        private void menuItemAuthorSite_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.97world.com");
+        }
+
+        private void menuItemGitHub_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/97world/97world_StaticFileUpload");
         }
 
     }

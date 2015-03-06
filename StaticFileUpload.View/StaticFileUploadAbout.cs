@@ -15,5 +15,15 @@ namespace StaticFileUpload.View
         {
             InitializeComponent();
         }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnDonate_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://me.alipay.com/97world");
+        }
     }
 }
