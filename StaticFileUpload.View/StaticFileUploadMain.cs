@@ -84,6 +84,7 @@ namespace StaticFileUpload.View
             LoadListViewByRemotePath();
         }
 
+        #region LocalBrowser
         public void LoadListViewByLocalPath()
         {
             if (localPath.Length == 2) localPath = localPath + "\\";
@@ -280,7 +281,7 @@ namespace StaticFileUpload.View
         private void menuItemPaste4Local_Click(object sender, EventArgs e)
         {
             bool retVal = localBrowserBusi.CopyFileOrFolder(localCopySourcePath, localPath);
-            if(retVal) LoadListViewByLocalPath();
+            if (retVal) LoadListViewByLocalPath();
         }
 
         private void SingleCheck4MenuItem(object sender)
@@ -333,10 +334,30 @@ namespace StaticFileUpload.View
         {
             System.Diagnostics.Process.Start("https://github.com/97world/97world_StaticFileUpload");
         }
+        #endregion
 
+        #region Remote
         public void LoadListViewByRemotePath()
         {
+            if (!comboBoxPath4Remote.Items.Contains(remotePath)) comboBoxPath4Remote.Items.Add(remotePath);
             remoteBrowserBusi.LoadListView(listView4Remote, imageListRemoteListViewIcon, remotePath);
+            comboBoxPath4Remote.Text = remotePath;
+        }
+
+        #endregion
+
+        private void listView4Remote_DoubleClick(object sender, EventArgs e)
+        {
+            ListViewItem selectedItem = listView4Remote.SelectedItems[listView4Remote.SelectedItems.Count - 1];
+            if (selectedItem.Text.Equals("上级目录"))
+            {
+                remotePath = SFUCommon.GetParentPath4Web(remotePath);
+            }
+            else
+            {
+                remotePath = SFUCommon.CombinePath4Web(remotePath, selectedItem.Text);
+            }
+            LoadListViewByRemotePath();
         }
 
     }

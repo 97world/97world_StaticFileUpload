@@ -288,6 +288,7 @@
             this.listView4Remote.TabIndex = 3;
             this.listView4Remote.UseCompatibleStateImageBehavior = false;
             this.listView4Remote.View = System.Windows.Forms.View.Details;
+            this.listView4Remote.DoubleClick += new System.EventHandler(this.listView4Remote_DoubleClick);
             // 
             // columnHeader4
             // 

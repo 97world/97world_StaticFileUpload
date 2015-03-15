@@ -89,5 +89,39 @@ namespace StaticFileUpload.Common
                 return decryptString;
             }
         }
+
+        /// <summary>
+        /// 根据传入的Web路径获取父目录的路径（通过路径分隔符'/'）
+        /// </summary>
+        /// <param name="currentPath">当前路径</param>
+        /// <returns>父目录路径</returns>
+        public static string GetParentPath4Web(string currentPath)
+        {
+            string[] pathArray = currentPath.Split('/');
+            int pathArrayLength = pathArray.Length; string retPath = "";
+            for (int i = 0; i < (pathArrayLength - 1); i++)
+            {
+                retPath = Path.Combine(retPath, pathArray[i]);
+            }
+            return '/' + retPath;
+        }
+
+        /// <summary>
+        /// 为传入的Web当前路径拼接一个目录（通过路径分隔符'/'）
+        /// </summary>
+        /// <param name="currentPath">当前路径</param>
+        /// <param name="folder">目录名称</param>
+        /// <returns>拼接后的路径</returns>
+        public static string CombinePath4Web(string currentPath, string folder)
+        {
+            if (currentPath.LastIndexOf('/') == (currentPath.Length - 1))
+            {
+                return currentPath + folder.Replace("/", "");
+            }
+            else
+            {
+                return currentPath + '/' + folder.Replace("/", "");
+            }
+        }
     }
 }

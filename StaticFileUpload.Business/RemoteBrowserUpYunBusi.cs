@@ -68,16 +68,18 @@ namespace StaticFileUpload.Business
             {
                 List<FolderItem> itemsArray = upYun.readDir(remotePath).Cast<FolderItem>().ToList();
                 ListView.ListViewItemCollection listViewItems = listView.Items;
-                int imageIndex = 2;
+                int imageIndex = 0;
                 string programPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
                 ImageList.ImageCollection imageItems = imageList.Images;
                 listViewItems.Clear(); imageItems.Clear();
-                if (!remotePath.Equals("//"))
+                if (!remotePath.Equals("/"))
                 {
                     listViewItems.Add("上级目录", 0);
                     imageItems.Add(StaticFileUpload.Business.Properties.Resources.up_16x16);
+                    imageIndex++;
                 }
                 imageItems.Add(IconUtil.GetDirectoryIcon(programPath));
+                imageIndex++;
                 foreach (FolderItem item in itemsArray)
                 {
                     ListViewItem listViewItem = null;
@@ -88,11 +90,12 @@ namespace StaticFileUpload.Business
                     if (item.filetype.Equals("N"))
                     {
                         listViewItem = new ListViewItem(itemInfo, imageIndex);
+                        imageItems.Add(IconUtil.GetFileIcon(item.filename, false));
                         imageIndex++;
                     }
                     else
                     {
-                        listViewItem = new ListViewItem(itemInfo, 1);
+                        listViewItem = new ListViewItem(itemInfo, remotePath.Equals("/") ? 0 : 1);
                     }
                     listViewItems.Add(listViewItem);
                 }
