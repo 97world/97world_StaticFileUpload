@@ -10,12 +10,15 @@ using System.Windows.Forms;
 
 using StaticFileUpload.Common;
 using StaticFileUpload.Model;
+using StaticFileUpload.Interface;
+using StaticFileUpload.Business;
 
 namespace StaticFileUpload.View
 {
     public partial class StaticFileUploadLogin : StaticFileUploadBase
     {
         private SFUConfigInfo tempSFUConfigInfo;
+        private IRemoteBrowser remoteBrowserBusi = new RemoteBrowserUpYunBusi();
 
         public StaticFileUploadLogin()
         {
@@ -62,14 +65,26 @@ namespace StaticFileUpload.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            bool isLoginSuccess = true;
-            if (isLoginSuccess)
+            tempSFUConfigInfo.operatorInfo.bucketName = textBoxBucketName.Text.Trim();
+            tempSFUConfigInfo.operatorInfo.operatorName = textBoxOperatorName.Text.Trim();
+            tempSFUConfigInfo.operatorInfo.operatorPwd = textBoxOperatorPwd.Text.Trim();
+            tempSFUConfigInfo.operatorInfo.bindDomain = textBoxDomain.Text.Trim();
+            tempSFUConfigInfo.operatorInfo.netSelection = comboBoxInternet.Text.Trim();
+            tempSFUConfigInfo.loginInfo.autoLogin = checkBoxAutoLogin.Checked;
+            tempSFUConfigInfo.loginInfo.rememberPwd = checkBoxRememberPwd.Checked;
+            try
             {
-                sfuConfigInfo = tempSFUConfigInfo;
-                StaticFileUploadMain staticFileUploadMain = (StaticFileUploadMain)this.Owner;
-                staticFileUploadMain.InitStaticFileUploadMain();
-                this.Close();
+                remoteBrowserBusi.CheckLoginInfo(tempSFUConfigInfo.operatorInfo);
             }
+            catch (LoginException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            sfuConfigInfo = tempSFUConfigInfo;
+            StaticFileUploadMain staticFileUploadMain = (StaticFileUploadMain)this.Owner;
+            staticFileUploadMain.InitStaticFileUploadMain();
+            this.Close();
         }
     }
 }

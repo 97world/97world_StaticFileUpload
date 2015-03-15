@@ -55,6 +55,14 @@
     <Compile Include="RemoteBrowserUpYunBusi.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Library.QiNiu\Library.QiNiu.csproj">
+      <Project>{02a88ac9-eb17-4074-be60-12654ee6bf73}</Project>
+      <Name>Library.QiNiu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library.UpYun\Library.UpYun.csproj">
+      <Project>{56c2376b-c2f5-4a12-8881-48300117e6ba}</Project>
+      <Name>Library.UpYun</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StaticFileUpload.Common\StaticFileUpload.Common.csproj">
       <Project>{48893977-88a9-4979-bb46-2b28db1b3e4b}</Project>
       <Name>StaticFileUpload.Common</Name>
@@ -66,6 +74,10 @@
     <ProjectReference Include="..\StaticFileUpload.Log\StaticFileUpload.Log.csproj">
       <Project>{9ae2e4d4-87e3-4e5f-b5cf-6e2c4cc8686b}</Project>
       <Name>StaticFileUpload.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StaticFileUpload.Model\StaticFileUpload.Model.csproj">
+      <Project>{f802c020-d836-4060-b2f3-2cb15938bb6c}</Project>
+      <Name>StaticFileUpload.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

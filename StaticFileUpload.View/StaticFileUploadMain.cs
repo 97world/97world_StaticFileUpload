@@ -44,7 +44,18 @@ namespace StaticFileUpload.View
             // 设置操作员信息
             if (sfuConfigInfo != null)
             {
+                try
+                {
+                    remoteBrowserBusi.CheckLoginInfo(sfuConfigInfo.operatorInfo);
+                }
+                catch (LoginException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+                }
                 statusLabelOperatorName.Text = sfuConfigInfo.operatorInfo.operatorName;
+                statusLabelUseSpaceValue.Text = remoteBrowserBusi.GetSpaceUsage();
+                toolStripStatusLabelStatus.Text = "登录成功！";
                 menuItemTrans4Local.Enabled = true;
             }
             else
@@ -53,7 +64,18 @@ namespace StaticFileUpload.View
                 if (tempSFUConfigInfo.loginInfo.autoLogin == true)
                 {
                     sfuConfigInfo = tempSFUConfigInfo;
-                    // TODO: Init Model YpYun.
+                    try
+                    {
+                        remoteBrowserBusi.CheckLoginInfo(sfuConfigInfo.operatorInfo);
+                    }
+                    catch (LoginException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        return;
+                    }
+                    statusLabelOperatorName.Text = sfuConfigInfo.operatorInfo.operatorName;
+                    statusLabelUseSpaceValue.Text = remoteBrowserBusi.GetSpaceUsage();
+                    toolStripStatusLabelStatus.Text = "登录成功！";
                     menuItemTrans4Local.Enabled = true;
                 }
             }

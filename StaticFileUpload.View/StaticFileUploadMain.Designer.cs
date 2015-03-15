@@ -743,7 +743,7 @@
             // statusLabelBlank
             // 
             this.statusLabelBlank.Name = "statusLabelBlank";
-            this.statusLabelBlank.Size = new System.Drawing.Size(469, 17);
+            this.statusLabelBlank.Size = new System.Drawing.Size(438, 17);
             this.statusLabelBlank.Spring = true;
             // 
             // toolStripStatusLabelStatus

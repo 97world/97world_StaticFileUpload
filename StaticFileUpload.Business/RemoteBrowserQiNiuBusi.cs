@@ -7,7 +7,7 @@ using StaticFileUpload.Interface;
 
 namespace StaticFileUpload.Business
 {
-    public class RemoteBrowserQiNiuBusi : IRemoteBrowser
+    public class RemoteBrowserQiNiuBusi
     {
     }
 }

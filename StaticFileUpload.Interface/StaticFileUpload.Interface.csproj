@@ -45,6 +45,12 @@
     <Compile Include="IRemoteBrowser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StaticFileUpload.Model\StaticFileUpload.Model.csproj">
+      <Project>{f802c020-d836-4060-b2f3-2cb15938bb6c}</Project>
+      <Name>StaticFileUpload.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
