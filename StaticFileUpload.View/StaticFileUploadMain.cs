@@ -243,7 +243,16 @@ namespace StaticFileUpload.View
             ShellContextMenu scmu = new ShellContextMenu();
             Point listViewPoint = listView4Local.PointToClient(localListViewPoint);
             FileInfo[] fileInfoArr = new FileInfo[1];
-            string filePath = Path.Combine(localPath, listView4Local.GetItemAt(listViewPoint.X, listViewPoint.Y).Text);
+            string filePath = "";
+            if (localPath.Equals(Environment.SpecialFolder.MyComputer.ToString()))
+            {
+                filePath = Path.GetFullPath(listView4Local.GetItemAt(listViewPoint.X, listViewPoint.Y).SubItems[3].Text);
+                // BUG: Can't get System menu from disk root directory.
+            }
+            else 
+            {
+                filePath = Path.Combine(localPath, listView4Local.GetItemAt(listViewPoint.X, listViewPoint.Y).Text);
+            }
             fileInfoArr[0] = new FileInfo(filePath);
             scmu.ShowContextMenu(fileInfoArr, localListViewPoint);
         }
