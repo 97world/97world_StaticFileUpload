@@ -101,11 +101,6 @@ namespace StaticFileUpload.View
             comboBoxPath4Local.Text = localPath;
         }
 
-        public void LoadListViewByRemotePath()
-        {
-
-        }
-
         private void listView4Local_DoubleClick(object sender, EventArgs e)
         {
             ListViewItem selectedItem = listView4Local.SelectedItems[listView4Local.SelectedItems.Count - 1];
@@ -337,6 +332,11 @@ namespace StaticFileUpload.View
         private void menuItemGitHub_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/97world/97world_StaticFileUpload");
+        }
+
+        public void LoadListViewByRemotePath()
+        {
+            remoteBrowserBusi.LoadListView(listView4Remote, imageListRemoteListViewIcon, remotePath);
         }
 
     }

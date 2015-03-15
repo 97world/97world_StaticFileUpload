@@ -30,7 +30,7 @@ namespace StaticFileUpload.View
         public static string remotePath = @"/";
 
         /// <summary>
-        /// 操作员信息
+        /// 操作员信息（如果没有登录或者登录失败此对象将为空，作为是否登录成功的标志）
         /// </summary>
         public static SFUConfigInfo sfuConfigInfo;
 
