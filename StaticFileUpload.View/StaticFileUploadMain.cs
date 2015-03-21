@@ -268,6 +268,16 @@ namespace StaticFileUpload.View
         {
             localListViewPoint.X = Cursor.Position.X;
             localListViewPoint.Y = Cursor.Position.Y;
+            //Point listViewPoint = listView4Local.PointToClient(localListViewPoint);
+            //ListViewItem listViewItem = listView4Local.GetItemAt(listViewPoint.X, listViewPoint.Y);
+            //if (listViewItem == null || listViewItem.Text == "上级目录")
+            //{
+
+            //}
+            //else
+            //{
+
+            //}
         }
 
         private void menuItemExit_Click(object sender, EventArgs e)
@@ -367,6 +377,14 @@ namespace StaticFileUpload.View
                 remotePath = SFUCommon.CombinePath4Web(remotePath, selectedItem.Text);
             }
             LoadListViewByRemotePath();
+        }
+
+        private void menuItemProperty4Local_Click(object sender, EventArgs e)
+        {
+            Point listViewPoint = listView4Local.PointToClient(localListViewPoint);
+            ListViewItem listViewItem = listView4Local.GetItemAt(listViewPoint.X, listViewPoint.Y);
+            string path = Path.Combine(localPath, listViewItem.Text);
+            SysFileOrDirActionUtil.PropertyFileOrDirectory(path);
         }
 
     }

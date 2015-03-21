@@ -845,6 +845,7 @@
             // 
             this.menuItemProperty4Local.Index = 10;
             this.menuItemProperty4Local.Text = "属性(&R)";
+            this.menuItemProperty4Local.Click += new System.EventHandler(this.menuItemProperty4Local_Click);
             // 
             // menuItem17
             // 

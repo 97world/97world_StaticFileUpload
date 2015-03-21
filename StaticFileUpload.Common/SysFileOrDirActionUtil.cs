@@ -56,6 +56,9 @@ namespace StaticFileUpload.Common
         [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
         public static extern int SHFileOperation([In] ref SHFILEOPSTRUCT lpFileOp);
 
+        [DllImport("shell32.dll")]
+        public static extern int ShellExecuteEx(ref SHELLEXECUTEINFO lpExecInfo);
+
         public static int DeleteFileOrDirectory(StringBuilder pathSb)
         {
             SHFILEOPSTRUCT shfileopstruct = new SHFILEOPSTRUCT();
@@ -79,6 +82,45 @@ namespace StaticFileUpload.Common
             shfileopstruct.fFlags = FILEOP_FLAGS.FOF_ALLOWUNDO;
             shfileopstruct.fAnyOperationsAborted = true;
             return SHFileOperation(ref shfileopstruct);
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct SHELLEXECUTEINFO
+        {
+            public int cbSize;
+            public uint fMask;
+            public IntPtr hwnd;
+            [MarshalAs(UnmanagedType.LPStr)]
+            public string lpVerb;
+            [MarshalAs(UnmanagedType.LPStr)]
+            public string lpFile;
+            [MarshalAs(UnmanagedType.LPStr)]
+            public string lpParameters;
+            [MarshalAs(UnmanagedType.LPStr)]
+            public string lpDirectory;
+            public int nShow;
+            public IntPtr hInstApp;
+            public IntPtr lpIDList;
+            [MarshalAs(UnmanagedType.LPStr)]
+            public string lpClass;
+            public IntPtr hkeyClass;
+            public uint dwHotKey;
+            public IntPtr hIcon;
+            public IntPtr hProcess;
+        }
+
+        private const int SW_SHOW = 5;
+        private const uint SEE_MASK_INVOKEIDLIST = 12;
+
+        public static int PropertyFileOrDirectory(string path)
+        {
+            SHELLEXECUTEINFO info = new SHELLEXECUTEINFO();
+            info.cbSize = System.Runtime.InteropServices.Marshal.SizeOf(info);
+            info.lpVerb = "properties";
+            info.lpFile = path.ToString();
+            info.nShow = SW_SHOW;
+            info.fMask = SEE_MASK_INVOKEIDLIST;
+            return ShellExecuteEx(ref info);
         }
     }
 }
