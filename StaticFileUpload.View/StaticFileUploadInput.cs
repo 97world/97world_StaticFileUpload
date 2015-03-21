@@ -40,9 +40,9 @@ namespace StaticFileUpload.View
             {
                 labelFolderName.Text = "文件夹名称：";
                 if (inputAddOrRename.Equals("ADD"))
-                    this.Text = "新建文件夹：";
+                    this.Text = "新建文件夹";
                 else
-                    this.Text = "重命名文件夹：";
+                    this.Text = "重命名文件夹";
             }
         }
 

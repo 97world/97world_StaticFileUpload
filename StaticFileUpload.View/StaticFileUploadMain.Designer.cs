@@ -47,56 +47,8 @@
             this.menuItem15 = new System.Windows.Forms.MenuItem();
             this.menuItemAbout = new System.Windows.Forms.MenuItem();
             this.menuItemGitHub = new System.Windows.Forms.MenuItem();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.mainPanelRight = new System.Windows.Forms.Panel();
-            this.listView4Remote = new System.Windows.Forms.ListView();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageListRemoteListViewIcon = new System.Windows.Forms.ImageList(this.components);
-            this.panelAddressBar4Remote = new System.Windows.Forms.Panel();
-            this.btnParentDirectory4Remote = new System.Windows.Forms.Button();
-            this.comboBoxPath4Remote = new System.Windows.Forms.ComboBox();
-            this.toolStripRemote = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabelRemote = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBtnConnect = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnDisConnect = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnRootPath = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnTrans4Remote = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnCopyLink = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnNewFolder4Remote = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnRefresh4Remote = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnDel4Remote = new System.Windows.Forms.ToolStripButton();
-            this.mainPanelLeft = new System.Windows.Forms.Panel();
-            this.listView4Local = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageListLocalListViewIcon = new System.Windows.Forms.ImageList(this.components);
-            this.panelAddressBar4Local = new System.Windows.Forms.Panel();
-            this.btnParentDirectory4Local = new System.Windows.Forms.Button();
-            this.comboBoxPath4Local = new System.Windows.Forms.ComboBox();
-            this.toolStripLeft = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabelLocal = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBtnComputer = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnMyDocument = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnDesktop = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnTrans4Local = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnNewFolder4Local = new System.Windows.Forms.ToolStripButton();
-            this.toolStripNewFile = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnRefresh4Local = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnDel4Local = new System.Windows.Forms.ToolStripButton();
-            this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
-            this.statusLabelOperatorLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusLabelOperatorName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusLabelDelimiter = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusLabelUseSpaceLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusLabelUseSpaceValue = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusLabelBlank = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.contextMenu4Local = new System.Windows.Forms.ContextMenu();
             this.menuItemTrans4Local = new System.Windows.Forms.MenuItem();
             this.menuItem13 = new System.Windows.Forms.MenuItem();
@@ -126,6 +78,54 @@
             this.menuItemNewFolder4Remote = new System.Windows.Forms.MenuItem();
             this.menuItem12 = new System.Windows.Forms.MenuItem();
             this.menuItemRefresh4Remote = new System.Windows.Forms.MenuItem();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.mainPanelRight = new System.Windows.Forms.Panel();
+            this.listView4Remote = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panelAddressBar4Remote = new System.Windows.Forms.Panel();
+            this.btnParentDirectory4Remote = new System.Windows.Forms.Button();
+            this.comboBoxPath4Remote = new System.Windows.Forms.ComboBox();
+            this.toolStripRemote = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabelRemote = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBtnConnect = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDisConnect = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnRootPath = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnTrans4Remote = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnCopyLink = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnNewFolder4Remote = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnRefresh4Remote = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDel4Remote = new System.Windows.Forms.ToolStripButton();
+            this.mainPanelLeft = new System.Windows.Forms.Panel();
+            this.listView4Local = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panelAddressBar4Local = new System.Windows.Forms.Panel();
+            this.btnParentDirectory4Local = new System.Windows.Forms.Button();
+            this.comboBoxPath4Local = new System.Windows.Forms.ComboBox();
+            this.toolStripLeft = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabelLocal = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBtnComputer = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnMyDocument = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDesktop = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnTrans4Local = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnNewFolder4Local = new System.Windows.Forms.ToolStripButton();
+            this.toolStripNewFile = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnRefresh4Local = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnDel4Local = new System.Windows.Forms.ToolStripButton();
+            this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
+            this.statusLabelOperatorLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusLabelOperatorName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusLabelDelimiter = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusLabelUseSpaceLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusLabelUseSpaceValue = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusLabelBlank = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.mainPanelRight.SuspendLayout();
             this.panelAddressBar4Remote.SuspendLayout();
             this.toolStripRemote.SuspendLayout();
@@ -164,6 +164,7 @@
             // 
             this.menuItemLogout.Index = 1;
             this.menuItemLogout.Text = "操作员注销(C)";
+            this.menuItemLogout.Click += new System.EventHandler(this.menuItemLogout_Click);
             // 
             // menuItem7
             // 
@@ -250,12 +251,219 @@
             this.menuItemGitHub.Text = "点击访问项目GitHub主页(&G)";
             this.menuItemGitHub.Click += new System.EventHandler(this.menuItemGitHub_Click);
             // 
+            // imageListRemoteListViewIcon
+            // 
+            this.imageListRemoteListViewIcon.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageListRemoteListViewIcon.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListRemoteListViewIcon.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageListLocalListViewIcon
+            // 
+            this.imageListLocalListViewIcon.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageListLocalListViewIcon.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListLocalListViewIcon.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // contextMenu4Local
+            // 
+            this.contextMenu4Local.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItemTrans4Local,
+            this.menuItem13,
+            this.menuItemOpen4Local,
+            this.menuItem14,
+            this.menuItemSysMenu4Local,
+            this.menuItem16,
+            this.menuItemCopy4Local,
+            this.menuItemPaste4Local,
+            this.menuItemDel4Local,
+            this.menuItemRename4Local,
+            this.menuItemProperty4Local,
+            this.menuItem17,
+            this.menuItemNewFolder4Local,
+            this.menuItemNewFile4Local,
+            this.menuItem18,
+            this.menuItemRefresh4Local});
+            // 
+            // menuItemTrans4Local
+            // 
+            this.menuItemTrans4Local.Index = 0;
+            this.menuItemTrans4Local.Shortcut = System.Windows.Forms.Shortcut.CtrlT;
+            this.menuItemTrans4Local.Text = "传输(&T)";
+            // 
+            // menuItem13
+            // 
+            this.menuItem13.Index = 1;
+            this.menuItem13.Text = "-";
+            // 
+            // menuItemOpen4Local
+            // 
+            this.menuItemOpen4Local.Index = 2;
+            this.menuItemOpen4Local.Shortcut = System.Windows.Forms.Shortcut.CtrlO;
+            this.menuItemOpen4Local.Text = "打开(&O)";
+            this.menuItemOpen4Local.Click += new System.EventHandler(this.menuItemOpen4Local_Click);
+            // 
+            // menuItem14
+            // 
+            this.menuItem14.Index = 3;
+            this.menuItem14.Text = "-";
+            // 
+            // menuItemSysMenu4Local
+            // 
+            this.menuItemSysMenu4Local.Index = 4;
+            this.menuItemSysMenu4Local.Text = "资源管理器菜单(&U)...";
+            this.menuItemSysMenu4Local.Click += new System.EventHandler(this.menuItemSysMenu4Local_Click);
+            // 
+            // menuItem16
+            // 
+            this.menuItem16.Index = 5;
+            this.menuItem16.Text = "-";
+            // 
+            // menuItemCopy4Local
+            // 
+            this.menuItemCopy4Local.Index = 6;
+            this.menuItemCopy4Local.Shortcut = System.Windows.Forms.Shortcut.CtrlC;
+            this.menuItemCopy4Local.Text = "复制(&C)";
+            this.menuItemCopy4Local.Click += new System.EventHandler(this.menuItemCopy4Local_Click);
+            // 
+            // menuItemPaste4Local
+            // 
+            this.menuItemPaste4Local.Index = 7;
+            this.menuItemPaste4Local.Shortcut = System.Windows.Forms.Shortcut.CtrlV;
+            this.menuItemPaste4Local.Text = "粘贴(&V)";
+            this.menuItemPaste4Local.Click += new System.EventHandler(this.menuItemPaste4Local_Click);
+            // 
+            // menuItemDel4Local
+            // 
+            this.menuItemDel4Local.Index = 8;
+            this.menuItemDel4Local.Shortcut = System.Windows.Forms.Shortcut.Del;
+            this.menuItemDel4Local.Text = "删除(&D)";
+            this.menuItemDel4Local.Click += new System.EventHandler(this.menuItemDel4Local_Click);
+            // 
+            // menuItemRename4Local
+            // 
+            this.menuItemRename4Local.Index = 9;
+            this.menuItemRename4Local.Shortcut = System.Windows.Forms.Shortcut.F2;
+            this.menuItemRename4Local.Text = "重命名(&N)";
+            this.menuItemRename4Local.Click += new System.EventHandler(this.menuItemRename4Local_Click);
+            // 
+            // menuItemProperty4Local
+            // 
+            this.menuItemProperty4Local.Index = 10;
+            this.menuItemProperty4Local.Text = "属性(&R)";
+            this.menuItemProperty4Local.Click += new System.EventHandler(this.menuItemProperty4Local_Click);
+            // 
+            // menuItem17
+            // 
+            this.menuItem17.Index = 11;
+            this.menuItem17.Text = "-";
+            // 
+            // menuItemNewFolder4Local
+            // 
+            this.menuItemNewFolder4Local.Index = 12;
+            this.menuItemNewFolder4Local.Shortcut = System.Windows.Forms.Shortcut.Ins;
+            this.menuItemNewFolder4Local.Text = "建立文件夹(&X)";
+            this.menuItemNewFolder4Local.Click += new System.EventHandler(this.menuItemNewFolder4Local_Click);
+            // 
+            // menuItemNewFile4Local
+            // 
+            this.menuItemNewFile4Local.Index = 13;
+            this.menuItemNewFile4Local.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftI;
+            this.menuItemNewFile4Local.Text = "新建文件(&Y)";
+            this.menuItemNewFile4Local.Click += new System.EventHandler(this.menuItemNewFile4Local_Click);
+            // 
+            // menuItem18
+            // 
+            this.menuItem18.Index = 14;
+            this.menuItem18.Text = "-";
+            // 
+            // menuItemRefresh4Local
+            // 
+            this.menuItemRefresh4Local.Index = 15;
+            this.menuItemRefresh4Local.Shortcut = System.Windows.Forms.Shortcut.F5;
+            this.menuItemRefresh4Local.Text = "刷新(&Z)";
+            this.menuItemRefresh4Local.Click += new System.EventHandler(this.menuItemRefresh4Local_Click);
+            // 
+            // contextMenu4Remote
+            // 
+            this.contextMenu4Remote.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItemCopyLink4Remote,
+            this.menuItem8,
+            this.menuItemTrans4Remote,
+            this.menuItem9,
+            this.menuItemPreview4Remote,
+            this.menuItem10,
+            this.menuItemDel4Remote,
+            this.menuItem11,
+            this.menuItemNewFolder4Remote,
+            this.menuItem12,
+            this.menuItemRefresh4Remote});
+            // 
+            // menuItemCopyLink4Remote
+            // 
+            this.menuItemCopyLink4Remote.Index = 0;
+            this.menuItemCopyLink4Remote.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftC;
+            this.menuItemCopyLink4Remote.Text = "复制链接(&L)";
+            // 
+            // menuItem8
+            // 
+            this.menuItem8.Index = 1;
+            this.menuItem8.Text = "-";
+            // 
+            // menuItemTrans4Remote
+            // 
+            this.menuItemTrans4Remote.Index = 2;
+            this.menuItemTrans4Remote.Shortcut = System.Windows.Forms.Shortcut.CtrlT;
+            this.menuItemTrans4Remote.Text = "传输(&T)";
+            // 
+            // menuItem9
+            // 
+            this.menuItem9.Index = 3;
+            this.menuItem9.Text = "-";
+            // 
+            // menuItemPreview4Remote
+            // 
+            this.menuItemPreview4Remote.Index = 4;
+            this.menuItemPreview4Remote.Shortcut = System.Windows.Forms.Shortcut.CtrlQ;
+            this.menuItemPreview4Remote.Text = "预览(&Q)";
+            // 
+            // menuItem10
+            // 
+            this.menuItem10.Index = 5;
+            this.menuItem10.Text = "-";
+            // 
+            // menuItemDel4Remote
+            // 
+            this.menuItemDel4Remote.Index = 6;
+            this.menuItemDel4Remote.Shortcut = System.Windows.Forms.Shortcut.Del;
+            this.menuItemDel4Remote.Text = "删除(&D)";
+            // 
+            // menuItem11
+            // 
+            this.menuItem11.Index = 7;
+            this.menuItem11.Text = "-";
+            // 
+            // menuItemNewFolder4Remote
+            // 
+            this.menuItemNewFolder4Remote.Index = 8;
+            this.menuItemNewFolder4Remote.Shortcut = System.Windows.Forms.Shortcut.Ins;
+            this.menuItemNewFolder4Remote.Text = "建立文件夹(&X)";
+            // 
+            // menuItem12
+            // 
+            this.menuItem12.Index = 9;
+            this.menuItem12.Text = "-";
+            // 
+            // menuItemRefresh4Remote
+            // 
+            this.menuItemRefresh4Remote.Index = 10;
+            this.menuItemRefresh4Remote.Shortcut = System.Windows.Forms.Shortcut.F5;
+            this.menuItemRefresh4Remote.Text = "刷新(&Z)";
+            // 
             // splitter1
             // 
             this.splitter1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.splitter1.Location = new System.Drawing.Point(449, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 593);
+            this.splitter1.Size = new System.Drawing.Size(3, 551);
             this.splitter1.TabIndex = 3;
             this.splitter1.TabStop = false;
             // 
@@ -268,7 +476,7 @@
             this.mainPanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanelRight.Location = new System.Drawing.Point(449, 0);
             this.mainPanelRight.Name = "mainPanelRight";
-            this.mainPanelRight.Size = new System.Drawing.Size(448, 593);
+            this.mainPanelRight.Size = new System.Drawing.Size(448, 551);
             this.mainPanelRight.TabIndex = 2;
             // 
             // listView4Remote
@@ -283,12 +491,13 @@
             this.listView4Remote.FullRowSelect = true;
             this.listView4Remote.Location = new System.Drawing.Point(0, 60);
             this.listView4Remote.Name = "listView4Remote";
-            this.listView4Remote.Size = new System.Drawing.Size(448, 533);
+            this.listView4Remote.Size = new System.Drawing.Size(448, 491);
             this.listView4Remote.SmallImageList = this.imageListRemoteListViewIcon;
             this.listView4Remote.TabIndex = 3;
             this.listView4Remote.UseCompatibleStateImageBehavior = false;
             this.listView4Remote.View = System.Windows.Forms.View.Details;
             this.listView4Remote.DoubleClick += new System.EventHandler(this.listView4Remote_DoubleClick);
+            this.listView4Remote.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listView4Remote_MouseUp);
             // 
             // columnHeader4
             // 
@@ -304,12 +513,6 @@
             // 
             this.columnHeader6.Text = "修改日期";
             this.columnHeader6.Width = 120;
-            // 
-            // imageListRemoteListViewIcon
-            // 
-            this.imageListRemoteListViewIcon.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imageListRemoteListViewIcon.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageListRemoteListViewIcon.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // panelAddressBar4Remote
             // 
@@ -480,7 +683,7 @@
             this.mainPanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.mainPanelLeft.Location = new System.Drawing.Point(0, 0);
             this.mainPanelLeft.Name = "mainPanelLeft";
-            this.mainPanelLeft.Size = new System.Drawing.Size(449, 593);
+            this.mainPanelLeft.Size = new System.Drawing.Size(449, 551);
             this.mainPanelLeft.TabIndex = 1;
             // 
             // listView4Local
@@ -495,12 +698,13 @@
             this.listView4Local.FullRowSelect = true;
             this.listView4Local.Location = new System.Drawing.Point(0, 60);
             this.listView4Local.Name = "listView4Local";
-            this.listView4Local.Size = new System.Drawing.Size(449, 533);
+            this.listView4Local.Size = new System.Drawing.Size(449, 491);
             this.listView4Local.SmallImageList = this.imageListLocalListViewIcon;
             this.listView4Local.TabIndex = 4;
             this.listView4Local.UseCompatibleStateImageBehavior = false;
             this.listView4Local.View = System.Windows.Forms.View.Details;
             this.listView4Local.DoubleClick += new System.EventHandler(this.listView4Local_DoubleClick);
+            this.listView4Local.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listView4Local_MouseUp);
             // 
             // columnHeader1
             // 
@@ -516,12 +720,6 @@
             // 
             this.columnHeader3.Text = "修改日期";
             this.columnHeader3.Width = 120;
-            // 
-            // imageListLocalListViewIcon
-            // 
-            this.imageListLocalListViewIcon.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imageListLocalListViewIcon.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageListLocalListViewIcon.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // panelAddressBar4Local
             // 
@@ -705,7 +903,7 @@
             this.statusLabelBlank,
             this.toolStripStatusLabelStatus,
             this.statusProgressBar});
-            this.mainStatusStrip.Location = new System.Drawing.Point(0, 593);
+            this.mainStatusStrip.Location = new System.Drawing.Point(0, 551);
             this.mainStatusStrip.Name = "mainStatusStrip";
             this.mainStatusStrip.Size = new System.Drawing.Size(897, 22);
             this.mainStatusStrip.TabIndex = 0;
@@ -759,212 +957,11 @@
             this.statusProgressBar.Size = new System.Drawing.Size(150, 16);
             this.statusProgressBar.Value = 10;
             // 
-            // contextMenu4Local
-            // 
-            this.contextMenu4Local.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItemTrans4Local,
-            this.menuItem13,
-            this.menuItemOpen4Local,
-            this.menuItem14,
-            this.menuItemSysMenu4Local,
-            this.menuItem16,
-            this.menuItemCopy4Local,
-            this.menuItemPaste4Local,
-            this.menuItemDel4Local,
-            this.menuItemRename4Local,
-            this.menuItemProperty4Local,
-            this.menuItem17,
-            this.menuItemNewFolder4Local,
-            this.menuItemNewFile4Local,
-            this.menuItem18,
-            this.menuItemRefresh4Local});
-            this.contextMenu4Local.Popup += new System.EventHandler(this.contextMenu4Local_Popup);
-            // 
-            // menuItemTrans4Local
-            // 
-            this.menuItemTrans4Local.Index = 0;
-            this.menuItemTrans4Local.Shortcut = System.Windows.Forms.Shortcut.CtrlT;
-            this.menuItemTrans4Local.Text = "传输(&T)";
-            // 
-            // menuItem13
-            // 
-            this.menuItem13.Index = 1;
-            this.menuItem13.Text = "-";
-            // 
-            // menuItemOpen4Local
-            // 
-            this.menuItemOpen4Local.Index = 2;
-            this.menuItemOpen4Local.Shortcut = System.Windows.Forms.Shortcut.CtrlO;
-            this.menuItemOpen4Local.Text = "打开(&O)";
-            this.menuItemOpen4Local.Click += new System.EventHandler(this.menuItemOpen4Local_Click);
-            // 
-            // menuItem14
-            // 
-            this.menuItem14.Index = 3;
-            this.menuItem14.Text = "-";
-            // 
-            // menuItemSysMenu4Local
-            // 
-            this.menuItemSysMenu4Local.Index = 4;
-            this.menuItemSysMenu4Local.Text = "资源管理器菜单(&U)...";
-            this.menuItemSysMenu4Local.Click += new System.EventHandler(this.menuItemSysMenu4Local_Click);
-            // 
-            // menuItem16
-            // 
-            this.menuItem16.Index = 5;
-            this.menuItem16.Text = "-";
-            // 
-            // menuItemCopy4Local
-            // 
-            this.menuItemCopy4Local.Index = 6;
-            this.menuItemCopy4Local.Shortcut = System.Windows.Forms.Shortcut.CtrlC;
-            this.menuItemCopy4Local.Text = "复制(&C)";
-            this.menuItemCopy4Local.Click += new System.EventHandler(this.menuItemCopy4Local_Click);
-            // 
-            // menuItemPaste4Local
-            // 
-            this.menuItemPaste4Local.Index = 7;
-            this.menuItemPaste4Local.Shortcut = System.Windows.Forms.Shortcut.CtrlV;
-            this.menuItemPaste4Local.Text = "粘贴(&V)";
-            this.menuItemPaste4Local.Click += new System.EventHandler(this.menuItemPaste4Local_Click);
-            // 
-            // menuItemDel4Local
-            // 
-            this.menuItemDel4Local.Index = 8;
-            this.menuItemDel4Local.Shortcut = System.Windows.Forms.Shortcut.Del;
-            this.menuItemDel4Local.Text = "删除(&D)";
-            this.menuItemDel4Local.Click += new System.EventHandler(this.menuItemDel4Local_Click);
-            // 
-            // menuItemRename4Local
-            // 
-            this.menuItemRename4Local.Index = 9;
-            this.menuItemRename4Local.Shortcut = System.Windows.Forms.Shortcut.F2;
-            this.menuItemRename4Local.Text = "重命名(&N)";
-            // 
-            // menuItemProperty4Local
-            // 
-            this.menuItemProperty4Local.Index = 10;
-            this.menuItemProperty4Local.Text = "属性(&R)";
-            this.menuItemProperty4Local.Click += new System.EventHandler(this.menuItemProperty4Local_Click);
-            // 
-            // menuItem17
-            // 
-            this.menuItem17.Index = 11;
-            this.menuItem17.Text = "-";
-            // 
-            // menuItemNewFolder4Local
-            // 
-            this.menuItemNewFolder4Local.Index = 12;
-            this.menuItemNewFolder4Local.Shortcut = System.Windows.Forms.Shortcut.Ins;
-            this.menuItemNewFolder4Local.Text = "建立文件夹(&X)";
-            this.menuItemNewFolder4Local.Click += new System.EventHandler(this.menuItemNewFolder4Local_Click);
-            // 
-            // menuItemNewFile4Local
-            // 
-            this.menuItemNewFile4Local.Index = 13;
-            this.menuItemNewFile4Local.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftI;
-            this.menuItemNewFile4Local.Text = "新建文件(&Y)";
-            this.menuItemNewFile4Local.Click += new System.EventHandler(this.menuItemNewFile4Local_Click);
-            // 
-            // menuItem18
-            // 
-            this.menuItem18.Index = 14;
-            this.menuItem18.Text = "-";
-            // 
-            // menuItemRefresh4Local
-            // 
-            this.menuItemRefresh4Local.Index = 15;
-            this.menuItemRefresh4Local.Shortcut = System.Windows.Forms.Shortcut.F5;
-            this.menuItemRefresh4Local.Text = "刷新(&Z)";
-            this.menuItemRefresh4Local.Click += new System.EventHandler(this.menuItemRefresh4Local_Click);
-            // 
-            // contextMenu4Remote
-            // 
-            this.contextMenu4Remote.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItemCopyLink4Remote,
-            this.menuItem8,
-            this.menuItemTrans4Remote,
-            this.menuItem9,
-            this.menuItemPreview4Remote,
-            this.menuItem10,
-            this.menuItemDel4Remote,
-            this.menuItem11,
-            this.menuItemNewFolder4Remote,
-            this.menuItem12,
-            this.menuItemRefresh4Remote});
-            // 
-            // menuItemCopyLink4Remote
-            // 
-            this.menuItemCopyLink4Remote.Enabled = false;
-            this.menuItemCopyLink4Remote.Index = 0;
-            this.menuItemCopyLink4Remote.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftC;
-            this.menuItemCopyLink4Remote.Text = "复制链接(&L)";
-            // 
-            // menuItem8
-            // 
-            this.menuItem8.Index = 1;
-            this.menuItem8.Text = "-";
-            // 
-            // menuItemTrans4Remote
-            // 
-            this.menuItemTrans4Remote.Enabled = false;
-            this.menuItemTrans4Remote.Index = 2;
-            this.menuItemTrans4Remote.Shortcut = System.Windows.Forms.Shortcut.CtrlT;
-            this.menuItemTrans4Remote.Text = "传输(&T)";
-            // 
-            // menuItem9
-            // 
-            this.menuItem9.Index = 3;
-            this.menuItem9.Text = "-";
-            // 
-            // menuItemPreview4Remote
-            // 
-            this.menuItemPreview4Remote.Enabled = false;
-            this.menuItemPreview4Remote.Index = 4;
-            this.menuItemPreview4Remote.Shortcut = System.Windows.Forms.Shortcut.CtrlQ;
-            this.menuItemPreview4Remote.Text = "预览(&Q)";
-            // 
-            // menuItem10
-            // 
-            this.menuItem10.Index = 5;
-            this.menuItem10.Text = "-";
-            // 
-            // menuItemDel4Remote
-            // 
-            this.menuItemDel4Remote.Enabled = false;
-            this.menuItemDel4Remote.Index = 6;
-            this.menuItemDel4Remote.Shortcut = System.Windows.Forms.Shortcut.Del;
-            this.menuItemDel4Remote.Text = "删除(&D)";
-            // 
-            // menuItem11
-            // 
-            this.menuItem11.Index = 7;
-            this.menuItem11.Text = "-";
-            // 
-            // menuItemNewFolder4Remote
-            // 
-            this.menuItemNewFolder4Remote.Enabled = false;
-            this.menuItemNewFolder4Remote.Index = 8;
-            this.menuItemNewFolder4Remote.Shortcut = System.Windows.Forms.Shortcut.Ins;
-            this.menuItemNewFolder4Remote.Text = "建立文件夹(&X)";
-            // 
-            // menuItem12
-            // 
-            this.menuItem12.Index = 9;
-            this.menuItem12.Text = "-";
-            // 
-            // menuItemRefresh4Remote
-            // 
-            this.menuItemRefresh4Remote.Enabled = false;
-            this.menuItemRefresh4Remote.Index = 10;
-            this.menuItemRefresh4Remote.Shortcut = System.Windows.Forms.Shortcut.F5;
-            this.menuItemRefresh4Remote.Text = "刷新(&Z)";
-            // 
             // StaticFileUploadMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 615);
+            this.ClientSize = new System.Drawing.Size(897, 573);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.mainPanelRight);
             this.Controls.Add(this.mainPanelLeft);

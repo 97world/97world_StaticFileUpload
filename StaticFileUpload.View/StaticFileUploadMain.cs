@@ -22,8 +22,7 @@ namespace StaticFileUpload.View
         private ILocalBrowser localBrowserBusi = new LocalBrowserBusi();
         private IRemoteBrowser remoteBrowserBusi = new RemoteBrowserUpYunBusi();
 
-        private Point localListViewPoint = new Point(0, 0);
-        private Point remoteListViewPoint = new Point(0, 0);
+        private Point tempPoint = new Point(0, 0);
 
         public StaticFileUploadMain()
         {
@@ -33,9 +32,6 @@ namespace StaticFileUpload.View
 
         public void InitStaticFileUploadMain()
         {
-            // 绑定 LocalListView & RemoteListView 控件的ContextMenu
-            listView4Local.ContextMenu = contextMenu4Local;
-            listView4Remote.ContextMenu = contextMenu4Remote;
             // 默认设置网络选择为“自动选择”
             menuItemNetAuto.Checked = true;
             // 设置右键菜单状态
@@ -51,6 +47,7 @@ namespace StaticFileUpload.View
                 catch (LoginException ex)
                 {
                     MessageBox.Show(ex.Message);
+                    sfuConfigInfo = null;
                     return;
                 }
                 statusLabelOperatorName.Text = sfuConfigInfo.operatorInfo.operatorName;
@@ -71,6 +68,7 @@ namespace StaticFileUpload.View
                     catch (LoginException ex)
                     {
                         MessageBox.Show(ex.Message);
+                        sfuConfigInfo = null;
                         return;
                     }
                     statusLabelOperatorName.Text = sfuConfigInfo.operatorInfo.operatorName;
@@ -234,14 +232,13 @@ namespace StaticFileUpload.View
 
         private void menuItemDel4Local_Click(object sender, EventArgs e)
         {
-            localBrowserBusi.DeleteFolderOrFile(listView4Local.SelectedItems, localPath);
-            LoadListViewByLocalPath();
+            toolStripBtnDel4Local_Click(sender, new EventArgs());
         }
 
         private void menuItemSysMenu4Local_Click(object sender, EventArgs e)
         {
             ShellContextMenu scmu = new ShellContextMenu();
-            Point listViewPoint = listView4Local.PointToClient(localListViewPoint);
+            Point listViewPoint = listView4Local.PointToClient(tempPoint);
             FileInfo[] fileInfoArr = new FileInfo[1];
             string filePath = "";
             if (localPath.Equals(Environment.SpecialFolder.MyComputer.ToString()))
@@ -249,12 +246,12 @@ namespace StaticFileUpload.View
                 filePath = Path.GetFullPath(listView4Local.GetItemAt(listViewPoint.X, listViewPoint.Y).SubItems[3].Text);
                 // BUG: Can't get System menu from disk root directory.
             }
-            else 
+            else
             {
                 filePath = Path.Combine(localPath, listView4Local.GetItemAt(listViewPoint.X, listViewPoint.Y).Text);
             }
             fileInfoArr[0] = new FileInfo(filePath);
-            scmu.ShowContextMenu(fileInfoArr, localListViewPoint);
+            scmu.ShowContextMenu(fileInfoArr, tempPoint);
         }
 
         private void menuItemLogin_Click(object sender, EventArgs e)
@@ -262,22 +259,6 @@ namespace StaticFileUpload.View
             StaticFileUploadLogin staticFileUploadLogin = new StaticFileUploadLogin();
             staticFileUploadLogin.Owner = this;
             staticFileUploadLogin.ShowDialog();
-        }
-
-        private void contextMenu4Local_Popup(object sender, EventArgs e)
-        {
-            localListViewPoint.X = Cursor.Position.X;
-            localListViewPoint.Y = Cursor.Position.Y;
-            //Point listViewPoint = listView4Local.PointToClient(localListViewPoint);
-            //ListViewItem listViewItem = listView4Local.GetItemAt(listViewPoint.X, listViewPoint.Y);
-            //if (listViewItem == null || listViewItem.Text == "上级目录")
-            //{
-
-            //}
-            //else
-            //{
-
-            //}
         }
 
         private void menuItemExit_Click(object sender, EventArgs e)
@@ -381,10 +362,70 @@ namespace StaticFileUpload.View
 
         private void menuItemProperty4Local_Click(object sender, EventArgs e)
         {
-            Point listViewPoint = listView4Local.PointToClient(localListViewPoint);
+            Point listViewPoint = listView4Local.PointToClient(tempPoint);
             ListViewItem listViewItem = listView4Local.GetItemAt(listViewPoint.X, listViewPoint.Y);
             string path = Path.Combine(localPath, listViewItem.Text);
             SysFileOrDirActionUtil.PropertyFileOrDirectory(path);
+        }
+
+        private void listView4Local_MouseUp(object sender, MouseEventArgs e)
+        {
+            tempPoint.X = Cursor.Position.X;
+            tempPoint.Y = Cursor.Position.Y;
+            if (e.Button == MouseButtons.Right)
+            {
+                Point listView4LocalPoint = listView4Local.PointToClient(tempPoint);
+                ListViewItem selectedItem = listView4Local.GetItemAt(listView4LocalPoint.X, listView4LocalPoint.Y);
+                if (selectedItem == null) return;
+                if (selectedItem.Text != "上级目录" && selectedItem.SubItems.Count == 3)
+                {
+                    contextMenu4Local.Show(listView4Local, listView4LocalPoint);
+                }
+            }
+        }
+
+        private void menuItemRename4Local_Click(object sender, EventArgs e)
+        {
+            Point listView4LocalPoint = listView4Local.PointToClient(tempPoint);
+            ListViewItem selectedItem = listView4Local.GetItemAt(listView4LocalPoint.X, listView4LocalPoint.Y);
+            string selectedItemText = selectedItem.Text;
+            bool isFolder = Directory.Exists(Path.Combine(localPath, selectedItemText));
+
+            StaticFileUploadInput staticFileUploadInput = new StaticFileUploadInput();
+            staticFileUploadInput.inputAddOrRename = "RENAME";
+            staticFileUploadInput.inputFileOrFolder = isFolder ? "FOLDER" : "FILE";
+            staticFileUploadInput.inputOriName = selectedItemText;
+            staticFileUploadInput.inputCurrPath = localPath;
+            staticFileUploadInput.Owner = this;
+            staticFileUploadInput.ShowDialog();
+            LoadListViewByLocalPath();
+        }
+
+        private void menuItemLogout_Click(object sender, EventArgs e)
+        {
+            sfuConfigInfo = null;
+            remoteBrowserBusi.Logout();
+            listView4Remote.Items.Clear();
+            menuItemTrans4Local.Enabled = false;
+            statusLabelUseSpaceValue.Text = "未登录";
+            statusLabelOperatorName.Text = "未登录";
+            toolStripStatusLabelStatus.Text = "操作员注销成功！";
+        }
+
+        private void listView4Remote_MouseUp(object sender, MouseEventArgs e)
+        {
+            tempPoint.X = Cursor.Position.X;
+            tempPoint.Y = Cursor.Position.Y;
+            if (e.Button == MouseButtons.Right)
+            {
+                Point listView4RemotePoint = listView4Remote.PointToClient(tempPoint);
+                ListViewItem selectedItem = listView4Remote.GetItemAt(listView4RemotePoint.X, listView4RemotePoint.Y);
+                if (selectedItem == null) return;
+                if (selectedItem.Text != "上级目录" && selectedItem.SubItems.Count == 3 && sfuConfigInfo != null)
+                {
+                    contextMenu4Remote.Show(listView4Remote, listView4RemotePoint);
+                }
+            }
         }
 
     }

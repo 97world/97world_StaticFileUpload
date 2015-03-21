@@ -12,6 +12,8 @@ namespace StaticFileUpload.Interface
     {
         void CheckLoginInfo(OperatorInfo operatorInfo);
 
+        void Logout();
+
         string GetSpaceUsage();
 
         void SetNetLine(string netLine);

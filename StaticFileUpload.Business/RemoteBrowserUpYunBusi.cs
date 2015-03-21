@@ -50,6 +50,11 @@ namespace StaticFileUpload.Business
             }
         }
 
+        public void Logout()
+        {
+            upYun = null;
+        }
+
         public void SetNetLine(string netLine)
         {
             upYun.setApiDomain(StrFormatUtil.FormatNetStr(netLine));
