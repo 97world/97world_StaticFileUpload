@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.IO;
+using System.Collections;
 using StaticFileUpload.Interface;
 using StaticFileUpload.Business;
 using StaticFileUpload.Common;
@@ -426,6 +427,37 @@ namespace StaticFileUpload.View
                     contextMenu4Remote.Show(listView4Remote, listView4RemotePoint);
                 }
             }
+        }
+
+        private void menuItemTrans4Remote_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void menuItemTrans4Local_Click(object sender, EventArgs e)
+        {
+            ArrayList uploadFileNameList = new ArrayList();
+            ListView.SelectedListViewItemCollection selectedItems = listView4Local.SelectedItems;
+            foreach(ListViewItem item in selectedItems)
+            {
+                if (item.Text.Equals("上级目录")) continue;
+                uploadFileNameList.Add(item.Text);
+            }
+            remoteBrowserBusi.UploadFile(uploadFileNameList, localPath, remotePath, true);
+            LoadListViewByRemotePath();
+        }
+
+        private void menuItemDel4Remote_Click(object sender, EventArgs e)
+        {
+            ArrayList deleteFileNameList = new ArrayList();
+            ListView.SelectedListViewItemCollection selectedItems = listView4Remote.SelectedItems;
+            foreach (ListViewItem item in selectedItems)
+            {
+                if (item.Text.Equals("上级目录")) continue;
+                deleteFileNameList.Add(item.Text);
+            }
+            remoteBrowserBusi.DeleteFileAndDirectory(deleteFileNameList, remotePath);
+            LoadListViewByRemotePath();
         }
 
     }

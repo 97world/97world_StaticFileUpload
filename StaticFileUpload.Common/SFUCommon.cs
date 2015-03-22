@@ -98,10 +98,10 @@ namespace StaticFileUpload.Common
         public static string GetParentPath4Web(string currentPath)
         {
             string[] pathArray = currentPath.Split('/');
-            int pathArrayLength = pathArray.Length; string retPath = "";
-            for (int i = 0; i < (pathArrayLength - 1); i++)
+            int pathArrayLength = pathArray.Length - 1; string retPath = "";
+            for (int i = 0; i < pathArrayLength; i++)
             {
-                retPath = Path.Combine(retPath, pathArray[i]);
+                retPath = Path.Combine(retPath, pathArray[i]).Replace('\\', '/');
             }
             return '/' + retPath;
         }

@@ -288,6 +288,7 @@
             this.menuItemTrans4Local.Index = 0;
             this.menuItemTrans4Local.Shortcut = System.Windows.Forms.Shortcut.CtrlT;
             this.menuItemTrans4Local.Text = "传输(&T)";
+            this.menuItemTrans4Local.Click += new System.EventHandler(this.menuItemTrans4Local_Click);
             // 
             // menuItem13
             // 
@@ -413,6 +414,7 @@
             this.menuItemTrans4Remote.Index = 2;
             this.menuItemTrans4Remote.Shortcut = System.Windows.Forms.Shortcut.CtrlT;
             this.menuItemTrans4Remote.Text = "传输(&T)";
+            this.menuItemTrans4Remote.Click += new System.EventHandler(this.menuItemTrans4Remote_Click);
             // 
             // menuItem9
             // 
@@ -435,6 +437,7 @@
             this.menuItemDel4Remote.Index = 6;
             this.menuItemDel4Remote.Shortcut = System.Windows.Forms.Shortcut.Del;
             this.menuItemDel4Remote.Text = "删除(&D)";
+            this.menuItemDel4Remote.Click += new System.EventHandler(this.menuItemDel4Remote_Click);
             // 
             // menuItem11
             // 

@@ -5,6 +5,7 @@ using System.Text;
 
 using System.Windows.Forms;
 using System.Collections;
+using System.IO;
 using StaticFileUpload.Interface;
 using StaticFileUpload.Model;
 using StaticFileUpload.Log;
@@ -35,14 +36,14 @@ namespace StaticFileUpload.Business
                 upYun = null;
                 if (ex.Message.Contains("401"))
                 {
-                    string exceptionMsg = String.Format("操作员[{0}]登录失败.原因:登录信息填写有误,BucketName=[{1}],APINet=[{2}],ExceptionMsg=[{3}]", optorInfo.operatorName, optorInfo.bucketName, optorInfo.netSelection, ex.Message);
+                    string exceptionMsg = String.Format("操作员[{0}]登录失败.原因:登录信息填写有误,BucketName=[{1}],APINet=[{2}],ExceptionMsg=[{3}]", optorInfo.operatorName, optorInfo.bucketName, optorInfo.netSelection, ex);
                     LoginException loginException = new LoginException(401, exceptionMsg);
                     SFULogger.DEFAULT.Error(loginException.Message);
                     throw loginException;
                 }
                 else
                 {
-                    string exceptionMsg = String.Format("操作员[{0}]登录失败.原因:未知,BucketName=[{1}],APINet=[{2}],ExceptionMsg=[{3}]", optorInfo.operatorName, optorInfo.bucketName, optorInfo.netSelection, ex.Message);
+                    string exceptionMsg = String.Format("操作员[{0}]登录失败.原因:未知,BucketName=[{1}],APINet=[{2}],ExceptionMsg=[{3}]", optorInfo.operatorName, optorInfo.bucketName, optorInfo.netSelection, ex);
                     LoginException loginException = new LoginException(0, exceptionMsg);
                     SFULogger.DEFAULT.Error(loginException.Message);
                     throw loginException;
@@ -69,9 +70,11 @@ namespace StaticFileUpload.Business
         {
             if (upYun == null) return;
             Cursor.Current = Cursors.WaitCursor;
+            List<FolderItem> itemsArray = new List<FolderItem>();
+            try {itemsArray = upYun.readDir(remotePath).Cast<FolderItem>().ToList();}
+            catch { } // UpYun SDK BUG: 调用readDir方法时，如果该目录下没有任何文件或目录，会有数组越界的问题
             try
             {
-                List<FolderItem> itemsArray = upYun.readDir(remotePath).Cast<FolderItem>().ToList();
                 ListView.ListViewItemCollection listViewItems = listView.Items;
                 int imageIndex = 0;
                 string programPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
@@ -107,10 +110,57 @@ namespace StaticFileUpload.Business
             }
             catch (Exception ex)
             {
-                SFULogger.DEFAULT.Error(ex.Message);
+                SFULogger.DEFAULT.Error(ex);
                 throw;
             }
             Cursor.Current = Cursors.Default;
         }
+
+        public void MakeDirectory(string remotePath, bool isRecursive)
+        {
+
+        }
+
+        public void DeleteFileAndDirectory(ArrayList deleteFileNameList, string remotePath)
+        {
+            foreach(string fileName in deleteFileNameList)
+            {
+                string fileRemotePath = SFUCommon.CombinePath4Web(remotePath, fileName);
+                upYun.deleteFile(fileRemotePath);
+            }
+        }
+
+        public void DeleteDirectory(string directoryName, string remotePath)
+        {
+
+        }
+
+        public void UploadFile(ArrayList uploadFileNameList, string localPath, string remotePath, bool isRecursive)
+        {
+            foreach(string fileName in uploadFileNameList)
+            {
+                string fileLocalPath = Path.Combine(localPath, fileName);
+                string fileRemotePath = SFUCommon.CombinePath4Web(remotePath, fileName);
+                bool isDirectory = Directory.Exists(fileLocalPath);
+                if (isDirectory)
+                {
+                    // TODO: If the item is folder, need to traverse folder recursively(Get all file path in the folder).
+                }
+                else
+                {
+                    FileStream fileStream = new FileStream(fileLocalPath, FileMode.Open, FileAccess.Read);
+                    BinaryReader binaryReader = new BinaryReader(fileStream);
+                    byte[] postByte = binaryReader.ReadBytes((int)fileStream.Length);
+                    upYun.writeFile(fileRemotePath, postByte, isRecursive);
+                }
+            }
+        }
+
+        public void DownloadFile(ArrayList downloadFileNameList, string localPath, string remotePath)
+        {
+
+        }
+
+        
     }
 }
