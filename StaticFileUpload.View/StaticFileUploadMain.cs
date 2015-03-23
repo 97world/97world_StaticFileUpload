@@ -159,6 +159,7 @@ namespace StaticFileUpload.View
         {
             StaticFileUploadInput staticFileUploadInput = new StaticFileUploadInput();
             staticFileUploadInput.inputAddOrRename = "ADD";
+            staticFileUploadInput.inputOperaType = "LOCAL";
             staticFileUploadInput.inputFileOrFolder = "FOLDER";
             staticFileUploadInput.inputCurrPath = localPath;
             staticFileUploadInput.Owner = this;
@@ -350,13 +351,18 @@ namespace StaticFileUpload.View
         private void listView4Remote_DoubleClick(object sender, EventArgs e)
         {
             ListViewItem selectedItem = listView4Remote.SelectedItems[listView4Remote.SelectedItems.Count - 1];
-            if (selectedItem.Text.Equals("上级目录"))
+            string itemType = selectedItem.SubItems[3].Text;
+            if (itemType.Equals("ParentDir"))
             {
                 remotePath = SFUCommon.GetParentPath4Web(remotePath);
             }
-            else
+            else if (itemType.Equals("F"))
             {
                 remotePath = SFUCommon.CombinePath4Web(remotePath, selectedItem.Text);
+            }
+            else if (itemType.Equals("N"))
+            {
+
             }
             LoadListViewByRemotePath();
         }
@@ -422,7 +428,7 @@ namespace StaticFileUpload.View
                 Point listView4RemotePoint = listView4Remote.PointToClient(tempPoint);
                 ListViewItem selectedItem = listView4Remote.GetItemAt(listView4RemotePoint.X, listView4RemotePoint.Y);
                 if (selectedItem == null) return;
-                if (selectedItem.Text != "上级目录" && selectedItem.SubItems.Count == 3 && sfuConfigInfo != null)
+                if (selectedItem.Text != "上级目录" && sfuConfigInfo != null)
                 {
                     contextMenu4Remote.Show(listView4Remote, listView4RemotePoint);
                 }
@@ -431,14 +437,14 @@ namespace StaticFileUpload.View
 
         private void menuItemTrans4Remote_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void menuItemTrans4Local_Click(object sender, EventArgs e)
         {
             ArrayList uploadFileNameList = new ArrayList();
             ListView.SelectedListViewItemCollection selectedItems = listView4Local.SelectedItems;
-            foreach(ListViewItem item in selectedItems)
+            foreach (ListViewItem item in selectedItems)
             {
                 if (item.Text.Equals("上级目录")) continue;
                 uploadFileNameList.Add(item.Text);
@@ -449,14 +455,30 @@ namespace StaticFileUpload.View
 
         private void menuItemDel4Remote_Click(object sender, EventArgs e)
         {
-            ArrayList deleteFileNameList = new ArrayList();
-            ListView.SelectedListViewItemCollection selectedItems = listView4Remote.SelectedItems;
-            foreach (ListViewItem item in selectedItems)
+            DialogResult dialogResult = MessageBox.Show("确定要删除选中文件/文件夹？", "删除确认", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.OK)
             {
-                if (item.Text.Equals("上级目录")) continue;
-                deleteFileNameList.Add(item.Text);
+                ArrayList deleteFileNameList = new ArrayList();
+                ListView.SelectedListViewItemCollection selectedItems = listView4Remote.SelectedItems;
+                foreach (ListViewItem item in selectedItems)
+                {
+                    if (item.Text.Equals("上级目录")) continue;
+                    deleteFileNameList.Add(item.Text);
+                }
+                remoteBrowserBusi.DeleteFileAndDirectory(deleteFileNameList, remotePath);
+                LoadListViewByRemotePath();
             }
-            remoteBrowserBusi.DeleteFileAndDirectory(deleteFileNameList, remotePath);
+        }
+
+        private void menuItemNewFolder4Remote_Click(object sender, EventArgs e)
+        {
+            StaticFileUploadInput staticFileUploadInput = new StaticFileUploadInput();
+            staticFileUploadInput.inputCurrPath = remotePath;
+            staticFileUploadInput.inputFileOrFolder = "FOLDER";
+            staticFileUploadInput.inputAddOrRename = "ADD";
+            staticFileUploadInput.inputOperaType = "REMOTE";
+            staticFileUploadInput.Owner = this;
+            staticFileUploadInput.ShowDialog();
             LoadListViewByRemotePath();
         }
 

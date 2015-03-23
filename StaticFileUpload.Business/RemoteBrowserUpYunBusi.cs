@@ -19,7 +19,7 @@ namespace StaticFileUpload.Business
         /// <summary>
         /// UpYun SDK 提供的操作对象，如果登录成功此对象将不为空，作为登录是否成功的标志
         /// </summary>
-        private UpYun upYun = null;
+        private static UpYun upYun = null;
 
         public void CheckLoginInfo(OperatorInfo optorInfo)
         {
@@ -82,7 +82,11 @@ namespace StaticFileUpload.Business
                 listViewItems.Clear(); imageItems.Clear();
                 if (!remotePath.Equals("/"))
                 {
-                    listViewItems.Add("上级目录", 0);
+                    string[] itemInfo = new string[4];
+                    itemInfo[0] = "上级目录";
+                    itemInfo[3] = "ParentDir";
+                    ListViewItem parentDirItem = new ListViewItem(itemInfo, 0);
+                    listViewItems.Add(parentDirItem);
                     imageItems.Add(StaticFileUpload.Business.Properties.Resources.up_16x16);
                     imageIndex++;
                 }
@@ -91,18 +95,20 @@ namespace StaticFileUpload.Business
                 foreach (FolderItem item in itemsArray)
                 {
                     ListViewItem listViewItem = null;
-                    string[] itemInfo = new string[3];
+                    string[] itemInfo = new string[4];
                     itemInfo[0] = item.filename;
                     itemInfo[1] = SFUCommon.GetCommonSize(item.size);
                     itemInfo[2] = SFUCommon.GetCommonTime(item.number).ToString();
                     if (item.filetype.Equals("N"))
                     {
+                        itemInfo[3] = "N";
                         listViewItem = new ListViewItem(itemInfo, imageIndex);
                         imageItems.Add(IconUtil.GetFileIcon(item.filename, false));
                         imageIndex++;
                     }
                     else
                     {
+                        itemInfo[3] = "F";
                         listViewItem = new ListViewItem(itemInfo, remotePath.Equals("/") ? 0 : 1);
                     }
                     listViewItems.Add(listViewItem);
@@ -116,9 +122,9 @@ namespace StaticFileUpload.Business
             Cursor.Current = Cursors.Default;
         }
 
-        public void MakeDirectory(string remotePath, bool isRecursive)
+        public bool NewFolder(string remotePath, bool isRecursive)
         {
-
+            return upYun.mkDir(remotePath, isRecursive);
         }
 
         public void DeleteFileAndDirectory(ArrayList deleteFileNameList, string remotePath)

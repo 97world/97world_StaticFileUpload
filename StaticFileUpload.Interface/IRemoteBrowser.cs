@@ -21,7 +21,7 @@ namespace StaticFileUpload.Interface
 
         void LoadListView(ListView listView, ImageList imageList, string remotePath);
 
-        void MakeDirectory(string remotePath, bool isRecursive);
+        bool NewFolder(string remotePath, bool isRecursive);
 
         void DeleteFileAndDirectory(ArrayList deleteFileNameList, string remotePath);
 

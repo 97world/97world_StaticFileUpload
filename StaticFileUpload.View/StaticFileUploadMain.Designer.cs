@@ -449,6 +449,7 @@
             this.menuItemNewFolder4Remote.Index = 8;
             this.menuItemNewFolder4Remote.Shortcut = System.Windows.Forms.Shortcut.Ins;
             this.menuItemNewFolder4Remote.Text = "建立文件夹(&X)";
+            this.menuItemNewFolder4Remote.Click += new System.EventHandler(this.menuItemNewFolder4Remote_Click);
             // 
             // menuItem12
             // 

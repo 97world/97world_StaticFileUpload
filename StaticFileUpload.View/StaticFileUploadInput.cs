@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using StaticFileUpload.Common;
 using StaticFileUpload.Interface;
 using StaticFileUpload.Business;
 
@@ -20,9 +21,11 @@ namespace StaticFileUpload.View
         }
 
         private ILocalBrowser localBrowserBusi = new LocalBrowserBusi();
+        private IRemoteBrowser remoteBrowserBusi = new RemoteBrowserUpYunBusi();
 
         public string inputAddOrRename = "ADD";
         public string inputFileOrFolder = "FILE";
+        public string inputOperaType = "LOCAL";
         public string inputOriName = "";
         public string inputCurrPath = "";
 
@@ -56,19 +59,30 @@ namespace StaticFileUpload.View
             string inputNewName = textBoxName.Text.Trim();
             bool retVal = false;
             if (inputNewName.Length <= 0) return;
-            if (inputFileOrFolder.Equals("FILE"))
+            if (inputOperaType.Equals("LOCAL"))
             {
-                if (inputAddOrRename.Equals("ADD"))
-                    retVal = localBrowserBusi.NewFile(inputCurrPath, inputNewName);
+                if (inputFileOrFolder.Equals("FILE"))
+                {
+                    if (inputAddOrRename.Equals("ADD"))
+                        retVal = localBrowserBusi.NewFile(inputCurrPath, inputNewName);
+                    else
+                        retVal = localBrowserBusi.RenameFile(inputCurrPath, inputOriName, inputNewName);
+                }
                 else
-                    retVal = localBrowserBusi.RenameFile(inputCurrPath, inputOriName, inputNewName);
+                {
+                    if (inputAddOrRename.Equals("ADD"))
+                        retVal = localBrowserBusi.NewFolder(inputCurrPath, inputNewName);
+                    else
+                        retVal = localBrowserBusi.RenameFolder(inputCurrPath, inputOriName, inputNewName);
+                }
             }
             else
             {
-                if (inputAddOrRename.Equals("ADD"))
-                    retVal = localBrowserBusi.NewFolder(inputCurrPath, inputNewName);
-                else
-                    retVal = localBrowserBusi.RenameFolder(inputCurrPath, inputOriName, inputNewName);
+                if (inputFileOrFolder.Equals("FOLDER"))
+                {
+                    string newFolderPath = SFUCommon.CombinePath4Web(inputCurrPath, inputNewName);
+                    retVal = remoteBrowserBusi.NewFolder(newFolderPath, true);
+                }
             }
             if (retVal == true) this.Close();
         }
