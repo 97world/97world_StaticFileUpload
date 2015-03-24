@@ -403,6 +403,7 @@
             this.menuItemCopyLink4Remote.Index = 0;
             this.menuItemCopyLink4Remote.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftC;
             this.menuItemCopyLink4Remote.Text = "复制链接(&L)";
+            this.menuItemCopyLink4Remote.Click += new System.EventHandler(this.menuItemCopyLink4Remote_Click);
             // 
             // menuItem8
             // 

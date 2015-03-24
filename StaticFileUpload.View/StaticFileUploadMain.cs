@@ -482,5 +482,15 @@ namespace StaticFileUpload.View
             LoadListViewByRemotePath();
         }
 
+        private void menuItemCopyLink4Remote_Click(object sender, EventArgs e)
+        {
+            Point listView4RemotePoint = listView4Remote.PointToClient(tempPoint);
+            ListViewItem selectedItem = listView4Remote.GetItemAt(listView4RemotePoint.X, listView4RemotePoint.Y);
+            string selectedItemText = selectedItem.Text;
+            string webLink = SFUCommon.CombinePath4Web(remotePath, selectedItemText);
+            string testStr = SFUCommon.CombinePath4Web(sfuConfigInfo.operatorInfo.bindDomain, webLink);
+            Clipboard.SetDataObject(SFUCommon.CombinePath4Web(sfuConfigInfo.operatorInfo.bindDomain, webLink));
+        }
+
     }
 }

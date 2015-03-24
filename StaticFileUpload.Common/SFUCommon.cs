@@ -114,14 +114,10 @@ namespace StaticFileUpload.Common
         /// <returns>拼接后的路径</returns>
         public static string CombinePath4Web(string currentPath, string folder)
         {
-            if (currentPath.LastIndexOf('/') == (currentPath.Length - 1))
-            {
-                return currentPath + folder.Replace("/", "");
-            }
-            else
-            {
-                return currentPath + '/' + folder.Replace("/", "");
-            }
+            if (currentPath.LastIndexOf('/') != (currentPath.Length - 1)) currentPath = currentPath + '/';
+            if (folder.IndexOf('/') == 0) folder = folder.Substring(1);
+            if (folder.LastIndexOf('/') == (folder.Length - 1)) folder = folder.Substring(0, folder.Length - 2);
+            return currentPath + folder;
         }
     }
 }
